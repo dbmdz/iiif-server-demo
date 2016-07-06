@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html 
+  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+  layout:decorator="base">
+  <body>
+    <section layout:fragment="content">
+      <header>
+        <h1>IIIF Image API: URL demo</h1>
+      </header>
+
+      <main>
+        <section id="urlbuilder" class="well">
+          /iiif/image/bsb00026283_00041/
+          <select name="region">
+            <option>full</option>
+            <option>2500,3000,1024,1024</option>
+            <option>pct:20,45,20,20</option>
+          </select>
+          /
+          <select name="size">
+            <option>full</option>
+            <option selected="selected">500,</option>
+            <option>,500</option>
+            <option>500,500</option>
+            <option>!500,500</option>
+            <option>pct:50</option>
+          </select>
+          /
+          <select name="rotation">
+            <option>0</option>
+            <option>90</option>
+            <option>180</option>
+            <option>270</option>
+          </select>
+          /
+          <select name="color">
+            <option>default</option>
+            <option>gray</option>
+            <option>bitonal</option>
+          </select>
+          .
+          <select name="format">
+            <option>jpg</option>
+            <option>png</option>
+          </select>
+        </section>
+        <section id="image-view">
+          <img id="imgrender" th:src="@{/iiif/image/bsb00026283_00041/full/500,/0/default.jpg}"/>
+        </section>
+        <script defer="true">
+          // <![CDATA[
+          function onChange() {
+            var params = {};
+            params.region = document.getElementsByName('region')[0].value || 'full';
+            params.size = document.getElementsByName('size')[0].value || 'full';
+            params.rotation = document.getElementsByName('rotation')[0].value || 0;
+            params.color = document.getElementsByName('color')[0].value || 'default';
+            params.format = document.getElementsByName('format')[0].value || 'jpg';
+            var URL = buildIIIFUrl(params);
+            document.getElementById('imgrender').setAttribute('src', URL);
+          }
+
+          function  buildIIIFUrl(params) {
+            var URL = "/iiif/image/bsb00026283_00041/" +
+                    [params.region, params.size, params.rotation, params.color].join('/') +
+                    "." + params.format;
+            return URL;
+          }
+
+          var selects = document.getElementsByTagName("select");
+          for (var i = 0; i < selects.length; i++) {
+            selects[i].addEventListener('change', onChange);
+          }
+          // ]]>
+        </script>
+      </main>
+
+      <p></p>
+      
+      <div class="alert alert-warning" role="alert">
+        <strong>License:</strong>
+        The demo image is part of the "Ottheinrich-Bibel" page "Einzug in Jerusalem" presented by the <a href="https://www.bsb-muenchen.de">Bavarian State Library</a> <a href="http://daten.digitale-sammlungen.de/bsb00026283/image_41">here</a>.<br/>
+        It is under the "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"-License (see <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">http://creativecommons.org/licenses/by-nc-sa/4.0/</a>)
+      </div>
+
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <strong><i class="glyphicon glyphicon-info-sign"></i> Legend:</strong><br/>
+          <img th:src="@{/images/iiif-image-api-url.jpg}" style="width: 100%;"/>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

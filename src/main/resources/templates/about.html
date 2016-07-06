@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html 
+  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+  layout:decorator="base">
+  <body>
+    <section layout:fragment="content">
+
+      <div class="page-header">
+        <h1>About</h1>
+      </div>
+
+      <p>The Demo IIIF server uses Spring Boot serving a Spring MVC + Thymeleaf-Templates webapplication.<br/>
+        (See <a href="https://spring.io/guides/gs/spring-boot/">https://spring.io/guides/gs/spring-boot/</a>.)</p>
+
+      <p>Images are resolved by the demo specific classpath-access and currently only can serve the images contained in the application JAR. But you also could extend the resolvers for HTTP- or File-Protocol in the properties-files.</p>
+    </section>
+  </body>
+</html>

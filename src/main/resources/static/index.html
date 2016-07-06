@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!--
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+<html>
+  <head>
+    <title>IIIF Server Demo</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <div>
+      <h1>IIIF Server Demo</h1>
+
+      <h2>Usage</h2>
+
+      Start Demo:
+
+      <pre>java -jar iiif-server-demo.jar</pre>
+
+      View zoomable image demo (using OpenSeadragon 2.0.0 viewer):
+
+      <pre><a href="http://localhost:8080/demo/bsb00026283_00041/view_image.html">http://localhost:8080/demo/bsb00026283_00041/view_openseadragon.html</a></pre>
+      
+       View pagable image demo (using Mirador 2.0.0 viewer):
+
+      <pre><a href="http://localhost:8080/demo/bsb00026283/view_presentation.html">http://localhost:8080/demo/bsb00026283/view_mirador.html</a></pre>
+
+      <h2>About the Demo's architecture</h2>
+
+      <p>The Demo IIIF server uses Spring Boot serving a Spring MVC + Thymeleaf-Templates webapplication.<br/>
+        (See <a href="https://spring.io/guides/gs/spring-boot/">https://spring.io/guides/gs/spring-boot/</a>.)</p>
+
+      <p>Images are resolved by the demo specific ClasspathResourceResolverImpl and currently only can serve the image with the identifier "bsb00026283_00041" (only packaged image in the demo). But you also could extend the resolvers for HTTP- or File-Protocol (HttpResolver and FileSystemResolver, see library code).</p>
+
+      <h2>License</h2>
+
+      <p>The demo image is part of the "Ottheinrich-Bibel" page "Einzug in Jerusalem" presented by the Bavarian State Library here: <a href="http://daten.digitale-sammlungen.de/bsb00026283/image_41">http://daten.digitale-sammlungen.de/bsb00026283/image_41</a>.<br/>
+        It is under the "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"-License (see <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">http://creativecommons.org/licenses/by-nc-sa/4.0/</a>)</p>
+
+      
+    </div>
+  </body>
+</html>

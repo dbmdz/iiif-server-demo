@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <link rel="stylesheet" type="text/css" th:href="@{/js/vendor/mirador/css/mirador-combined.css}" />
+    <title>Mirador Viewer</title>
+    <style type="text/css">
+      body { padding: 0; margin: 0; overflow: hidden; font-size: 70%; }
+      #viewer { background: #333; width: 100%; height: 100%; position: fixed; }
+    </style>
+  </head>
+  <body>
+    <div id="viewer"></div>
+
+    <script th:src="@{/js/vendor/mirador/mirador.js}"></script>
+    <script type="text/javascript" th:inline="javascript">
+      $(function () {
+      Mirador({
+      "id": "viewer",
+              "workspaceType": 'bookReading',
+              "layout": "1x1",
+              "mainMenuSettings" :
+      {
+      "show": true,
+              "buttons" : {"bookmark" : true, "layout" : true},
+              "userLogo": {"label": "IIIF", "attributes": {"href": "http://iiif.io"}}
+      },
+              'showAddFromURLBox' : false,
+              "saveSession": true,
+              "data": [
+              {
+              "manifestUri": [[${manifestId}]]
+              }
+              ],
+              "windowObjects": [
+              {
+              "loadedManifest": [[${manifestId}]],
+                      "viewType": "ImageView",
+                      "layoutOptions": {
+                      "close": false,
+                              "slotRight": false,
+                              "slotLeft": false,
+                              "slotAbove": false,
+                              "slotBelow": false
+                      },
+                      "annotationLayer": false,
+                      "annotationCreation": false,
+                      "saveSession": true,
+                      "displayLayout": true,
+                      "bottomPanel" : true,
+                      "sidePanel" : false
+              }]
+      });
+      });
+    </script>
+  </body>
+</html>
