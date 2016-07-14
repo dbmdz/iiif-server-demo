@@ -22,6 +22,20 @@ View Homepage:
 
     http://localhost:8080/
 
+## Screenshots
+
+IIIF Image API URL Demo:
+
+![Image API URL Demo](./doc/images/screenshot-image-api-url.png)
+
+OpenSeadragon zoom viewer Demo:
+
+![OpenSeadragon zoom viewer Demo](./doc/images/screenshot-openseadragon.png)
+
+Mirador presentation viewer Demo:
+
+![Mirador presentation viewer Demo](./doc/images/screenshot-mirador.png)
+
 ## About the Demo's architecture
 
 The Demo IIIF server uses Spring Boot serving a Spring MVC + Thymeleaf-Templates webapplication.<br/>
