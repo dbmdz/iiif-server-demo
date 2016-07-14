@@ -31,14 +31,14 @@ public class DemoController {
   @RequestMapping(value = "/demo/{identifier}/view_image.html", method = RequestMethod.GET)
   public String getPreviewPage(@PathVariable String identifier,
           HttpServletRequest request, Model model) {
-    model.addAttribute("infoUrl", "/iiif/image/" + identifier + "/info.json");
+    model.addAttribute("infoUrl", "/iiif/image/2.0.0/" + identifier + "/info.json");
     return "view_openseadragon";
   }
 
   @RequestMapping(value = "/demo/{identifier}/view_presentation.html", method = RequestMethod.GET)
   public String getMiradorPage(@PathVariable String identifier,
           HttpServletRequest request, Model model) {
-    model.addAttribute("manifestId", "/iiif/presentation/" + identifier + "/manifest.json");
+    model.addAttribute("manifestId", "/iiif/presentation/2.0.0/" + identifier + "/manifest");
     return "view_mirador";
   }
 

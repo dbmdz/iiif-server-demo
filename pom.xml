@@ -5,7 +5,7 @@
 
   <groupId>de.digitalcollections</groupId>
   <artifactId>iiif-server-demo</artifactId>
-  <version>2.0.0-SNAPSHOT</version>
+  <version>0-SNAPSHOT</version>
   <packaging>jar</packaging>
   
   <name>IIIF: IIIF Server Demo</name>
@@ -18,6 +18,8 @@
 
   <properties>
     <java.version>1.8</java.version>
+    <version.iiif-image>2.0.0</version.iiif-image>
+    <version.iiif-presentation>2.0.0</version.iiif-presentation>
     <version.slf4j>1.7.13</version.slf4j>
   </properties>
   
@@ -31,37 +33,37 @@
     <dependency>
       <groupId>de.digitalcollections</groupId>
       <artifactId>iiif-image-backend-impl</artifactId>
-      <version>2.0.0-SNAPSHOT</version>
+      <version>${version.iiif-image}</version>
       <scope>runtime</scope>
     </dependency>
     <dependency>
       <groupId>de.digitalcollections</groupId>
       <artifactId>iiif-image-business-impl</artifactId>
-      <version>2.0.0-SNAPSHOT</version>
+      <version>${version.iiif-image}</version>
       <scope>runtime</scope>
     </dependency>
     <dependency>
       <groupId>de.digitalcollections</groupId>
       <artifactId>iiif-image-frontend-impl-springmvc</artifactId>
-      <version>2.0.0-SNAPSHOT</version>
+      <version>${version.iiif-image}</version>
       <scope>runtime</scope>
     </dependency>
     <dependency>
       <groupId>de.digitalcollections</groupId>
       <artifactId>iiif-presentation-backend-impl</artifactId>
-      <version>2.0.0-SNAPSHOT</version>
+      <version>${version.iiif-presentation}</version>
       <scope>runtime</scope>
     </dependency>
     <dependency>
       <groupId>de.digitalcollections</groupId>
       <artifactId>iiif-presentation-business-impl</artifactId>
-      <version>2.0.0-SNAPSHOT</version>
+      <version>${version.iiif-presentation}</version>
       <scope>runtime</scope>
     </dependency>
     <dependency>
       <groupId>de.digitalcollections</groupId>
       <artifactId>iiif-presentation-frontend-impl-springmvc</artifactId>
-      <version>2.0.0-SNAPSHOT</version>
+      <version>${version.iiif-presentation}</version>
       <scope>runtime</scope>
     </dependency>
     <dependency>
