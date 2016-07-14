@@ -1,4 +1,7 @@
 # IIIF Server Demo
+
+[![Build Status](https://travis-ci.org/dbmdz/iiif-server-demo.svg?branch=master)](https://travis-ci.org/dbmdz/iiif-server-demo)
+
 A standalone IIIF server demonstrating the use of [IIIF Image API Java Libraries](https://github.com/dbmdz/iiif-image-api "IIIF Image API Java Libraries") and [IIIF Presentation API Java Libraries](https://github.com/dbmdz/iiif-presentation-api "IIIF Presentation API Java Libraries") (Java implementations of the [IIIF specifications](http://iiif.io/technical-details/ "IIIF specifications")).
 
 ## Build and run it
