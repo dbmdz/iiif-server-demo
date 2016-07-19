@@ -5,8 +5,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
 /**
- * Demo IIIF Server (see https://spring.io/guides/gs/spring-boot/)<br/>
- * Run: mvn package && java -jar target/iiif-server-demo.jar
+ * Demo IIIF Server (see https://spring.io/guides/gs/spring-boot/)<br>
+ * Run: mvn package &amp;&amp; java -jar target/iiif-server-demo.jar
  */
 @SpringBootApplication
 /*
