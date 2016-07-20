@@ -14,10 +14,12 @@
         <script type="application/javascript" th:inline="javascript">
           var viewer = OpenSeadragon({
           id: "preview",
-          prefixUrl: "/img/vendor/openseadragon/",
+          /*<![CDATA[*/
+          prefixUrl: /*[[@{/img/vendor/openseadragon/}]]*/,
+          /*]]>*/
           tileWidth: 64,
           /*<![CDATA[*/
-          tileSources: /*[[${infoUrl}]]*/
+          tileSources: /*[[@{__${infoUrl}__}]]*/
           /*]]>*/
           });
         </script>

@@ -29,29 +29,33 @@
               'showAddFromURLBox' : false,
               "saveSession": true,
               "data": [
-              {
-              "manifestUri": [[${manifestId}]]
-              }
+                {
+                /*<![CDATA[*/
+                "manifestUri": /*[[@{__${manifestId}__}]]*/
+                /*]]>*/
+                }
               ],
               "windowObjects": [
               {
-              "loadedManifest": [[${manifestId}]],
-                      "viewType": "ImageView",
-                      "layoutOptions": {
-                      "close": false,
-                              "slotRight": false,
-                              "slotLeft": false,
-                              "slotAbove": false,
-                              "slotBelow": false
-                      },
-                      "annotationLayer": false,
-                      "annotationCreation": false,
-                      "saveSession": true,
-                      "displayLayout": true,
-                      "bottomPanel" : true,
-                      "sidePanel" : false
+                /*<![CDATA[*/
+                "loadedManifest": /*[[@{__${manifestId}__}]]*/,
+                /*]]>*/
+                "viewType": "ImageView",
+                "layoutOptions": {
+                  "close": false,
+                  "slotRight": false,
+                  "slotLeft": false,
+                  "slotAbove": false,
+                  "slotBelow": false
+                },
+                "annotationLayer": false,
+                "annotationCreation": false,
+                "saveSession": false,
+                "displayLayout": true,
+                "bottomPanel" : true,
+                "sidePanel" : false
               }]
-      });
+        });
       });
     </script>
   </body>
