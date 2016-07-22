@@ -42,4 +42,11 @@ public class DemoController {
     return "view_mirador";
   }
 
+  @RequestMapping(value = "/demo/{identifier}/view_universal.html", method = RequestMethod.GET)
+  public String getUniversalViewerPage(@PathVariable String identifier,
+          HttpServletRequest request, Model model) {
+    model.addAttribute("manifestId", "/iiif/presentation/2.0.0/" + identifier + "/manifest");
+    return "view_universal";
+  }
+
 }
