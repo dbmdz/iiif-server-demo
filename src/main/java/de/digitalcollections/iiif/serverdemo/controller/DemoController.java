@@ -49,4 +49,11 @@ public class DemoController {
     return "view_universal";
   }
 
+  @RequestMapping(value = "/demo/{identifier}/view_diva.html", method = RequestMethod.GET)
+  public String getDivaViewerPage(@PathVariable String identifier,
+          HttpServletRequest request, Model model) {
+    model.addAttribute("manifestId", "/iiif/presentation/2.0.0/" + identifier + "/manifest");
+    return "view_diva";
+  }
+
 }
