@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="base">
+  <head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" type="text/css" media="all" th:href="@{/js/vendor/iipmoo/css/iip.min.css}" />
+    <!--[if lt IE 10]>
+      <meta http-equiv="X-UA-Compatible" content="IE=9" >
+      <link rel="stylesheet" type="text/css" media="all" href="css/ie.min.css" />
+    <![endif]-->
+
+    <!-- Basic example style for a 100% view -->
+    <style type="text/css">
+      body{
+        height: 100%;
+        padding: 0;
+        margin: 0;
+      }
+      div#viewer{
+        height: 100%;
+        min-height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 0;
+        padding: 0;
+      }	
+    </style>
+
+    <script type="text/javascript" th:src="@{/js/vendor/iipmoo/mootools-core-1.6.0-compressed.js}"></script>
+    <script type="text/javascript" th:src="@{/js/vendor/iipmoo/mootools-more-1.6.0.js}"></script>
+    <script type="text/javascript" th:src="@{/js/vendor/iipmoo/iipmooviewer-2.0.js}"></script>
+    <script type="text/javascript" th:src="@{/js/vendor/iipmoo/protocols/iiif.js}"></script>
+    <script type="application/javascript" th:inline="javascript">
+       /*<![CDATA[*/
+          var iipmooviewer = new IIPMooViewer( "viewer", {
+                            image: /*[[@{__${image}__}]]*/, 
+                            credit: "My Title",
+                            protocol : 'IIIF',
+                            server: /*[[@{__${serverUrl}__}]]*/
+                          });
+                          /*]]>*/
+    </script>
+  </head>
+
+  <body>
+    <section layout:fragment="content">
+      <header>
+        <h1>IIPMooViewer viewer: IIPMooViewer 2.0</h1>
+      </header>
+
+      <div id="viewer"></div>
+
+
+    </section>
+  </body>
+</html>

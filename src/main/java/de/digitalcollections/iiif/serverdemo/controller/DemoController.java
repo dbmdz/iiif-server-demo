@@ -35,6 +35,28 @@ public class DemoController {
     return "view_openseadragon";
   }
 
+  @RequestMapping(value = "/demo/{identifier}/view_iipmoo.html", method = RequestMethod.GET)
+  public String getIIPMooViewerPage(@PathVariable String identifier,
+          HttpServletRequest request, Model model) {
+    model.addAttribute("serverUrl", "/iiif/image/2.0.0/");
+    model.addAttribute("image", identifier);
+    return "view_iipmoo";
+  }
+
+  @RequestMapping(value = "/demo/{identifier}/view_leaflet-image.html", method = RequestMethod.GET)
+  public String getLeafletImageViewerPage(@PathVariable String identifier,
+          HttpServletRequest request, Model model) {
+    model.addAttribute("infoUrl", "/iiif/image/2.0.0/" + identifier + "/info.json");
+    return "view_leaflet-image";
+  }
+
+  @RequestMapping(value = "/demo/{identifier}/view_leaflet-presentation.html", method = RequestMethod.GET)
+  public String getLeafletManifestViewerPage(@PathVariable String identifier,
+          HttpServletRequest request, Model model) {
+    model.addAttribute("manifestId", "/iiif/presentation/2.0.0/" + identifier + "/manifest");
+    return "view_leaflet-presentation";
+  }
+
   @RequestMapping(value = "/demo/{identifier}/view_presentation.html", method = RequestMethod.GET)
   public String getMiradorPage(@PathVariable String identifier,
           HttpServletRequest request, Model model) {
