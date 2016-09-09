@@ -16,45 +16,51 @@
     <script th:src="@{/js/vendor/mirador/mirador.js}"></script>
     <script type="text/javascript" th:inline="javascript">
       $(function () {
-      Mirador({
-      "id": "viewer",
-              "workspaceType": 'bookReading',
-              "layout": "1x1",
-              "mainMenuSettings" :
-      {
-      "show": true,
-              "buttons" : {"bookmark" : true, "layout" : true},
-              "userLogo": {"label": "IIIF", "attributes": {"href": "http://iiif.io"}}
-      },
-              'showAddFromURLBox' : false,
-              "saveSession": true,
-              "data": [
-                {
-                /*<![CDATA[*/
-                "manifestUri": /*[[@{__${manifestId}__}]]*/
-                /*]]>*/
-                }
-              ],
-              "windowObjects": [
-              {
-                /*<![CDATA[*/
-                "loadedManifest": /*[[@{__${manifestId}__}]]*/,
-                /*]]>*/
-                "viewType": "ImageView",
-                "layoutOptions": {
-                  "close": false,
-                  "slotRight": false,
-                  "slotLeft": false,
-                  "slotAbove": false,
-                  "slotBelow": false
-                },
-                "annotationLayer": false,
-                "annotationCreation": false,
-                "saveSession": false,
-                "displayLayout": true,
-                "bottomPanel" : true,
-                "sidePanel" : false
-              }]
+        Mirador({
+          'id': 'viewer',
+          'workspaceType': 'bookReading',
+          'layout': '1x1',
+          'mainMenuSettings': {
+            'show': true,
+            'buttons': {
+              'bookmark': true,
+              'layout': true
+            },
+            'userLogo': {
+              'label': 'IIIF',
+              'attributes': { 'href': 'http://iiif.io' }
+            }
+          },
+          'showAddFromURLBox': false,
+          'saveSession': true,
+          'data': [
+            {
+              /*<![CDATA[*/
+              'manifestUri': /*[[@{__${manifestId}__}]]*/
+              /*]]>*/
+            }
+          ],
+          'windowObjects': [
+            {
+              /*<![CDATA[*/
+              'loadedManifest': /*[[@{__${manifestId}__}]]*/,
+              /*]]>*/
+              'viewType': 'ImageView',
+              'layoutOptions': {
+                'close': false,
+                'slotRight': false,
+                'slotLeft': false,
+                'slotAbove': false,
+                'slotBelow': false
+              },
+              'annotationLayer': false,
+              'annotationCreation': false,
+              'saveSession': false,
+              'displayLayout': true,
+              'bottomPanel': true,
+              'sidePanel': false
+            }
+          ]
         });
       });
     </script>
