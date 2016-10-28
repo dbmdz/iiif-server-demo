@@ -19,6 +19,7 @@ import org.springframework.context.ApplicationContext;
 public class Application {
 
   public static void main(String[] args) {
+    System.setProperty("spring.profiles.active", "PROD");
     ApplicationContext ctx = SpringApplication.run(Application.class, args);
   }
 }
