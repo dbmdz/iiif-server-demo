@@ -3,7 +3,7 @@
   xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
   layout:decorator="base">
   <head>
-    <link rel="stylesheet" type="text/css" th:href="@{/js/vendor/mirador/css/mirador-combined.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/webjars/mirador/2.1.1/css/mirador-combined.min.css}" />
     <title>Mirador Viewer</title>
     <style type="text/css">
       body { font-size: 14px; }
@@ -17,7 +17,7 @@
     </section>
 
   <th:block layout:fragment="morejs">
-    <script th:src="@{/js/vendor/mirador/mirador.js}"></script>
+    <script th:src="@{/webjars/mirador/2.1.1/mirador.js}"></script>
     <script type="text/javascript" th:inline="javascript">
       $(function () {
       Mirador({
