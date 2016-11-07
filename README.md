@@ -6,7 +6,7 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/961bd34d44d748f3acdff4cf98c68e6e)](https://www.codacy.com/app/ralf-eichinger/iiif-server-demo?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=dbmdz/iiif-server-demo&amp;utm_campaign=Badge_Grade)
 [![codecov](https://codecov.io/gh/dbmdz/iiif-server-demo/branch/master/graph/badge.svg)](https://codecov.io/gh/dbmdz/iiif-server-demo)
 
-A standalone IIIF server demonstrating the use of [IIIF Image API Java Libraries](https://github.com/dbmdz/iiif-image-api "IIIF Image API Java Libraries") and [IIIF Presentation API Java Libraries](https://github.com/dbmdz/iiif-presentation-api "IIIF Presentation API Java Libraries") (Java implementations of the [IIIF specifications](http://iiif.io/technical-details/ "IIIF specifications")).
+A standalone IIIF server demonstrating the use of [IIIF Image API Java Libraries](https://github.com/dbmdz/iiif-image-api "IIIF Image API Java Libraries") and [IIIF Presentation API Java Libraries](https://github.com/dbmdz/iiif-presentation-api "IIIF Presentation API Java Libraries") (Java implementations of the [IIIF specifications](http://iiif.io/technical-details/ "IIIF specifications")) and annotations stored in the local storage of the browser.
 
 ## Run Demo Server
 
