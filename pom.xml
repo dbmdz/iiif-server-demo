@@ -51,6 +51,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     
     <version.iiif-image>2.1.0</version.iiif-image>
+    <version.iiif-mirador>2.1.1</version.iiif-mirador>
     <version.iiif-presentation>3.1.0</version.iiif-presentation>
     <version.jacoco-maven-plugin>0.7.4.201502262128</version.jacoco-maven-plugin>
     <version.maven-compiler-plugin>3.3</version.maven-compiler-plugin>
@@ -130,6 +131,11 @@
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-aop</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.webjars</groupId>
+      <artifactId>mirador</artifactId>
+      <version>${version.iiif-mirador}</version>
     </dependency>
   </dependencies>
 
