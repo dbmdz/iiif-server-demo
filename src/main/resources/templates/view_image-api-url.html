@@ -10,7 +10,7 @@
 
       <main>
         <section id="urlbuilder" class="well">
-          http://localhost:8080/iiif/image/2.0.0/bsb00026283_00041/
+          http://localhost:8080/image/v2/bsb00026283_00041/
           <select name="region">
             <option>full</option>
             <option>2500,3000,1024,1024</option>
@@ -45,7 +45,7 @@
           </select>
         </section>
         <section id="image-view">
-          <img id="imgrender" th:src="@{/iiif/image/2.0.0/bsb00026283_00041/full/500,/0/default.jpg}"/>
+          <img id="imgrender" th:src="@{/image/v2/bsb00026283_00041/full/500,/0/default.jpg}"/>
         </section>
         <script defer="true">
           // <![CDATA[
@@ -61,7 +61,7 @@
           }
 
           function  buildIIIFUrl(params) {
-            var URL = "/iiif/image/2.0.0/bsb00026283_00041/" +
+            var URL = "/image/v2/bsb00026283_00041/" +
                     [params.region, params.size, params.rotation, params.color].join('/') +
                     "." + params.format;
             return URL;
