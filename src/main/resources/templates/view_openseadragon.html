@@ -5,17 +5,17 @@
   <body>
     <section layout:fragment="content">
       <header>
-        <h1>IIIF Zoom viewer: Openseadragon 2.0.0</h1>
+        <h1>IIIF Zoom viewer: Openseadragon 2.2.1</h1>
       </header>
 
       <main>
         <div id="preview" class="openseadragon" style="width: 1000px; height: 700px;"></div>
-        <script th:src="@{/js/vendor/openseadragon/openseadragon.min.js}"></script>
+        <script th:src="@{/webjars/openseadragon/2.2.1/openseadragon.min.js}"></script>
         <script type="application/javascript" th:inline="javascript">
           var viewer = OpenSeadragon({
           id: "preview",
           /*<![CDATA[*/
-          prefixUrl: /*[[@{/img/vendor/openseadragon/}]]*/,
+          prefixUrl: /*[[@{/webjars/openseadragon/2.2.1/images/}]]*/,
           /*]]>*/
           tileWidth: 64,
           /*<![CDATA[*/
