@@ -65,9 +65,9 @@
     <version.maven-source-plugin>3.0.1</version.maven-source-plugin>
     <version.maven-surefire-plugin>2.19.1</version.maven-surefire-plugin>
     <version.nexus-staging-maven-plugin>1.6.7</version.nexus-staging-maven-plugin>
-    <version.openseadragon>2.2.1</version.openseadragon>
     <version.slf4j>1.7.13</version.slf4j>
     <version.versions-maven-plugin>2.2</version.versions-maven-plugin>
+    <version.webjar-openseadragon>2.2.1</version.webjar-openseadragon>
   </properties>
 
   <dependencies>
@@ -146,7 +146,7 @@
     <dependency>
       <groupId>org.webjars</groupId>
       <artifactId>openseadragon</artifactId>
-      <version>${version.openseadragon}</version>
+      <version>${version.webjar-openseadragon}</version>
     </dependency>
   </dependencies>
 
