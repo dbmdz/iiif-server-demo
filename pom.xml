@@ -8,12 +8,12 @@
     <artifactId>spring-boot-starter-parent</artifactId>
     <version>1.2.6.RELEASE</version>
   </parent>
-  
+
   <groupId>de.digitalcollections</groupId>
   <artifactId>iiif-server-demo</artifactId>
   <version>2.1.3-SNAPSHOT</version>
   <packaging>jar</packaging>
-  
+
   <name>DigitalCollections: IIIF Server Demo</name>
   <description>A standalone IIIF server demonstrating the use of IIIF Image API Java Libraries (https://github.com/dbmdz/iiif-image-api) and IIIF Presentation API Java Libraries (https://github.com/dbmdz/iiif-presentation-api) (Java implementations of the IIIF specifications: http://iiif.io/technical-details/).</description>
   <url>https://github.com/dbmdz/iiif-server-demo</url>
@@ -30,6 +30,11 @@
       <email>ralf.eichinger@gmail.com</email>
       <id>datazuul</id>
     </developer>
+    <developer>
+      <name>Matthias Lindinger</name>
+      <email>matthias.lindinger@bsb-muenchen.de</email>
+      <id>morpheus-87</id>
+    </developer>
   </developers>
   <ciManagement>
     <url>https://travis-ci.org/dbmdz/iiif-server-demo</url>
@@ -44,12 +49,12 @@
     <developerConnection>git@github.com:dbmdz/iiif-server-demo.git</developerConnection>
     <url>https://github.com/dbmdz/iiif-server-demo</url>
   </scm>
-  
+
   <properties>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    
+
     <version.iiif-image>2.2.5-SNAPSHOT</version.iiif-image>
     <version.iiif-mirador>2.1.2</version.iiif-mirador>
     <version.iiif-presentation>3.2.4-SNAPSHOT</version.iiif-presentation>
@@ -64,7 +69,7 @@
     <version.slf4j>1.7.13</version.slf4j>
     <version.versions-maven-plugin>2.2</version.versions-maven-plugin>
   </properties>
-  
+
   <dependencies>
     <dependency>
       <groupId>de.digitalcollections</groupId>
@@ -150,7 +155,7 @@
 
     <plugins>
       <plugin>
-        <!-- 
+        <!--
 The Spring Boot Maven plugin provides many convenient features:
 - It collects all the jars on the classpath and builds a single, runnable "über-jar", which makes it more convenient to execute and transport your service.
 - It searches for the public static void main() method to flag as a runnable class.
