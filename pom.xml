@@ -70,6 +70,7 @@
     <version.webjar-bootstrap>3.3.7</version.webjar-bootstrap>
     <version.webjar-html5shiv>3.7.3</version.webjar-html5shiv>
     <version.webjar-openseadragon>2.2.1</version.webjar-openseadragon>
+    <version.webjar-respond>1.4.2</version.webjar-respond>
   </properties>
 
   <dependencies>
@@ -165,6 +166,11 @@
       <groupId>org.webjars</groupId>
       <artifactId>openseadragon</artifactId>
       <version>${version.webjar-openseadragon}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.webjars</groupId>
+      <artifactId>respond</artifactId>
+      <version>${version.webjar-respond}</version>
     </dependency>
   </dependencies>
 
