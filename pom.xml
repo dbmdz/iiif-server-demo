@@ -67,6 +67,7 @@
     <version.nexus-staging-maven-plugin>1.6.7</version.nexus-staging-maven-plugin>
     <version.slf4j>1.7.13</version.slf4j>
     <version.versions-maven-plugin>2.2</version.versions-maven-plugin>
+    <version.webjar-bootstrap>3.3.7</version.webjar-bootstrap>
     <version.webjar-openseadragon>2.2.1</version.webjar-openseadragon>
   </properties>
 
@@ -137,6 +138,17 @@
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-aop</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.webjars</groupId>
+      <artifactId>bootstrap</artifactId>
+      <version>${version.webjar-bootstrap}</version>
+      <exclusions>
+          <exclusion>
+              <groupId>org.webjars</groupId>
+              <artifactId>jquery</artifactId>
+          </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>org.webjars</groupId>
