@@ -14,10 +14,15 @@ import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 @PropertySource(value = {
   "classpath:de/digitalcollections/iiif/serverdemo/config/SpringConfigWeb-${spring.profiles.active:PROD}.properties"
 })
-public class SpringConfigWeb extends WebMvcAutoConfigurationAdapter {
+public class SpringConfigWeb extends WebMvcAutoConfigurationAdapter { // implements EmbeddedServletContainerCustomizer
 
   @Bean
   public static PropertySourcesPlaceholderConfigurer propertySourcesPlaceholderConfigurer() {
     return new PropertySourcesPlaceholderConfigurer();
   }
+
+//  @Override
+//  public void customize(ConfigurableEmbeddedServletContainer container) {
+//    container.setContextPath("/demo");
+//  }
 }
