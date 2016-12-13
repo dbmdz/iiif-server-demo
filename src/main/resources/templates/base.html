@@ -15,19 +15,19 @@
     <title>IIIF Server Demo</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="/webjars/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+    <link th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}" rel="stylesheet"/>
     <!-- Bootstrap theme -->
-    <link href="/webjars/bootstrap/3.3.7/css/bootstrap-theme.min.css" rel="stylesheet"/>
+    <link th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap-theme.min.css}" rel="stylesheet"/>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="/css/thirdparty/ie10-viewport-bug-workaround.css" rel="stylesheet"/>
+    <link th:href="@{/css/thirdparty/ie10-viewport-bug-workaround.css}" rel="stylesheet"/>
 
     <!-- Custom styles for this template -->
-    <link href="/css/theme.css" rel="stylesheet"/>
+    <link th:href="@{/css/theme.css}" rel="stylesheet"/>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-      <script src="/webjars/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="/webjars/respond/1.4.2/dest/respond.min.js"></script>
+      <script th:src="@{/webjars/html5shiv/3.7.3/html5shiv.min.js}"></script>
+      <script th:src="@{/webjars/respond/1.4.2/dest/respond.min.js}"></script>
     <![endif]-->
   </head>
 
@@ -35,14 +35,15 @@
     <!-- Bootstrap core JavaScript
         ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script>
-      <!--
-      window.jQuery || document.write('<script src="/webjars/jquery/1.11.3/jquery.min.js"><\/script>');
-      //-->
+    <script th:inline="javascript">
+      /*<![CDATA[*/
+      var url = /*[[@{/webjars/jquery/1.11.3/jquery.min.js}]]*/;
+      window.jQuery || document.write('<script src="' + url + '"><\/script>');
+      /*]]>*/
     </script>
-    <script src="/webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script th:src="@{/webjars/bootstrap/3.3.7/js/bootstrap.min.js}"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="/js/thirdparty/ie10-viewport-bug-workaround.js"></script>
+    <script th:src="@{/js/thirdparty/ie10-viewport-bug-workaround.js}"></script>
 
     <!-- Fixed navbar -->
     <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -90,7 +91,7 @@
         <p>visit us on <a href="https://github.com/dbmdz">GitHub</a> - License: <a href="https://opensource.org/licenses/MIT">MIT</a></p>
       </footer>
     </div> <!-- /container -->
-    
-    <th:block layout:fragment="morejs"> </th:block>
-  </body>
+
+  <th:block layout:fragment="morejs"> </th:block>
+</body>
 </html>

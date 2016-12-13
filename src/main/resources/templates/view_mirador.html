@@ -19,55 +19,51 @@
   <th:block layout:fragment="morejs">
     <script th:src="@{/webjars/mirador/2.1.2/mirador.min.js}"></script>
     <script type="text/javascript" th:inline="javascript">
-      $(function () {
-      Mirador({
-      'id': 'viewer',
-              'buildPath': '/webjars/mirador/2.1.2/',
-              'workspaceType': 'bookReading',
-              'layout': '1x1',
-              'mainMenuSettings': {
-              'show': true,
-                      'buttons': {
-                      'bookmark': true,
-                              'layout': true
-                      },
-                      'userLogo': {
-                      'label': 'IIIF',
-                              'attributes': { 'href': 'http://iiif.io' }
-                      }
-              },
-              'showAddFromURLBox': false,
-              'saveSession': false,
-              'data': [
-              {
-              /*<![CDATA[*/
-              'manifestUri': /*[[@{__${manifestId}__}]]*/
-                      /*]]>*/
-              }
-              ],
-              'windowObjects': [
-              {
-              /*<![CDATA[*/
-              'loadedManifest': /*[[@{__${manifestId}__}]]*/,
-                      /*]]>*/
-                      'viewType': 'ImageView',
-                      'layoutOptions': {
-                      'close': false,
-                              'slotRight': false,
-                              'slotLeft': false,
-                              'slotAbove': false,
-                              'slotBelow': false
-                      },
-                      'annotationLayer': false,
-                      'annotationCreation': false,
-                      'saveSession': false,
-                      'displayLayout': true,
-                      'bottomPanel': true,
-                      'sidePanel': false
-              }
-              ],
-              'annotationEndpoint': { 'name':'Local Storage', 'module': 'LocalStorageEndpoint' }
-      });
+      $(function(){
+        Mirador({
+          'id': 'viewer',
+          'buildPath': /*[[@{/webjars/mirador/2.1.2/}]]*/,
+          'workspaceType': 'bookReading',
+          'layout': '1x1',
+          'mainMenuSettings': {
+            'show': true,
+            'buttons': {
+              'bookmark': true,
+              'layout': true
+            },
+            'userLogo': {
+              'label': 'IIIF',
+              'attributes': { 'href': 'http://iiif.io' }
+            }
+          },
+          'showAddFromURLBox': false,
+          'saveSession': false,
+          'data': [{
+            /*<![CDATA[*/
+            'manifestUri': /*[[@{__${manifestId}__}]]*/
+            /*]]>*/
+          }],
+          'windowObjects': [{
+            /*<![CDATA[*/
+            'loadedManifest': /*[[@{__${manifestId}__}]]*/,
+            /*]]>*/
+            'viewType': 'ImageView',
+            'layoutOptions': {
+              'close': false,
+              'slotRight': false,
+              'slotLeft': false,
+              'slotAbove': false,
+              'slotBelow': false
+            },
+            'annotationLayer': false,
+            'annotationCreation': false,
+            'saveSession': false,
+            'displayLayout': true,
+            'bottomPanel': true,
+            'sidePanel': false
+          }],
+          'annotationEndpoint': { 'name':'Local Storage', 'module': 'LocalStorageEndpoint' }
+        });
       });
     </script>
   </th:block>
