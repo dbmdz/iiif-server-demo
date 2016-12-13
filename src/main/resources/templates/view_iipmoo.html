@@ -40,14 +40,14 @@ and open the template in the editor.
     <script type="text/javascript" th:src="@{/js/vendor/iipmoo/iipmooviewer-2.0.js}"></script>
     <script type="text/javascript" th:src="@{/js/vendor/iipmoo/protocols/iiif.js}"></script>
     <script type="application/javascript" th:inline="javascript">
-       /*<![CDATA[*/
-          var iipmooviewer = new IIPMooViewer( "viewer", {
-                            image: /*[[@{__${image}__}]]*/, 
-                            credit: "My Title",
-                            protocol : 'IIIF',
-                            server: /*[[@{__${serverUrl}__}]]*/
-                          });
-                          /*]]>*/
+      /*<![CDATA[*/
+      var iipmooviewer = new IIPMooViewer( "viewer", {
+        image: /*[[@{__${image}__}]]*/,
+        credit: "My Title",
+        protocol : 'IIIF',
+        server: /*[[@{__${serverUrl}__}]]*/
+      });
+      /*]]>*/
     </script>
   </head>
 

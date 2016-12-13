@@ -12,27 +12,25 @@ and open the template in the editor.
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" th:href="@{/js/vendor/leaflet/css/leaflet.css}" />
-  
-
   </head>
   <body>
     <section layout:fragment="content">
-       <header>
+      <header>
         <h1>IIIF-Leaflet viewer: Leaflet-IIIF 0.1.2 </h1>
       </header>
-    <div id="map" style="width: 1000px; height: 700px;"></div>
-    <script th:src="@{/js/vendor/leaflet/leaflet.js}"></script>
-    <script th:src="@{/webjars/jquery/1.11.3/jquery.min.js}" type="text/javascript"></script>
-    <script th:src="@{/js/vendor/leaflet/leaflet-iiif.js}"></script>
-    <script type="text/javascript" th:inline="javascript">
-      /*<![CDATA[*/
-      var map = L.map('map', {
-              center: [0, 0],
-              crs: L.CRS.Simple,
-              zoom: 0,
-            }).addLayer(L.tileLayer.iiif(/*[[@{__${infoUrl}__}]]*/));
-       /*]]>*/
-    </script>
+      <div id="map" style="width: 1000px; height: 700px;"></div>
+      <script th:src="@{/js/vendor/leaflet/leaflet.js}"></script>
+      <script th:src="@{/webjars/jquery/1.11.3/jquery.min.js}" type="text/javascript"></script>
+      <script th:src="@{/js/vendor/leaflet/leaflet-iiif.js}"></script>
+      <script type="text/javascript" th:inline="javascript">
+        /*<![CDATA[*/
+        var map = L.map('map', {
+          center: [0, 0],
+          crs: L.CRS.Simple,
+          zoom: 0,
+        }).addLayer(L.tileLayer.iiif(/*[[@{__${infoUrl}__}]]*/));
+        /*]]>*/
+      </script>
     </section>
   </body>
 </html>

@@ -13,24 +13,24 @@
         <script th:src="@{/webjars/openseadragon/2.2.1/openseadragon.min.js}"></script>
         <script type="application/javascript" th:inline="javascript">
           var viewer = OpenSeadragon({
-          id: "preview",
-          /*<![CDATA[*/
-          prefixUrl: /*[[@{/webjars/openseadragon/2.2.1/images/}]]*/,
-          /*]]>*/
-          tileWidth: 64,
-          /*<![CDATA[*/
-          tileSources: /*[[@{__${infoUrl}__}]]*/
-          /*]]>*/
+            id: "preview",
+            /*<![CDATA[*/
+            prefixUrl: /*[[@{/webjars/openseadragon/2.2.1/images/}]]*/,
+            /*]]>*/
+            tileWidth: 64,
+            /*<![CDATA[*/
+            tileSources: /*[[@{__${infoUrl}__}]]*/
+            /*]]>*/
           });
         </script>
       </main>
-      
+
       <p></p>
-      
+
       <div class="alert alert-warning" role="alert">
         <strong>License:</strong>
         The demo image is part of the "Ottheinrich-Bibel" page "Einzug in Jerusalem" presented by the <a href="https://www.bsb-muenchen.de">Bavarian State Library</a> <a href="http://daten.digitale-sammlungen.de/bsb00026283/image_41">here</a>.<br/>
-      It is under the "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"-License (see <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">http://creativecommons.org/licenses/by-nc-sa/4.0/</a>)
+        It is under the "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"-License (see <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">http://creativecommons.org/licenses/by-nc-sa/4.0/</a>)
       </div>
 
     </section>
