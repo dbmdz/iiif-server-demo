@@ -6,7 +6,7 @@
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
-    <version>1.2.6.RELEASE</version>
+    <version>1.2.8.RELEASE</version>
   </parent>
 
   <groupId>de.digitalcollections</groupId>
@@ -58,7 +58,10 @@
     <version.iiif-image>2.2.5-SNAPSHOT</version.iiif-image>
     <version.iiif-mirador>2.1.2</version.iiif-mirador>
     <version.iiif-presentation>3.2.4-SNAPSHOT</version.iiif-presentation>
+    <version.jackson>2.8.1</version.jackson>
     <version.jacoco-maven-plugin>0.7.4.201502262128</version.jacoco-maven-plugin>
+    <version.logback-classic>1.1.7</version.logback-classic>
+    <version.logback-ext-spring>0.1.4</version.logback-ext-spring>
     <version.maven-compiler-plugin>3.3</version.maven-compiler-plugin>
     <version.maven-gpg-plugin>1.6</version.maven-gpg-plugin>
     <version.maven-javadoc-plugin>2.10.4</version.maven-javadoc-plugin>
@@ -76,6 +79,26 @@
   </properties>
 
   <dependencies>
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-classic</artifactId>
+      <version>${version.logback-classic}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-annotations</artifactId>
+      <version>${version.jackson}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-core</artifactId>
+      <version>${version.jackson}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
+      <version>${version.jackson}</version>
+    </dependency>
     <dependency>
       <groupId>de.digitalcollections</groupId>
       <artifactId>iiif-image-backend-impl</artifactId>
@@ -113,12 +136,19 @@
       <scope>runtime</scope>
     </dependency>
     <dependency>
-      <groupId>org.slf4j</groupId>
-      <artifactId>slf4j-api</artifactId>
+      <groupId>org.logback-extensions</groupId>
+      <artifactId>logback-ext-spring</artifactId>
+      <version>${version.logback-ext-spring}</version>
+      <exclusions>
+        <exclusion>
+          <groupId>ch.qos.logback</groupId>
+          <artifactId>logback-classic</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>org.slf4j</groupId>
-      <artifactId>slf4j-log4j12</artifactId>
+      <artifactId>slf4j-api</artifactId>
     </dependency>
     <dependency>
       <groupId>org.springframework.boot</groupId>
