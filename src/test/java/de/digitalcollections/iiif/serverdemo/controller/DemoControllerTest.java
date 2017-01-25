@@ -28,7 +28,7 @@ public class DemoControllerTest {
 
   @Test
   public void getHello() throws Exception {
-    ResultActions perform = mvc.perform(MockMvcRequestBuilders.get("/demo/1234/view_image.html").
+    ResultActions perform = mvc.perform(MockMvcRequestBuilders.get("/1234/view_image.html").
             accept(MediaType.TEXT_HTML));
     perform.andExpect(MockMvcResultMatchers.status().isOk());
   }
