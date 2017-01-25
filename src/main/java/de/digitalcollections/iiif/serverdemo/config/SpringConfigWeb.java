@@ -20,9 +20,4 @@ public class SpringConfigWeb extends WebMvcAutoConfigurationAdapter { // impleme
   public static PropertySourcesPlaceholderConfigurer propertySourcesPlaceholderConfigurer() {
     return new PropertySourcesPlaceholderConfigurer();
   }
-
-//  @Override
-//  public void customize(ConfigurableEmbeddedServletContainer container) {
-//    container.setContextPath("/demo");
-//  }
 }
