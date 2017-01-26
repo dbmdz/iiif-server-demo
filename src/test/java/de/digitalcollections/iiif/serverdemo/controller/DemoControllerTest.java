@@ -2,7 +2,6 @@ package de.digitalcollections.iiif.serverdemo.controller;
 
 import static org.hamcrest.CoreMatchers.is;
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.SpringApplicationConfiguration;
@@ -17,6 +16,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.model;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
+import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = MockServletContext.class)
@@ -27,7 +27,11 @@ public class DemoControllerTest {
 
   @Before
   public void setUp() throws Exception {
-    mvc = MockMvcBuilders.standaloneSetup(new DemoController()).build();
+    InternalResourceViewResolver resolver = new InternalResourceViewResolver();
+    resolver.setPrefix("/WEB-INF/view/");
+    mvc = MockMvcBuilders.standaloneSetup(new DemoController())
+        .setViewResolvers(resolver)
+        .build();
   }
 
   @Test
@@ -42,7 +46,6 @@ public class DemoControllerTest {
         .andExpect(model().attribute("active", is("home")));
   }
 
-  @Ignore
   @Test
   public void shouldGetAbout() throws Exception {
     mvc.perform(get("/about"))
