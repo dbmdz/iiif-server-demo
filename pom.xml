@@ -296,6 +296,7 @@ The Spring Boot Maven plugin provides many convenient features:
           <excludes>
             <exclude>**/Application*</exclude>
             <exclude>**/SpringConfig*</exclude>
+            <exclude>**/WebappInitializer*</exclude>
           </excludes>
         </configuration>
       </plugin>
