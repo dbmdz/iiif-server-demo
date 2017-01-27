@@ -1,6 +1,5 @@
 body {
   padding-top: 70px;
-  padding-bottom: 30px;
 }
 
 .theme-dropdown .dropdown-menu {
@@ -26,10 +25,15 @@ body {
 #viewer {
   background: #333;
   width: 100%;
-  height: calc(100vh - 160px);
+  height: calc(100vh - 130px);
   position: relative;
 }
 
 .window-manifest-title {
   height: 1.25em;
+}
+
+.navbar-brand img {
+  height: 19px;
+  margin-top: -5px;
 }
