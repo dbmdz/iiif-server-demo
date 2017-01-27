@@ -121,13 +121,11 @@
       <groupId>de.digitalcollections</groupId>
       <artifactId>iiif-presentation-backend-impl</artifactId>
       <version>${version.iiif-presentation}</version>
-      <scope>runtime</scope>
     </dependency>
     <dependency>
       <groupId>de.digitalcollections</groupId>
       <artifactId>iiif-presentation-business-impl</artifactId>
       <version>${version.iiif-presentation}</version>
-      <scope>runtime</scope>
     </dependency>
     <dependency>
       <groupId>de.digitalcollections</groupId>
