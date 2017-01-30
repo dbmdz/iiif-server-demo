@@ -32,9 +32,11 @@ public class DemoPresentationRepositoryImpl extends PresentationRepositoryImpl {
     this.serverUrl = serverUrl;
   }
 
-  private String replaceUrlEndpoints(String json) {
-    json = json.replaceAll(this.serverUrlPlaceholder, this.serverUrl);
-    LOGGER.info("replaced all occurrences of the placeholder {} with the application url {}", this.serverUrlPlaceholder, this.serverUrl);
+  protected String replaceUrlEndpoints(String json) {
+    if (!this.serverUrlPlaceholder.equals(this.serverUrl)) {
+      json = json.replaceAll(this.serverUrlPlaceholder, this.serverUrl);
+      LOGGER.info("replaced all occurrences of the placeholder {} with the application url {}", this.serverUrlPlaceholder, this.serverUrl);
+    }
     return json;
   }
 
