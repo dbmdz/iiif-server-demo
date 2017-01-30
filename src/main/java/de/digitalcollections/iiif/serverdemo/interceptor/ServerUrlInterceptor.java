@@ -3,14 +3,10 @@ package de.digitalcollections.iiif.serverdemo.interceptor;
 import de.digitalcollections.iiif.serverdemo.service.DemoPresentationServiceImpl;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
 public class ServerUrlInterceptor extends HandlerInterceptorAdapter {
-
-  private static final Logger LOGGER = LoggerFactory.getLogger(ServerUrlInterceptor.class);
 
   @Autowired
   DemoPresentationServiceImpl demoPresentationServiceImpl;
