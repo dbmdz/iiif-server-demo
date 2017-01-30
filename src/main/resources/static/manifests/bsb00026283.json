@@ -1,9 +1,9 @@
 {
-  "@id": "http://localhost:8080/demo/presentation/v2/bsb00026283/manifest",
+  "@id": "http://localhost:8080/presentation/v2/bsb00026283/manifest",
   "label": "Ottheinrich-Bibel",
   "attribution": "Bayerische Staatsbibliothek",
   "license": "http://creativecommons.org/licenses/by/3.0",
-  "logo": "http://localhost:8080/demo/images/bsb_logo.png",
+  "logo": "http://localhost:8080/images/bsb_logo.png",
   "seeAlso": [
     "http://daten.digitale-sammlungen.de/~db/0002/bsb00026283/images"
   ],
@@ -44,137 +44,137 @@
     },
     {
       "label": "IIIF-Manifest",
-      "value": "http://localhost:8080/demo/presentation/v2/bsb00026283/manifest"
+      "value": "http://localhost:8080/presentation/v2/bsb00026283/manifest"
     }
   ],
   "sequences": [
     {
       "canvases": [
         {
-          "@id": "http://localhost:8080/demo/presentation/v2/bsb00026283_00041/canvas/1",
+          "@id": "http://localhost:8080/presentation/v2/bsb00026283_00041/canvas/1",
           "label": "Page 41",
           "height": 4275,
           "width": 2592,
           "images": [
             {
               "motivation": "sc:painting",
-              "on": "http://localhost:8080/demo/presentation/v2/bsb00026283_00041/canvas/1",
+              "on": "http://localhost:8080/presentation/v2/bsb00026283_00041/canvas/1",
               "resource": {
                 "service": {
                   "profile": "http://iiif.io/api/image/2/level1.json",
                   "@context": "http://iiif.io/api/image/2/context.json",
-                  "@id": "http://localhost:8080/demo/image/v2/bsb00026283_00041"
+                  "@id": "http://localhost:8080/image/v2/bsb00026283_00041"
                 },
                 "height": 4275,
                 "width": 2592,
-                "@id": "http://localhost:8080/demo/presentation/v2/bsb00026283/res/bsb00026283_00041",
+                "@id": "http://localhost:8080/presentation/v2/bsb00026283/res/bsb00026283_00041",
                 "@type": "dctypes:Image"
               },
-              "@id": "http://localhost:8080/demo/presentation/v2/bsb00026283/image/bsb00026283_00041",
+              "@id": "http://localhost:8080/presentation/v2/bsb00026283/image/bsb00026283_00041",
               "@type": "oa:Annotation"
             }
           ],
           "@type": "sc:Canvas"
         },
         {
-          "@id": "http://localhost:8080/demo/presentation/v2/bsb00026283_00042/canvas/2",
+          "@id": "http://localhost:8080/presentation/v2/bsb00026283_00042/canvas/2",
           "label": "Page 42",
           "height": 4275,
           "width": 2592,
           "images": [
             {
               "motivation": "sc:painting",
-              "on": "http://localhost:8080/demo/presentation/v2/bsb00026283_00042/canvas/2",
+              "on": "http://localhost:8080/presentation/v2/bsb00026283_00042/canvas/2",
               "resource": {
                 "service": {
                   "profile": "http://iiif.io/api/image/2/level1.json",
                   "@context": "http://iiif.io/api/image/2/context.json",
-                  "@id": "http://localhost:8080/demo/image/v2/bsb00026283_00042"
+                  "@id": "http://localhost:8080/image/v2/bsb00026283_00042"
                 },
                 "height": 4275,
                 "width": 2592,
-                "@id": "http://localhost:8080/demo/presentation/v2/bsb00026283/res/bsb00026283_00042",
+                "@id": "http://localhost:8080/presentation/v2/bsb00026283/res/bsb00026283_00042",
                 "@type": "dctypes:Image"
               },
-              "@id": "http://localhost:8080/demo/presentation/v2/bsb00026283/image/bsb00026283_00042",
+              "@id": "http://localhost:8080/presentation/v2/bsb00026283/image/bsb00026283_00042",
               "@type": "oa:Annotation"
             }
           ],
           "@type": "sc:Canvas"
         },
         {
-          "@id": "http://localhost:8080/demo/presentation/v2/bsb00026283_00043/canvas/3",
+          "@id": "http://localhost:8080/presentation/v2/bsb00026283_00043/canvas/3",
           "label": "Page 43",
           "height": 4275,
           "width": 2592,
           "images": [
             {
               "motivation": "sc:painting",
-              "on": "http://localhost:8080/demo/presentation/v2/bsb00026283_00043/canvas/3",
+              "on": "http://localhost:8080/presentation/v2/bsb00026283_00043/canvas/3",
               "resource": {
                 "service": {
                   "profile": "http://iiif.io/api/image/2/level1.json",
                   "@context": "http://iiif.io/api/image/2/context.json",
-                  "@id": "http://localhost:8080/demo/image/v2/bsb00026283_00043"
+                  "@id": "http://localhost:8080/image/v2/bsb00026283_00043"
                 },
                 "height": 4275,
                 "width": 2592,
-                "@id": "http://localhost:8080/demo/presentation/v2/bsb00026283/res/bsb00026283_00043",
+                "@id": "http://localhost:8080/presentation/v2/bsb00026283/res/bsb00026283_00043",
                 "@type": "dctypes:Image"
               },
-              "@id": "http://localhost:8080/demo/presentation/v2/bsb00026283/image/bsb00026283_00043",
+              "@id": "http://localhost:8080/presentation/v2/bsb00026283/image/bsb00026283_00043",
               "@type": "oa:Annotation"
             }
           ],
           "@type": "sc:Canvas"
         },
         {
-          "@id": "http://localhost:8080/demo/presentation/v2/bsb00026283_00044/canvas/4",
+          "@id": "http://localhost:8080/presentation/v2/bsb00026283_00044/canvas/4",
           "label": "Page 44",
           "height": 4275,
           "width": 2592,
           "images": [
             {
               "motivation": "sc:painting",
-              "on": "http://localhost:8080/demo/presentation/v2/bsb00026283_00044/canvas/4",
+              "on": "http://localhost:8080/presentation/v2/bsb00026283_00044/canvas/4",
               "resource": {
                 "service": {
                   "profile": "http://iiif.io/api/image/2/level1.json",
                   "@context": "http://iiif.io/api/image/2/context.json",
-                  "@id": "http://localhost:8080/demo/image/v2/bsb00026283_00044"
+                  "@id": "http://localhost:8080/image/v2/bsb00026283_00044"
                 },
                 "height": 4275,
                 "width": 2592,
-                "@id": "http://localhost:8080/demo/presentation/v2/bsb00026283/res/bsb00026283_00044",
+                "@id": "http://localhost:8080/presentation/v2/bsb00026283/res/bsb00026283_00044",
                 "@type": "dctypes:Image"
               },
-              "@id": "http://localhost:8080/demo/presentation/v2/bsb00026283/image/bsb00026283_00044",
+              "@id": "http://localhost:8080/presentation/v2/bsb00026283/image/bsb00026283_00044",
               "@type": "oa:Annotation"
             }
           ],
           "@type": "sc:Canvas"
         },
         {
-          "@id": "http://localhost:8080/demo/presentation/v2/bsb00026283_00045/canvas/5",
+          "@id": "http://localhost:8080/presentation/v2/bsb00026283_00045/canvas/5",
           "label": "Page 45",
           "height": 4275,
           "width": 2592,
           "images": [
             {
               "motivation": "sc:painting",
-              "on": "http://localhost:8080/demo/presentation/v2/bsb00026283_00045/canvas/5",
+              "on": "http://localhost:8080/presentation/v2/bsb00026283_00045/canvas/5",
               "resource": {
                 "service": {
                   "profile": "http://iiif.io/api/image/2/level1.json",
                   "@context": "http://iiif.io/api/image/2/context.json",
-                  "@id": "http://localhost:8080/demo/image/v2/bsb00026283_00045"
+                  "@id": "http://localhost:8080/image/v2/bsb00026283_00045"
                 },
                 "height": 4275,
                 "width": 2592,
-                "@id": "http://localhost:8080/demo/presentation/v2/bsb00026283/res/bsb00026283_00045",
+                "@id": "http://localhost:8080/presentation/v2/bsb00026283/res/bsb00026283_00045",
                 "@type": "dctypes:Image"
               },
-              "@id": "http://localhost:8080/demo/presentation/v2/bsb00026283/image/bsb00026283_00045",
+              "@id": "http://localhost:8080/presentation/v2/bsb00026283/image/bsb00026283_00045",
               "@type": "oa:Annotation"
             }
           ],
@@ -183,7 +183,7 @@
       ],
       "label": "Default",
       "@type": "sc:Sequence",
-      "@id": "http://localhost:8080/demo/presentation/v2/bsb00026283/sequence/normal"
+      "@id": "http://localhost:8080/presentation/v2/bsb00026283/sequence/normal"
     }
   ],
   "viewingDirection": "left-to-right",

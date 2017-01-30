@@ -23,7 +23,9 @@ public class ServerUrlInterceptor extends HandlerInterceptorAdapter {
     String requestUrl = request.getRequestURL().toString();
     if (requestUrl.endsWith("/manifest")) {
       String contextPath = request.getContextPath();
-      String serverUrl = requestUrl.substring(0, requestUrl.indexOf(contextPath));
+      String requestUri = request.getRequestURI();
+      String requestUriWithoutContextPath = requestUri.substring(contextPath.length());
+      String serverUrl = requestUrl.substring(0, requestUrl.indexOf(requestUriWithoutContextPath));
       demoPresentationServiceImpl.setServerUrl(serverUrl);
     }
     return true;
