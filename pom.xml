@@ -56,7 +56,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
     <version.iiif-image>2.2.5-SNAPSHOT</version.iiif-image>
-    <version.iiif-mirador>2.1.3-SNAPSHOT</version.iiif-mirador>
+    <version.iiif-mirador>2.2.0</version.iiif-mirador>
     <version.iiif-presentation>3.2.4-SNAPSHOT</version.iiif-presentation>
     <version.jackson>2.8.6</version.jackson>
     <version.jacoco-maven-plugin>0.7.4.201502262128</version.jacoco-maven-plugin>
@@ -198,8 +198,8 @@
       <version>${version.webjar-jquery}</version>
     </dependency>
     <dependency>
-      <groupId>de.digitalcollections</groupId>
-      <artifactId>mirador-dev</artifactId>
+      <groupId>org.webjars</groupId>
+      <artifactId>mirador</artifactId>
       <version>${version.iiif-mirador}</version>
     </dependency>
     <dependency>
