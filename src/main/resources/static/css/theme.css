@@ -33,6 +33,10 @@ body {
   box-sizing: content-box;
 }
 
+.overlay * {
+  box-sizing: border-box !important;
+}
+
 .window-manifest-title {
   height: 1.25em;
 }
