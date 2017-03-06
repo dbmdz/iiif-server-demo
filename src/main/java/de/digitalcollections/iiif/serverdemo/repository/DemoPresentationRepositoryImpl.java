@@ -21,8 +21,8 @@ public class DemoPresentationRepositoryImpl extends PresentationRepositoryImpl {
   private String serverUrl;
 
   @Override
-  public String getManifestJson(URI manifestUri) throws NotFoundException {
-    String json = super.getManifestJson(manifestUri);
+  public String getResourceJson(URI manifestUri) throws NotFoundException {
+    String json = super.getResourceJson(manifestUri);
     json = replaceUrlEndpoints(json);
     LOGGER.debug("manifest json: " + json);
     return json;
@@ -35,7 +35,8 @@ public class DemoPresentationRepositoryImpl extends PresentationRepositoryImpl {
   protected String replaceUrlEndpoints(String json) {
     if (!this.serverUrlPlaceholder.equals(this.serverUrl)) {
       json = json.replaceAll(this.serverUrlPlaceholder, this.serverUrl);
-      LOGGER.info("replaced all occurrences of the placeholder {} with the application url {}", this.serverUrlPlaceholder, this.serverUrl);
+      LOGGER.info("replaced all occurrences of the placeholder {} with the application url {}",
+              this.serverUrlPlaceholder, this.serverUrl);
     }
     return json;
   }
