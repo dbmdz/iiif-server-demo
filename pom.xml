@@ -79,6 +79,7 @@
     <version.webjar-leaflet-iiif>1.1.1</version.webjar-leaflet-iiif>
     <version.webjar-openseadragon>2.2.1</version.webjar-openseadragon>
     <version.webjar-respond>1.4.2</version.webjar-respond>
+    <version.webjar-universalviewer>1.6.14</version.webjar-universalviewer>
   </properties>
 
   <dependencies>
@@ -228,6 +229,11 @@
       <groupId>org.webjars.npm</groupId>
       <artifactId>leaflet-iiif</artifactId>
       <version>${version.webjar-leaflet-iiif}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.webjars.npm</groupId>
+      <artifactId>universalviewer</artifactId>
+      <version>${version.webjar-universalviewer}</version>
     </dependency>
   </dependencies>
 
