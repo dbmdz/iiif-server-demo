@@ -38,7 +38,7 @@ public class DemoController {
   }
 
   @RequestMapping(value = "/{identifier}/view_image.html", method = RequestMethod.GET)
-  public String getPreviewPage(@PathVariable String identifier,
+  public String getOpenSeadragonPage(@PathVariable String identifier,
           HttpServletRequest request, Model model) {
     model.addAttribute("active", "demos");
     model.addAttribute("infoUrl", "/image/v2/" + identifier + "/info.json");

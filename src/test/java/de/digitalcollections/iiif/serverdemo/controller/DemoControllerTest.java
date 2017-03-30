@@ -65,7 +65,7 @@ public class DemoControllerTest {
   }
 
   @Test
-  public void shouldGetPreviewPage() throws Exception {
+  public void shouldGetOpenSeadragonPage() throws Exception {
     mvc.perform(get("/12345/view_image.html"))
             .andExpect(model().attribute("active", is("demos")))
             .andExpect(model().attribute("infoUrl", is("/image/v2/12345/info.json")));
