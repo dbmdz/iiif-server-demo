@@ -91,13 +91,4 @@ public class DemoController {
     model.addAttribute("manifestId", "/presentation/v2/" + identifier + "/manifest");
     return "view_universal";
   }
-
-  @RequestMapping(value = "/{identifier}/view_diva.html", method = RequestMethod.GET)
-  public String getDivaViewerPage(@PathVariable String identifier,
-          HttpServletRequest request, Model model) {
-    model.addAttribute("active", "demos");
-    model.addAttribute("manifestId", "/presentation/v2/" + identifier + "/manifest");
-    return "view_diva";
-  }
-
 }

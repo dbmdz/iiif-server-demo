@@ -106,11 +106,4 @@ public class DemoControllerTest {
             .andExpect(model().attribute("active", is("demos")))
             .andExpect(model().attribute("manifestId", is("/presentation/v2/12345/manifest")));
   }
-
-  @Test
-  public void shouldGetDivaViewerPage() throws Exception {
-    mvc.perform(get("/12345/view_diva.html"))
-            .andExpect(model().attribute("active", is("demos")))
-            .andExpect(model().attribute("manifestId", is("/presentation/v2/12345/manifest")));
-  }
 }
