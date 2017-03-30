@@ -64,6 +64,12 @@ public class DemoController {
     return "view_leaflet-presentation";
   }
 
+  @RequestMapping(value = {"/presentation-api-url.html"}, method = RequestMethod.GET)
+  public String getPresentationApiUrlDemo(Model model) {
+    model.addAttribute("active", "demos");
+    return "view_presenation-api-url";
+  }
+
   @RequestMapping(value = "/{identifier}/view_presentation.html", method = RequestMethod.GET)
   public String getMiradorPage(@PathVariable String identifier,
           HttpServletRequest request, Model model) {

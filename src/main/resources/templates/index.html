@@ -12,23 +12,35 @@
       </div>
 
       <div class="row">
+        <div class="col-sm-12">
+          <p>The <b>IIIF Image API</b> for accessing images provided by an IIIF server is specified at <a href="http://iiif.io/api/image/2.1/" target="_blank">http://iiif.io/api/image/2.1/</a>.</p>
+          
+          <p>The main objective of the <b>IIIF Presentation API</b> (specified at <a href="http://iiif.io/api/presentation/2.1/" target="_blank">http://iiif.io/api/presentation/2.1/</a>) is to provide the information necessary to allow a rich, online viewing environment for primarily image-based objects to be presented to a human user.</p>
+        </div>
+      </div>
+      
+      <div class="row">
         <div class="col-sm-6">
           <div class="panel panel-primary">
             <div class="panel-heading">
-              <h3 class="panel-title">IIIF Image API 2.0</h3>
+              <h3 class="panel-title">IIIF Image API 2.1</h3>
             </div>
             <div class="panel-body">
               <div class="list-group">
                 <a th:href="@{/image-api-url.html}" class="list-group-item">
-                  <h4 class="list-group-item-heading">Image API Url</h4>
-                  <p class="list-group-item-text"><i class="glyphicon glyphicon-play-circle"></i> View demo of Image API Url params.</p>
+                  <h4 class="list-group-item-heading">Basics: Image Request URI Syntax</h4>
+                  <p class="list-group-item-text"><i class="glyphicon glyphicon-play-circle"></i> Request an image, which may be part of a larger image.</p>
+                </a>
+                <a th:href="@{/image-api-url.html}" class="list-group-item">
+                  <h4 class="list-group-item-heading">Basics: Image Information Request URI Syntax</h4>
+                  <p class="list-group-item-text"><i class="glyphicon glyphicon-play-circle"></i> Request information about the image, including characteristics, functionality available, and related services.</p>
                 </a>
                 <a th:href="@{/bsb00026283_00041/view_image.html}" class="list-group-item">
-                  <h4 class="list-group-item-heading">OpenSeadragon viewer</h4>
+                  <h4 class="list-group-item-heading">Image-Viewer: OpenSeadragon</h4>
                   <p class="list-group-item-text"><i class="glyphicon glyphicon-play-circle"></i> View zoomable image demo (using OpenSeadragon 2.2.1 viewer)</p>
                 </a>
                 <a th:href="@{/bsb00026283_00041/view_leaflet-image.html}" class="list-group-item">
-                  <h4 class="list-group-item-heading">Leaflet-IIIF viewer</h4>
+                  <h4 class="list-group-item-heading">Image-Viewer: Leaflet-IIIF</h4>
                   <p class="list-group-item-text"><i class="glyphicon glyphicon-play-circle"></i> View zoomable image demo (using Leaflet-IIIF 0.1.2 viewer)</p>
                 </a>
                 <!-- <a th:href="@{/demo/tiled_iipmoo/view_iipmoo.html}" class="list-group-item">
@@ -42,24 +54,24 @@
         <div class="col-sm-6">
           <div class="panel panel-primary">
             <div class="panel-heading">
-              <h3 class="panel-title">IIIF Presentation API 2.0</h3>
+              <h3 class="panel-title">IIIF Presentation API 2.1</h3>
             </div>
             <div class="panel-body">
               <div class="list-group">
                 <a th:href="@{/bsb00026283/view_presentation.html}" class="list-group-item">
-                  <h4 class="list-group-item-heading">Mirador viewer</h4>
+                  <h4 class="list-group-item-heading">Object-Viewer: Mirador</h4>
                   <p class="list-group-item-text"><i class="glyphicon glyphicon-play-circle"></i> View pagable image demo (using Mirador 2.3.0 viewer)</p>
                 </a>
                 <a th:href="@{/bsb00026283/view_universal.html}" class="list-group-item">
-                  <h4 class="list-group-item-heading">UniversalViewer viewer</h4>
+                  <h4 class="list-group-item-heading">Object-Viewer: UniversalViewer</h4>
                   <p class="list-group-item-text"><i class="glyphicon glyphicon-play-circle"></i> View pagable image demo (using UniversalViewer 1.6.14 viewer)</p>
                 </a>
                 <a th:href="@{/bsb00026283/view_diva.html}" class="list-group-item">
-                  <h4 class="list-group-item-heading">Diva viewer</h4>
+                  <h4 class="list-group-item-heading">Object-Viewer: Diva</h4>
                   <p class="list-group-item-text"><i class="glyphicon glyphicon-play-circle"></i> View pagable image demo (using Diva 4.1.0 viewer)</p>
                 </a>
                 <a th:href="@{/bsb00026283/view_leaflet-presentation.html}" class="list-group-item">
-                  <h4 class="list-group-item-heading">Leaflet-IIIF viewer</h4>
+                  <h4 class="list-group-item-heading">Object-Viewer: Leaflet-IIIF</h4>
                   <p class="list-group-item-text"><i class="glyphicon glyphicon-play-circle"></i> View pagable image demo (using Leaflet-IIIF 0.1.2 viewer)</p>
                 </a>
               </div>
