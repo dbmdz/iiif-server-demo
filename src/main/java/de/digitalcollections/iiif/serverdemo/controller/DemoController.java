@@ -25,10 +25,16 @@ public class DemoController {
     return "about";
   }
 
-  @RequestMapping(value = {"/image-api-url.html"}, method = RequestMethod.GET)
-  public String getImageApiUrlDemo(Model model) {
+  @RequestMapping(value = {"/image-request-url.html"}, method = RequestMethod.GET)
+  public String getImageRequestUrlDemo(Model model) {
     model.addAttribute("active", "demos");
-    return "view_image-api-url";
+    return "view_image-request-url";
+  }
+
+  @RequestMapping(value = {"/image-info-url.html"}, method = RequestMethod.GET)
+  public String getImageInfoUrlDemo(Model model) {
+    model.addAttribute("active", "demos");
+    return "view_image-info-url";
   }
 
   @RequestMapping(value = "/{identifier}/view_image.html", method = RequestMethod.GET)

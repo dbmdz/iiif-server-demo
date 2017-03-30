@@ -5,20 +5,10 @@
   <body>
     <section layout:fragment="content">
       <header>
-        <h1>IIIF Image API</h1>
+        <h1>IIIF Image API: Image Request URI Syntax</h1>
       </header>
 
       <main>
-        <p>The API for accessing images provided by an IIIF server is specified at <a href="http://iiif.io/api/image/2.1/">http://iiif.io/api/image/2.1/</a>:</p>
-
-        <blockquote>The IIIF Image API can be called in two ways:
-          <ul>
-            <li>Request an image, which may be part of a larger image.</li>
-            <li>Request information about the image, including characteristics, functionality available, and related services.</li>
-          </ul>
-        </blockquote>
-
-        <h3>Image Request URI Syntax</h3>
         <p>The IIIF Image API URI for requesting an image must conform to the following URI Template:</p>
 
         <div class="panel panel-default">
@@ -31,11 +21,12 @@
         Example:
         <section id="urlbuilder" class="well">
           Directly embedded in HTML as image:<br/>
-          <b>&lt;img src="<span th:text="@{/image/v2/bsb00026283_00041/}">
+          <b>&lt;img src="http://localhost:8080<span th:text="@{/image/v2/bsb00026283_00041/}">
               /demo/image/v2/bsb00026283_00041/
             </span>
             <select name="region">
               <option>full</option>
+              <option>658,1757,3108,2647</option>
               <option>2500,3000,1024,1024</option>
               <option>pct:20,45,20,20</option>
             </select>
@@ -128,125 +119,6 @@
           // ]]>
         </script>
 
-        <h3>Image Information Request URI Syntax</h3>
-        <p>The IIIF Image API URI for requesting an image must conform to the following URI Template:</p>
-        <pre class="well">{scheme}://{server}{/prefix}/{identifier}/info.json</pre>
-
-        Example:
-
-        <div class="well">
-          <span th:text="${#ctx.httpServletRequest.getScheme()}">...</span>://<span th:text="${#ctx.httpServletRequest.getServerName()}">...</span><a th:href="@{/image/v2/bsb00026283_00041/info.json}" th:text="@{/image/v2/bsb00026283_00041/info.json}" target="_blank">
-            /demo/image/v2/bsb00026283_00041/info.json</a>
-        </div>
-
-        Response (JSON-LD):
-        <pre>
-{
-  tiles: [
-    {
-      scaleFactors: [
-        1,
-        2,
-        4,
-        8,
-       16,
-       32
-      ],
-      width: 128,
-      height: 128
-    },
-    {
-      scaleFactors: [
-        1,
-        2,
-        4,
-        8,
-       16,
-       32
-      ],
-      width: 256,
-      height: 256
-    },
-    {
-      scaleFactors: [
-        1,
-        2,
-        4,
-        8,
-       16,
-       32
-      ],
-      width: 512,
-      height: 512
-    }
-  ],
-  protocol: "http://iiif.io/api/image",
-  profile: [
-    "http://iiif.io/api/image/2/level2.json"
-  ],
-  @id: "http://localhost:8080/demo/image/v2/bsb00026283_00041",
-  @context: "http://iiif.io/api/image/2/context.json",
-  width: 4512,
-  height: 6420
-}
-        </pre>
-
-        <table class="table">
-          <thead>
-            <tr>
-              <th>Technical Property</th>
-              <th>Required?</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><code class="highlighter-rouge">@context</code></td>
-              <td>Required</td>
-              <td>The context document that describes the semantics of the terms used in the document. This must be the URI: <code class="highlighter-rouge">http://iiif.io/api/image/2/context.json</code> for version 2.1 of the <abbr title="International Image Interoperability Framework">IIIF</abbr> Image <abbr title="Application Programming Interface">API</abbr>. This document allows the response to be interpreted as <abbr title="Resource Description Framework">RDF</abbr>, using the <a href="http://www.json-ld.org/" title="JSON for Linking Data"><abbr title="JSON for Linking Data">JSON-LD</abbr></a> serialization.</td>
-            </tr>
-            <tr>
-              <td><code class="highlighter-rouge">@id</code></td>
-              <td>Required</td>
-              <td>The base URI of the image as defined in <a href="#uri-syntax" title="2. URI Syntax">URI Syntax</a>, including scheme, server, prefix and identifier without a trailing slash.</td>
-            </tr>
-            <tr>
-              <td><code class="highlighter-rouge">@type</code></td>
-              <td>Optional</td>
-              <td>The type for the Image. If present, the value <em class="rfc">must</em> be the string <code class="highlighter-rouge">iiif:Image</code>.</td>
-            </tr>
-            <tr>
-              <td><code class="highlighter-rouge">protocol</code></td>
-              <td>Required</td>
-              <td>The URI <code class="highlighter-rouge">http://iiif.io/api/image</code> which can be used to determine that the document describes an image service which is a version of the <abbr title="International Image Interoperability Framework">IIIF</abbr> Image <abbr title="Application Programming Interface">API</abbr>.</td>
-            </tr>
-            <tr>
-              <td><code class="highlighter-rouge">width</code></td>
-              <td>Required</td>
-              <td>The width in pixels of the full image content, given as an integer.</td>
-            </tr>
-            <tr>
-              <td><code class="highlighter-rouge">height</code></td>
-              <td>Required</td>
-              <td>The height in pixels of the full image content, given as an integer.</td>
-            </tr>
-            <tr>
-              <td><code class="highlighter-rouge">profile</code></td>
-              <td>Required</td>
-              <td>A list of profiles, indicated by either a URI or an object describing the features supported. The first entry in the list <em class="rfc">must</em> be a <a href="#compliance-levels" title="6. Compliance Levels">compliance level URI</a>.</td>
-            </tr>
-            <tr>
-              <td><code class="highlighter-rouge">sizes</code></td>
-              <td>Optional</td>
-              <td>A set of height and width pairs the client should use in the <code class="highlighter-rouge">size</code> parameter to request complete images at different sizes that the server has available. This may be used to let a client know the sizes that are available when the server does not support requests for arbitrary sizes, or simply as a hint that requesting an image of this size may result in a faster response. A request constructed with the <code class="highlighter-rouge">w,h</code> syntax using these sizes <em class="rfc">must</em> be supported by the server, even if arbitrary width and height are not.</td>
-            </tr>
-            <tr>
-              <td><code class="highlighter-rouge">tiles</code></td>
-              <td>Optional</td>
-              <td>A set of descriptions of the parameters to use to request regions of the image (tiles) that are efficient for the server to deliver. Each description gives a width, optionally a height for non-square tiles, and a set of scale factors at which tiles of those dimensions are available.</td>
-            </tr>
-          </tbody>
-        </table>
       </main>
     </section>
   </body>

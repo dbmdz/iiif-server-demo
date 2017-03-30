@@ -13,25 +13,27 @@
 
       <div class="row">
         <div class="col-sm-12">
-          <p>The <b>IIIF Image API</b> for accessing images provided by an IIIF server is specified at <a href="http://iiif.io/api/image/2.1/" target="_blank">http://iiif.io/api/image/2.1/</a>.</p>
-          
-          <p>The main objective of the <b>IIIF Presentation API</b> (specified at <a href="http://iiif.io/api/presentation/2.1/" target="_blank">http://iiif.io/api/presentation/2.1/</a>) is to provide the information necessary to allow a rich, online viewing environment for primarily image-based objects to be presented to a human user.</p>
+          <ul>
+            <li>The <b>IIIF Image API</b> for accessing images provided by an IIIF server is specified at <a href="http://iiif.io/api/image/2.1/" target="_blank">http://iiif.io/api/image/2.1/</a>.</li>
+
+            <li>The main objective of the <b>IIIF Presentation API</b> (specified at <a href="http://iiif.io/api/presentation/2.1/" target="_blank">http://iiif.io/api/presentation/2.1/</a>) is to provide the information necessary to allow a rich, online viewing environment for primarily image-based objects to be presented to a human user.</li>
+          </ul>
         </div>
       </div>
-      
+
       <div class="row">
         <div class="col-sm-6">
           <div class="panel panel-primary">
             <div class="panel-heading">
-              <h3 class="panel-title">IIIF Image API 2.1</h3>
+              <h3 class="panel-title">IIIF Image API 2.1: Access to images</h3>
             </div>
             <div class="panel-body">
               <div class="list-group">
-                <a th:href="@{/image-api-url.html}" class="list-group-item">
+                <a th:href="@{/image-request-url.html}" class="list-group-item">
                   <h4 class="list-group-item-heading">Basics: Image Request URI Syntax</h4>
                   <p class="list-group-item-text"><i class="glyphicon glyphicon-play-circle"></i> Request an image, which may be part of a larger image.</p>
                 </a>
-                <a th:href="@{/image-api-url.html}" class="list-group-item">
+                <a th:href="@{/image-info-url.html}" class="list-group-item">
                   <h4 class="list-group-item-heading">Basics: Image Information Request URI Syntax</h4>
                   <p class="list-group-item-text"><i class="glyphicon glyphicon-play-circle"></i> Request information about the image, including characteristics, functionality available, and related services.</p>
                 </a>
@@ -54,7 +56,7 @@
         <div class="col-sm-6">
           <div class="panel panel-primary">
             <div class="panel-heading">
-              <h3 class="panel-title">IIIF Presentation API 2.1</h3>
+              <h3 class="panel-title">IIIF Presentation API 2.1: Presentation of objects</h3>
             </div>
             <div class="panel-body">
               <div class="list-group">
