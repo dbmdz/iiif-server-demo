@@ -53,3 +53,8 @@ ul.api-description {
 .panel-body > div.list-group {
   margin-bottom: 0;
 }
+
+div.alert.alert-warning {
+  clear: both;
+  margin-top: 20px;
+}
