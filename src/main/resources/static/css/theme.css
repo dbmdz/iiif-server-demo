@@ -1,5 +1,5 @@
 body {
-  padding-top: 70px;
+  padding-top: 85px;
 }
 
 .theme-dropdown .dropdown-menu {
@@ -44,4 +44,12 @@ body {
 .navbar-brand img {
   height: 19px;
   margin-top: -5px;
+}
+
+ul.api-description {
+  margin-bottom: 30px;
+}
+
+.panel-body > div.list-group {
+  margin-bottom: 0;
 }
