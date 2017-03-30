@@ -72,14 +72,6 @@ public class DemoControllerTest {
   }
 
   @Test
-  public void shouldGetIIPMooViewerPage() throws Exception {
-    mvc.perform(get("/12345/view_iipmoo.html"))
-            .andExpect(model().attribute("active", is("demos")))
-            .andExpect(model().attribute("serverUrl", is("/iiif/image/2.0.0/")))
-            .andExpect(model().attribute("image", is("12345")));
-  }
-
-  @Test
   public void shouldGetLeafletImageViewerPage() throws Exception {
     mvc.perform(get("/12345/view_leaflet-image.html"))
             .andExpect(model().attribute("active", is("demos")))

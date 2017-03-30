@@ -45,15 +45,6 @@ public class DemoController {
     return "view_openseadragon";
   }
 
-  @RequestMapping(value = "/{identifier}/view_iipmoo.html", method = RequestMethod.GET)
-  public String getIIPMooViewerPage(@PathVariable String identifier,
-          HttpServletRequest request, Model model) {
-    model.addAttribute("active", "demos");
-    model.addAttribute("serverUrl", "/iiif/image/2.0.0/");
-    model.addAttribute("image", identifier);
-    return "view_iipmoo";
-  }
-
   @RequestMapping(value = "/{identifier}/view_leaflet-image.html", method = RequestMethod.GET)
   public String getLeafletImageViewerPage(@PathVariable String identifier,
           HttpServletRequest request, Model model) {
