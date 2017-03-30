@@ -30,8 +30,8 @@ public class DemoControllerTest {
     InternalResourceViewResolver resolver = new InternalResourceViewResolver();
     resolver.setPrefix("/WEB-INF/view/");
     mvc = MockMvcBuilders.standaloneSetup(new DemoController())
-        .setViewResolvers(resolver)
-        .build();
+            .setViewResolvers(resolver)
+            .build();
   }
 
   @Test
@@ -43,69 +43,75 @@ public class DemoControllerTest {
   @Test
   public void shouldGetHomepage() throws Exception {
     mvc.perform(get("/"))
-        .andExpect(model().attribute("active", is("home")));
+            .andExpect(model().attribute("active", is("home")));
   }
 
   @Test
   public void shouldGetAbout() throws Exception {
     mvc.perform(get("/about"))
-        .andExpect(model().attribute("active", is("about")));
+            .andExpect(model().attribute("active", is("about")));
   }
 
   @Test
   public void shouldGetImageApiUrlDemo() throws Exception {
-    mvc.perform(get("/image-api-url.html"))
-        .andExpect(model().attribute("active", is("demos")));
+    mvc.perform(get("/image-request-url.html"))
+            .andExpect(model().attribute("active", is("demos")));
+  }
+
+  @Test
+  public void shouldGetImageInfoUrlDemo() throws Exception {
+    mvc.perform(get("/image-info-url.html"))
+            .andExpect(model().attribute("active", is("demos")));
   }
 
   @Test
   public void shouldGetPreviewPage() throws Exception {
     mvc.perform(get("/12345/view_image.html"))
-        .andExpect(model().attribute("active", is("demos")))
-        .andExpect(model().attribute("infoUrl", is("/image/v2/12345/info.json")));
+            .andExpect(model().attribute("active", is("demos")))
+            .andExpect(model().attribute("infoUrl", is("/image/v2/12345/info.json")));
   }
 
   @Test
   public void shouldGetIIPMooViewerPage() throws Exception {
     mvc.perform(get("/12345/view_iipmoo.html"))
-        .andExpect(model().attribute("active", is("demos")))
-        .andExpect(model().attribute("serverUrl", is("/iiif/image/2.0.0/")))
-        .andExpect(model().attribute("image", is("12345")));
+            .andExpect(model().attribute("active", is("demos")))
+            .andExpect(model().attribute("serverUrl", is("/iiif/image/2.0.0/")))
+            .andExpect(model().attribute("image", is("12345")));
   }
 
   @Test
   public void shouldGetLeafletImageViewerPage() throws Exception {
     mvc.perform(get("/12345/view_leaflet-image.html"))
-        .andExpect(model().attribute("active", is("demos")))
-        .andExpect(model().attribute("infoUrl", is("/image/v2/12345/info.json")));
+            .andExpect(model().attribute("active", is("demos")))
+            .andExpect(model().attribute("infoUrl", is("/image/v2/12345/info.json")));
   }
 
   @Test
   public void shouldGetLeafletManifestViewerPage() throws Exception {
     mvc.perform(get("/12345/view_leaflet-presentation.html"))
-        .andExpect(model().attribute("active", is("demos")))
-        .andExpect(model().attribute("manifestId", is("/presentation/v2/12345/manifest")));
+            .andExpect(model().attribute("active", is("demos")))
+            .andExpect(model().attribute("manifestId", is("/presentation/v2/12345/manifest")));
   }
 
   @Test
   public void shouldGetMiradorPage() throws Exception {
     mvc.perform(get("/12345/view_presentation.html"))
-        .andExpect(model().attribute("active", is("demos")))
-        .andExpect(model().attribute("manifestId", is("/presentation/v2/12345/manifest")));
+            .andExpect(model().attribute("active", is("demos")))
+            .andExpect(model().attribute("manifestId", is("/presentation/v2/12345/manifest")));
   }
 
   @Test
   public void shouldUniversalViewerPage() throws Exception {
     mvc.perform(get("/12345/view_universal.html"))
-        .andExpect(model().attribute("active", is("demos")))
-        .andExpect(model().attribute("manifestId", is("/presentation/v2/12345/manifest")));
+            .andExpect(model().attribute("active", is("demos")))
+            .andExpect(model().attribute("manifestId", is("/presentation/v2/12345/manifest")));
   }
 
   @Test
   public void shouldDivaViewerPage() throws Exception {
     mvc.perform(get("/12345/view_diva.html"))
-        .andExpect(model().attribute("active", is("demos")))
-        .andExpect(model().attribute("manifestId", is("/presentation/v2/12345/manifest")));
+            .andExpect(model().attribute("active", is("demos")))
+            .andExpect(model().attribute("manifestId", is("/presentation/v2/12345/manifest")));
   }
 
 }
