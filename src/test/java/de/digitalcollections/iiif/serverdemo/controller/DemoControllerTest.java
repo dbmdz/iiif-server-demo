@@ -53,7 +53,7 @@ public class DemoControllerTest {
   }
 
   @Test
-  public void shouldGetImageApiUrlDemo() throws Exception {
+  public void shouldGetImageRequestUrlDemo() throws Exception {
     mvc.perform(get("/image-request-url.html"))
             .andExpect(model().attribute("active", is("demos")));
   }
@@ -101,17 +101,16 @@ public class DemoControllerTest {
   }
 
   @Test
-  public void shouldUniversalViewerPage() throws Exception {
+  public void shouldGetUniversalViewerPage() throws Exception {
     mvc.perform(get("/12345/view_universal.html"))
             .andExpect(model().attribute("active", is("demos")))
             .andExpect(model().attribute("manifestId", is("/presentation/v2/12345/manifest")));
   }
 
   @Test
-  public void shouldDivaViewerPage() throws Exception {
+  public void shouldGetDivaViewerPage() throws Exception {
     mvc.perform(get("/12345/view_diva.html"))
             .andExpect(model().attribute("active", is("demos")))
             .andExpect(model().attribute("manifestId", is("/presentation/v2/12345/manifest")));
   }
-
 }
