@@ -1,7 +1,7 @@
 package de.digitalcollections.iiif.serverdemo.repository;
 
-import de.digitalcollections.iiif.presentation.backend.api.exceptions.NotFoundException;
 import de.digitalcollections.iiif.presentation.backend.impl.repository.v2.PresentationRepositoryImpl;
+import de.digitalcollections.iiif.presentation.model.api.exceptions.NotFoundException;
 import java.net.URI;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
