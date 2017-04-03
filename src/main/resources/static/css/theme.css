@@ -59,10 +59,28 @@ div.alert.alert-warning {
   margin-top: 20px;
 }
 
-pre code {
+pre > code {
   font-size: 16px;
 }
 
 .toc h2 {
   font-size: 14px !important;
+}
+
+div.well.uri-template {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+img#api-legend {
+  width: 100%;
+}
+
+img#imgrender {
+  margin: 0 10px 10px 0;
+}
+
+section#image-view {
+  border: solid 1px #AAA;
+  padding: 10px;
 }

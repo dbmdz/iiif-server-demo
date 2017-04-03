@@ -10,66 +10,64 @@
 
       <main>
         <p>The IIIF Image API URI for requesting an image must conform to the following URI Template:</p>
-        <pre class="well" style="font-size: 16px; font-weight: bold;">{scheme}://{server}{/prefix}/{identifier}/info.json</pre>
+        <div class="well uri-template">{scheme}://{server}{/prefix}/{identifier}/info.json</div>
 
         Example:
-
         <div class="well">
-          <span th:text="${#ctx.httpServletRequest.getScheme()}">...</span>://<span th:text="${#ctx.httpServletRequest.getServerName()}">...</span><a th:href="@{/image/v2/bsb00026283_00041/info.json}" th:text="@{/image/v2/bsb00026283_00041/info.json}" target="_blank">
-            /demo/image/v2/bsb00026283_00041/info.json</a>
+          <span th:text="${#ctx.httpServletRequest.getScheme()}">...</span>://<span th:text="${#ctx.httpServletRequest.getServerName()}">...</span><a th:href="@{/image/v2/bsb00026283_00041/info.json}" th:text="@{/image/v2/bsb00026283_00041/info.json}" target="_blank">/image/v2/bsb00026283_00041/info.json</a>
         </div>
 
         Response (JSON-LD):
-        <pre>
-{
-  tiles: [
-    {
-      scaleFactors: [
-        1,
-        2,
-        4,
-        8,
-       16,
-       32
-      ],
-      width: 128,
-      height: 128
-    },
-    {
-      scaleFactors: [
-        1,
-        2,
-        4,
-        8,
-       16,
-       32
-      ],
-      width: 256,
-      height: 256
-    },
-    {
-      scaleFactors: [
-        1,
-        2,
-        4,
-        8,
-       16,
-       32
-      ],
-      width: 512,
-      height: 512
-    }
-  ],
-  protocol: "http://iiif.io/api/image",
-  profile: [
-    "http://iiif.io/api/image/2/level2.json"
-  ],
-  @id: "http://localhost:8080/demo/image/v2/bsb00026283_00041",
-  @context: "http://iiif.io/api/image/2/context.json",
-  width: 4512,
-  height: 6420
-}
-        </pre>
+        <pre><code class="json">
+  {
+    tiles: [
+      {
+        scaleFactors: [
+          1,
+          2,
+          4,
+          8,
+          16,
+          32
+        ],
+        width: 128,
+        height: 128
+      },
+      {
+        scaleFactors: [
+          1,
+          2,
+          4,
+          8,
+          16,
+          32
+        ],
+        width: 256,
+        height: 256
+      },
+      {
+        scaleFactors: [
+          1,
+          2,
+          4,
+          8,
+         16,
+         32
+        ],
+        width: 512,
+        height: 512
+      }
+    ],
+    protocol: "http://iiif.io/api/image",
+    profile: [
+      "http://iiif.io/api/image/2/level2.json"
+    ],
+    @id: "http://localhost:8080/image/v2/bsb00026283_00041",
+    @context: "http://iiif.io/api/image/2/context.json",
+    width: 4512,
+    height: 6420
+  }
+        </code></pre>
 
         <table class="table">
           <thead>
