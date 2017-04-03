@@ -1,0 +1,81 @@
+{
+  "@context": "http://iiif.io/api/presentation/2/context.json",
+  "@id": "http://www.e-codices.unifr.ch/metadata/iiif/collection/kba.json",
+  "@type": "sc:Collection",
+  "label": "Aarau, Aargauer Kantonsbibliothek",
+  "description": "http://www.ag.ch/kantonsbibliothek/",
+  "attribution": "e-codices - Virtual Manuscript Library of Switzerland",
+  "manifests": [{
+      "@id": "http://www.e-codices.unifr.ch/metadata/iiif/kba-BN0049/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "Aarau, Aargauer Kantonsbibliothek, MsBN 49"
+    }, {
+      "@id": "http://www.e-codices.unifr.ch/metadata/iiif/kba-MurF0031a/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "Aarau, Aargauer Kantonsbibliothek, MsMurF 31a"
+    }, {
+      "@id": "http://www.e-codices.unifr.ch/metadata/iiif/kba-Wett0004/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "Aarau, Aargauer Kantonsbibliothek, MsWett 4"
+    }, {
+      "@id": "http://www.e-codices.unifr.ch/metadata/iiif/kba-WettF0011/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "Aarau, Aargauer Kantonsbibliothek, MsWettF 11"
+    }, {
+      "@id": "http://www.e-codices.unifr.ch/metadata/iiif/kba-WettF0013/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "Aarau, Aargauer Kantonsbibliothek, MsWettF 13"
+    }, {
+      "@id": "http://www.e-codices.unifr.ch/metadata/iiif/kba-0026-4/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "Aarau, Aargauer Kantonsbibliothek, MsWettF 26: 4"
+    }, {
+      "@id": "http://www.e-codices.unifr.ch/metadata/iiif/kba-WettF0009/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "Aarau, Aargauer Kantonsbibliothek, MsWettF 9"
+    }, {
+      "@id": "http://www.e-codices.unifr.ch/metadata/iiif/kba-WettFm0002/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "Aarau, Aargauer Kantonsbibliothek, MsWettFm 2"
+    }, {
+      "@id": "http://www.e-codices.unifr.ch/metadata/iiif/kba-WettFm0003/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "Aarau, Aargauer Kantonsbibliothek, MsWettFm 3"
+    }, {
+      "@id": "http://www.e-codices.unifr.ch/metadata/iiif/kba-Ms-ZF-0018/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "Aarau, Aargauer Kantonsbibliothek, ZF 18"
+    }, {
+      "@id": "http://www.e-codices.unifr.ch/metadata/iiif/kba-0003/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "Aarau, Aargauer Kantonsbibliothek, MsMurF 3"
+    }, {
+      "@id": "http://www.e-codices.unifr.ch/metadata/iiif/kba-WettF0001/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "Aarau, Aargauer Kantonsbibliothek, MsWettF 1"
+    }, {
+      "@id": "http://www.e-codices.unifr.ch/metadata/iiif/kba-MsWettF0002/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "Aarau, Aargauer Kantonsbibliothek, MsWettF 2"
+    }, {
+      "@id": "http://www.e-codices.unifr.ch/metadata/iiif/kba-WettF0015/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "Aarau, Aargauer Kantonsbibliothek, MsWettF 15"
+    }, {
+      "@id": "http://www.e-codices.unifr.ch/metadata/iiif/kba-0016-1/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "Aarau, Aargauer Kantonsbibliothek, MsWettF 16: 1"
+    }, {
+      "@id": "http://www.e-codices.unifr.ch/metadata/iiif/kba-0016-2/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "Aarau, Aargauer Kantonsbibliothek, MsWettF 16: 2"
+    }, {
+      "@id": "http://www.e-codices.unifr.ch/metadata/iiif/kba-0016-3/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "Aarau, Aargauer Kantonsbibliothek, MsWettF 16: 3"
+    }, {
+      "@id": "http://www.e-codices.unifr.ch/metadata/iiif/kba-WettFm0001/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "Aarau, Aargauer Kantonsbibliothek, MsWettFm 1"
+    }]
+}

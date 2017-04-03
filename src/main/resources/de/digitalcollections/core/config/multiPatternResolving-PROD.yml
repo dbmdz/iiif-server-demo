@@ -1,8 +1,9 @@
 - pattern: iiiftest
   substitutions: 
     - classpath:/static/images/iiiftest.png
-    
+
 - pattern: ^(.*)$
   substitutions:
     - classpath:/static/images/$1.jpg
     - classpath:/static/manifests/$1.json
+    - classpath:/static/manifests/collection-$1.json

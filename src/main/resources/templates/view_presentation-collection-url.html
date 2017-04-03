@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html 
+  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+  layout:decorator="base">
+  <body>
+    <section layout:fragment="content">
+      <header>
+        <h1>IIIF Presentation API: Request collection URI Syntax</h1>
+      </header>
+
+      <main>
+        <p>Collections are used to</p>
+        <ul>
+          <li>list the manifests available for viewing, and to</li>
+          <li>describe the structures, hierarchies or curated collections that the physical objects are part of.</li>
+          <li><b>The collections may include both other collections and manifests, in order to form a hierarchy of objects</b> with manifests at the leaf nodes of the tree.</li>
+        </ul>
+
+        <p>The IIIF Presentation API URI for requesting a collection must conform to the following URI Template:</p>
+
+        <pre class="well" style="font-size: 16px; font-weight: bold;">{scheme}://{host}/{prefix}/collection/{name}</pre>
+
+        Example:
+
+        <div class="well">
+          <a th:href="@{__${manifestId}__}" th:text="@{${#ctx.httpServletRequest.getScheme() + '://' + #ctx.httpServletRequest.getServerName() + ':' + #ctx.httpServletRequest.getServerPort()}} + @{__${manifestId}__}" target="_blank">
+            http://localhost:8080/demo/presentation/v2/collection/ecodices</a><br/>
+            <br/>         
+          <a th:href="@{__${manifestId}__}" th:text="@{${#ctx.httpServletRequest.getScheme() + '://' + #ctx.httpServletRequest.getServerName() + ':' + #ctx.httpServletRequest.getServerPort()} + '/demo/presentation/v2/collection/kba'}" target="_blank">
+            http://localhost:8080/demo/presentation/v2/collection/kba</a>
+        </div>
+
+        Response (JSON-LD):
+        
+        <p>e-codices-Collection</p>
+        
+        <pre>
+<code class="json">
+{
+  "@context": "http://iiif.io/api/presentation/2/context.json",
+  "@id": "http://www.e-codices.unifr.ch/metadata/iiif/collection.json",
+  "@type": "sc:Collection",
+  "label": "e-codices \u2013 Virtual Manuscript Library of Switzerland",
+  "description": "The goal of e-codices is to provide access to medieval and modern manuscripts of Switzerland by means of a virtual library.",
+  "attribution": "e-codices - Virtual Manuscript Library of Switzerland",
+  "collections": [{
+      "@id": "http://www.e-codices.unifr.ch/metadata/iiif/collection/sl.json",
+      "@type": "sc:Collection",
+      "label": "[sine loco], codices restituti"
+    }, {
+      "@id": "http://www.e-codices.unifr.ch/metadata/iiif/collection/kba.json",
+      "@type": "sc:Collection",
+      "label": "Aarau, Aargauer Kantonsbibliothek"
+    }, {
+      "@id": "http://www.e-codices.unifr.ch/metadata/iiif/collection/saa.json",
+      "@type": "sc:Collection",
+      "label": "Aarau, Staatsarchiv Aargau"
+    }, {
+      "@id": "http://www.e-codices.unifr.ch/metadata/iiif/collection/laai.json",
+      "@type": "sc:Collection",
+      "label": "Appenzell, Landesarchiv Appenzell Innerrhoden"
+    },
+    ...
+  ]
+}
+</code>
+        </pre>
+        
+        <p>Sub-Collection "Aarau, Aargauer Kantonsbibliothek"</p>
+        
+        <pre>
+<code class="json">
+{
+  "@context": "http://iiif.io/api/presentation/2/context.json",
+  "@id": "http://www.e-codices.unifr.ch/metadata/iiif/collection/kba.json",
+  "@type": "sc:Collection",
+  "label": "Aarau, Aargauer Kantonsbibliothek",
+  "description": "http://www.ag.ch/kantonsbibliothek/",
+  "attribution": "e-codices - Virtual Manuscript Library of Switzerland",
+  "manifests": [{
+      "@id": "http://www.e-codices.unifr.ch/metadata/iiif/kba-BN0049/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "Aarau, Aargauer Kantonsbibliothek, MsBN 49"
+    }, {
+      "@id": "http://www.e-codices.unifr.ch/metadata/iiif/kba-MurF0031a/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "Aarau, Aargauer Kantonsbibliothek, MsMurF 31a"
+    }, {
+      "@id": "http://www.e-codices.unifr.ch/metadata/iiif/kba-Wett0004/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "Aarau, Aargauer Kantonsbibliothek, MsWett 4"
+    },
+    ...
+  ]
+}
+</code>
+        </pre>
+      </main>
+    </section>
+  </body>
+</html>

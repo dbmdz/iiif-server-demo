@@ -57,11 +57,20 @@ public class DemoController {
     return "view_leaflet-presentation";
   }
 
-  @RequestMapping(value = {"/{identifier}/presentation-manifest-url.html"}, method = RequestMethod.GET)
-  public String getPresentationApiUrlDemo(@PathVariable String identifier, Model model) {
+  @RequestMapping(value = {"/{identifier}/presentation-manifest-url.html"},
+          method = RequestMethod.GET)
+  public String getPresentationManifestUrlDemo(@PathVariable String identifier, Model model) {
     model.addAttribute("active", "demos");
     model.addAttribute("manifestId", "/presentation/v2/" + identifier + "/manifest");
     return "view_presentation-manifest-url";
+  }
+
+  @RequestMapping(value = {"/{name}/presentation-collection-url.html"},
+          method = RequestMethod.GET)
+  public String getPresentationCollectionUrlDemo(@PathVariable String name, Model model) {
+    model.addAttribute("active", "demos");
+    model.addAttribute("manifestId", "/presentation/v2/collection/" + name);
+    return "view_presentation-collection-url";
   }
 
   @RequestMapping(value = "/{identifier}/view_presentation.html", method = RequestMethod.GET)
