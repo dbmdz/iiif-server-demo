@@ -38,7 +38,7 @@
     <script th:inline="javascript">
       /*<![CDATA[*/
       var url = /*[[@{/webjars/jquery/1.11.3/jquery.min.js}]]*/;
-      window.jQuery || document.write('<script src="' + url + '"><\/script>');
+              window.jQuery || document.write('<script src="' + url + '"><\/script>');
       /*]]>*/
     </script>
     <script th:src="@{/webjars/bootstrap/3.3.7/js/bootstrap.min.js}"></script>
@@ -101,6 +101,10 @@
       </footer>
     </div> <!-- /container -->
 
+    <link rel="stylesheet" th:href="@{/css/highlightJS/xt256.css}" />
+    <script th:src="@{/js/highlightJS/highlight.min.js}"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    
   <th:block layout:fragment="morejs"> </th:block>
 </body>
 </html>

@@ -1,7 +1,39 @@
+<!DOCTYPE html>
+<html 
+  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+  layout:decorator="base">
+  <body>
+    <section layout:fragment="content">
+      <header>
+        <h1>IIIF Presentation API: Request manifest URI Syntax</h1>
+      </header>
+
+      <main>
+        <p>A IIIF presentation manifest contains information for</p>
+        <ul>
+          <li>displaying of digitized images associated with a particular physical object, or born-digital compound object.</li>
+          <li>Navigation between the pages, surfaces or views of the object (e.g. table of contents)</li>
+          <li>The display of text, and resources of other media types, associated with the object or its pages – this includes descriptive information about the object (incl. metadata), labels that can aid navigation such as numbers associated with individual pages, copyright or attribution information, etc.</li>
+        </ul>
+
+        <p>The IIIF Presentation API URI for requesting a manifest must conform to the following URI Template:</p>
+
+        <pre class="well" style="font-size: 16px; font-weight: bold;">{scheme}://{host}/{prefix}/{identifier}/manifest</pre>
+
+        Example:
+
+        <div class="well">
+          <a th:href="@{__${manifestId}__}" th:text="@{${#ctx.httpServletRequest.getScheme() + '://' + #ctx.httpServletRequest.getServerName() + ':' + #ctx.httpServletRequest.getServerPort()} + ${manifestId}}" target="_blank">
+            http://localhost:8080/demo/presentation/v2/bsb00026283/manifest</a>
+        </div>
+
+        Response (JSON-LD):
+        <pre>
+<code class="json">
 {
   "@context": "http://iiif.io/api/presentation/2/context.json",
-  "@type": "sc:Manifest",
   "@id": "http://localhost:8080/presentation/v2/bsb00026283/manifest",
+  "@type": "sc:Manifest",
   "label": "Ottheinrich-Bibel",
   "description": "Um 1430 entstandene, aber erst hundert Jahre später vollendete Handschrift des Neuen Testaments in mittelbairischer Schreibsprache. Früheste erhaltene illustrierte Handschrift eines Neuen Testaments in deutscher Sprache.",
   "attribution": "Bayerische Staatsbibliothek",
@@ -13,6 +45,7 @@
   "seeAlso": [
     "http://daten.digitale-sammlungen.de/~db/0002/bsb00026283/images"
   ],
+  
   "metadata": [
     {
       "label": "Title",
@@ -51,11 +84,13 @@
       "value": "http://localhost:8080/presentation/v2/bsb00026283/manifest"
     }
   ],
+  
   "sequences": [
     {
       "@id": "http://localhost:8080/presentation/v2/bsb00026283/sequence/normal",
       "@type": "sc:Sequence",
       "label": "Default",
+      
       "canvases": [
         {
           "@id": "http://localhost:8080/presentation/v2/bsb00026283_00041/canvas/1",
@@ -81,7 +116,7 @@
                 }
               }
             }
-          ]
+          ],
         },
         {
           "@id": "http://localhost:8080/presentation/v2/bsb00026283_00042/canvas/2",
@@ -191,3 +226,10 @@
     }
   ]
 }
+
+</code>
+        </pre>
+      </main>
+    </section>
+  </body>
+</html>

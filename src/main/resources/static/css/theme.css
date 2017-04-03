@@ -58,3 +58,7 @@ div.alert.alert-warning {
   clear: both;
   margin-top: 20px;
 }
+
+pre code {
+  font-size: 16px;
+}
