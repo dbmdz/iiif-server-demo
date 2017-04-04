@@ -63,6 +63,11 @@
           "label": "Page 41",
           "height": 6420,
           "width": 4512,
+          "service":{
+            "profile":"http://iiif.io/api/annex/services/physdim",
+            "physicalScale":0.0083333333333,
+            "physicalUnits":"cm",
+            "@context":"http://iiif.io/api/annex/services/physdim/1/context.json" },
           "images": [
             {
               "@id": "http://localhost:8080/presentation/v2/bsb00026283/image/bsb00026283_00041",
