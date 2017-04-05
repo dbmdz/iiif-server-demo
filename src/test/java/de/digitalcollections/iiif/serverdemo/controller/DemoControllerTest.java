@@ -79,10 +79,17 @@ public class DemoControllerTest {
   }
 
   @Test
-  public void shouldGetLeafletManifestViewerPage() throws Exception {
-    mvc.perform(get("/12345/view_leaflet-presentation.html"))
+  public void shouldGetPresentationManifestDemo() throws Exception {
+    mvc.perform(get("/12345/presentation-manifest-url.html"))
             .andExpect(model().attribute("active", is("demos")))
             .andExpect(model().attribute("manifestId", is("/presentation/v2/12345/manifest")));
+  }
+
+  @Test
+  public void shouldGetCollectionManifestDemo() throws Exception {
+    mvc.perform(get("/12345/presentation-collection-url.html"))
+            .andExpect(model().attribute("active", is("demos")))
+            .andExpect(model().attribute("manifestId", is("/presentation/v2/collection/12345")));
   }
 
   @Test
@@ -95,6 +102,13 @@ public class DemoControllerTest {
   @Test
   public void shouldGetUniversalViewerPage() throws Exception {
     mvc.perform(get("/12345/view_universal.html"))
+            .andExpect(model().attribute("active", is("demos")))
+            .andExpect(model().attribute("manifestId", is("/presentation/v2/12345/manifest")));
+  }
+
+  @Test
+  public void shouldGetLeafletManifestViewerPage() throws Exception {
+    mvc.perform(get("/12345/view_leaflet-presentation.html"))
             .andExpect(model().attribute("active", is("demos")))
             .andExpect(model().attribute("manifestId", is("/presentation/v2/12345/manifest")));
   }
