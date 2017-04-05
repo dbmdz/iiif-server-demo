@@ -13,17 +13,20 @@ public class ServerUrlInterceptor extends HandlerInterceptorAdapter {
 
   //before the actual handler will be executed
   @Override
-  public boolean preHandle(HttpServletRequest request,
-          HttpServletResponse response, Object handler)
-          throws Exception {
+  public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
     String requestUrl = request.getRequestURL().toString();
     if (requestUrl.endsWith("/manifest")) {
       String contextPath = request.getContextPath();
       String requestUri = request.getRequestURI();
-      String requestUriWithoutContextPath = requestUri.substring(contextPath.length());
-      String serverUrl = requestUrl.substring(0, requestUrl.indexOf(requestUriWithoutContextPath));
+      String serverUrl = retrieveServerUrl(requestUrl, requestUri, contextPath);
       demoPresentationServiceImpl.setServerUrl(serverUrl);
     }
     return true;
+  }
+
+  protected String retrieveServerUrl(String requestUrl, String requestUri, String contextPath) {
+    String requestUriWithoutContextPath = requestUri.substring(contextPath.length());
+    String serverUrl = requestUrl.substring(0, requestUrl.indexOf(requestUriWithoutContextPath));
+    return serverUrl;
   }
 }
