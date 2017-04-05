@@ -100,6 +100,13 @@ public class DemoControllerTest {
   }
 
   @Test
+  public void shouldGetMiradorWithRulerPage() throws Exception {
+    mvc.perform(get("/12345/view_mirador_withruler.html"))
+            .andExpect(model().attribute("active", is("demos")))
+            .andExpect(model().attribute("manifestId", is("/presentation/v2/12345/manifest")));
+  }
+
+  @Test
   public void shouldGetUniversalViewerPage() throws Exception {
     mvc.perform(get("/12345/view_universal.html"))
             .andExpect(model().attribute("active", is("demos")))
