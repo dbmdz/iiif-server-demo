@@ -73,7 +73,7 @@ public class DemoController {
     return "view_presentation-collection-url";
   }
 
-  @RequestMapping(value = "/{identifier}/view_presentation.html", method = RequestMethod.GET)
+  @RequestMapping(value = "/{identifier}/view_mirador.html", method = RequestMethod.GET)
   public String getMiradorPage(@PathVariable String identifier, Model model) {
     model.addAttribute("active", "demos");
     model.addAttribute("manifestId", "/presentation/v2/" + identifier + "/manifest");

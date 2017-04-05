@@ -94,7 +94,7 @@ public class DemoControllerTest {
 
   @Test
   public void shouldGetMiradorPage() throws Exception {
-    mvc.perform(get("/12345/view_presentation.html"))
+    mvc.perform(get("/12345/view_mirador.html"))
             .andExpect(model().attribute("active", is("demos")))
             .andExpect(model().attribute("manifestId", is("/presentation/v2/12345/manifest")));
   }
