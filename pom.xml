@@ -72,6 +72,7 @@
     <version.thymeleaf-extras-conditionalcomments>2.1.2.RELEASE</version.thymeleaf-extras-conditionalcomments>
     <version.versions-maven-plugin>2.2</version.versions-maven-plugin>
     <version.webjar-bootstrap>3.3.7</version.webjar-bootstrap>
+    <version.webjar-highlightjs>9.10.0</version.webjar-highlightjs>
     <version.webjar-html5shiv>3.7.3</version.webjar-html5shiv>
     <version.webjar-ie10-viewport-bug-workaround>1.0.3</version.webjar-ie10-viewport-bug-workaround>
     <version.webjar-jquery>1.11.3</version.webjar-jquery>
@@ -214,6 +215,11 @@
       <groupId>org.webjars</groupId>
       <artifactId>respond</artifactId>
       <version>${version.webjar-respond}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.webjars.bower</groupId>
+      <artifactId>highlightjs</artifactId>
+      <version>${version.webjar-highlightjs}</version>
     </dependency>
     <dependency>
       <groupId>org.webjars.bower</groupId>

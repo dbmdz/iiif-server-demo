@@ -21,6 +21,9 @@
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link th:href="@{/webjars/ie10-viewport-bug-workaround/1.0.3/dist/ie10-viewport-bug-workaround.min.css}" rel="stylesheet"/>
 
+    <!-- HighlightJS theme-->
+    <link rel="stylesheet" th:href="@{/webjars/highlightjs/9.10.0/styles/atom-one-light.css}" />
+
     <!-- Custom styles for this template -->
     <link th:href="@{/css/theme.css}" rel="stylesheet"/>
 
@@ -103,8 +106,7 @@
       </footer>
     </div> <!-- /container -->
 
-    <link rel="stylesheet" th:href="@{/css/highlightJS/atom-one-light.css}" />
-    <script th:src="@{/js/highlightJS/highlight.min.js}"></script>
+    <script th:src="@{/webjars/highlightjs/9.10.0/highlight.pack.min.js}"></script>
     <script>hljs.initHighlightingOnLoad();</script>
     
   <th:block layout:fragment="morejs"> </th:block>
