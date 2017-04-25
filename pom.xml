@@ -56,7 +56,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
     <version.iiif-image>2.2.6-SNAPSHOT</version.iiif-image>
-    <version.iiif-mirador>2.3.0</version.iiif-mirador>
+    <version.iiif-mirador>2.4.0</version.iiif-mirador>
     <version.iiif-presentation>3.2.5-SNAPSHOT</version.iiif-presentation>
     <version.jackson>2.8.6</version.jackson>
     <version.jacoco-maven-plugin>0.7.4.201502262128</version.jacoco-maven-plugin>

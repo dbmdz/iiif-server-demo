@@ -25,7 +25,7 @@ body {
 #viewer {
   background: #333;
   width: 100%;
-  height: calc(100vh - 130px);
+  height: calc(100vh - 135px);
   position: relative;
 }
 
