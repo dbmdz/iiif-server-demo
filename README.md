@@ -8,6 +8,10 @@
 
 A standalone IIIF server demonstrating the use of [IIIF Image API Java Libraries](https://github.com/dbmdz/iiif-image-api "IIIF Image API Java Libraries") and [IIIF Presentation API Java Libraries](https://github.com/dbmdz/iiif-presentation-api "IIIF Presentation API Java Libraries") (Java implementations of the [IIIF specifications](http://iiif.io/technical-details/ "IIIF specifications")) and annotations stored in the local storage of the browser.
 
+## Prerequisites
+
+* Java 8: You will need the [Java Runtime Environment (JRE) version 1.8](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) or higher. At a command line, check your Java version with "java -version".
+
 ## Run Demo Server
 
 - Download iiif-server-demo.jar from [Releases on GitHub](https://github.com/dbmdz/iiif-server-demo/releases)
