@@ -87,10 +87,10 @@ public class DemoController {
     return "view_universal";
   }
 
-  @RequestMapping(value = "/{identifier}/view_mirador_withruler.html", method = RequestMethod.GET)
-  public String getMiradorWithRulerPage(@PathVariable String identifier, Model model) {
+  @RequestMapping(value = "/{identifier}/view_mirador_physicalruler.html", method = RequestMethod.GET)
+  public String getMiradorPhysicalRulerPage(@PathVariable String identifier, Model model) {
     model.addAttribute("active", "demos");
     model.addAttribute("manifestId", "/presentation/v2/" + identifier + "/manifest");
-    return "view_mirador_withruler";
+    return "view_mirador_physicalruler";
   }
 }
