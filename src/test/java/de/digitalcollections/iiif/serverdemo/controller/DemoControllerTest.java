@@ -100,8 +100,43 @@ public class DemoControllerTest {
   }
 
   @Test
+  public void shouldGetMiradorCanvasLinkPage() throws Exception {
+    mvc.perform(get("/12345/view_mirador_canvaslink.html"))
+            .andExpect(model().attribute("active", is("demos")))
+            .andExpect(model().attribute("manifestId", is("/presentation/v2/12345/manifest")));
+  }
+
+  @Test
+  public void shouldGetMiradorKeyboardNavigationPage() throws Exception {
+    mvc.perform(get("/12345/view_mirador_keyboardnavigation.html"))
+            .andExpect(model().attribute("active", is("demos")))
+            .andExpect(model().attribute("manifestId", is("/presentation/v2/12345/manifest")));
+  }
+
+  @Test
+  public void shouldGetMiradorManifestButtonPage() throws Exception {
+    mvc.perform(get("/12345/view_mirador_manifestbutton.html"))
+            .andExpect(model().attribute("active", is("demos")))
+            .andExpect(model().attribute("manifestId", is("/presentation/v2/12345/manifest")));
+  }
+
+  @Test
+  public void shouldGetMiradorMultiPageNavigationPage() throws Exception {
+    mvc.perform(get("/12345/view_mirador_multipagenavigation.html"))
+            .andExpect(model().attribute("active", is("demos")))
+            .andExpect(model().attribute("manifestId", is("/presentation/v2/12345/manifest")));
+  }
+
+  @Test
   public void shouldGetMiradorPyhsicalRulerPage() throws Exception {
     mvc.perform(get("/12345/view_mirador_physicalruler.html"))
+            .andExpect(model().attribute("active", is("demos")))
+            .andExpect(model().attribute("manifestId", is("/presentation/v2/12345/manifest")));
+  }
+
+  @Test
+  public void shouldGetMiradorViewFromUrlPage() throws Exception {
+    mvc.perform(get("/12345/view_mirador_viewfromurl.html"))
             .andExpect(model().attribute("active", is("demos")))
             .andExpect(model().attribute("manifestId", is("/presentation/v2/12345/manifest")));
   }
