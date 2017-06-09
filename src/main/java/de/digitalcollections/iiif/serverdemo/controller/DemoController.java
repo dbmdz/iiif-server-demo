@@ -87,6 +87,41 @@ public class DemoController {
     return "view_universal";
   }
 
+  @RequestMapping(value = "/{identifier}/view_mirador_canvaslink.html", method = RequestMethod.GET)
+  public String getMiradorCanvasLinkPage(@PathVariable String identifier, Model model) {
+    model.addAttribute("active", "demos");
+    model.addAttribute("manifestId", "/presentation/v2/" + identifier + "/manifest");
+    return "view_mirador_canvaslink";
+  }
+
+  @RequestMapping(value = "/{identifier}/view_mirador_keyboardnavigation.html", method = RequestMethod.GET)
+  public String getMiradorKeyboardNavigationPage(@PathVariable String identifier, Model model) {
+    model.addAttribute("active", "demos");
+    model.addAttribute("manifestId", "/presentation/v2/" + identifier + "/manifest");
+    return "view_mirador_keyboardnavigation";
+  }
+
+  @RequestMapping(value = "/{identifier}/view_mirador_manifestbutton.html", method = RequestMethod.GET)
+  public String getMiradorManifestButtonPage(@PathVariable String identifier, Model model) {
+    model.addAttribute("active", "demos");
+    model.addAttribute("manifestId", "/presentation/v2/" + identifier + "/manifest");
+    return "view_mirador_manifestbutton";
+  }
+
+  @RequestMapping(value = "/{identifier}/view_mirador_multipagenavigation.html", method = RequestMethod.GET)
+  public String getMiradorMultiPageNavigationPage(@PathVariable String identifier, Model model) {
+    model.addAttribute("active", "demos");
+    model.addAttribute("manifestId", "/presentation/v2/" + identifier + "/manifest");
+    return "view_mirador_multipagenavigation";
+  }
+
+  @RequestMapping(value = "/{identifier}/view_mirador_viewfromurl.html", method = RequestMethod.GET)
+  public String getMiradorViewFromUrlPage(@PathVariable String identifier, Model model) {
+    model.addAttribute("active", "demos");
+    model.addAttribute("manifestId", "/presentation/v2/" + identifier + "/manifest");
+    return "view_mirador_viewfromurl";
+  }
+
   @RequestMapping(value = "/{identifier}/view_mirador_physicalruler.html", method = RequestMethod.GET)
   public String getMiradorPhysicalRulerPage(@PathVariable String identifier, Model model) {
     model.addAttribute("active", "demos");
