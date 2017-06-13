@@ -274,10 +274,10 @@
     /** Update the scales with the new pixelsPerMillimeter value **/
     updateScales: function(pixelsPerMillimeter) {
       var scaleInfo = this.getScalesInfo(pixelsPerMillimeter);
-      this.elems.horizontal.small.style.backgroundSize = scaleInfo.small + 'px 100%';
-      this.elems.horizontal.large.style.backgroundSize = scaleInfo.small * scaleInfo.largeFactor + 'px 100%';
-      this.elems.vertical.small.style.backgroundSize = '100% ' + scaleInfo.small + 'px';
-      this.elems.vertical.large.style.backgroundSize = '100% ' + scaleInfo.small * scaleInfo.largeFactor + 'px';
+      this.elems.horizontal.small.style.backgroundSize = Math.round(scaleInfo.small) + 'px 100%';
+      this.elems.horizontal.large.style.backgroundSize = Math.round(scaleInfo.small) * scaleInfo.largeFactor + 'px 100%';
+      this.elems.vertical.small.style.backgroundSize = '100% ' + Math.round(scaleInfo.small) + 'px';
+      this.elems.vertical.large.style.backgroundSize = '100% ' + Math.round(scaleInfo.small) * scaleInfo.largeFactor + 'px';
       if (this.elems.unit.text !== scaleInfo.unit) {
         this.elems.unit.textContent = scaleInfo.unit;
       }
@@ -290,9 +290,9 @@
     updateLabels: function(direction, scaleInfo) {
       var numLabels;
       if (direction === 'vertical') {
-        numLabels = Math.ceil(this.viewer.viewport.containerSize.y / (scaleInfo.small * scaleInfo.largeFactor) / this.labelsEvery);
+        numLabels = Math.ceil(this.viewer.viewport.containerSize.y / (Math.round(scaleInfo.small) * scaleInfo.largeFactor) / this.labelsEvery);
       } else {
-        numLabels = Math.ceil(this.viewer.viewport.containerSize.x / (scaleInfo.small * scaleInfo.largeFactor) / this.labelsEvery);
+        numLabels = Math.ceil(this.viewer.viewport.containerSize.x / (Math.round(scaleInfo.small) * scaleInfo.largeFactor) / this.labelsEvery);
       }
       var labelDistance = this.labelsEvery * (scaleInfo.small / scaleInfo.largeFactor);
       var currentLabels = this.elems[direction].labels;
@@ -339,11 +339,11 @@
           } else {
             label.style.right = this.largeDashSize * 1.5 + 'px';
           }
-          var verticalMargin = (this.labelsEvery * idx * scaleInfo.small * scaleInfo.largeFactor - (textHeight / 2)) + 'px';
+          var verticalMargin = (this.labelsEvery * idx * Math.round(scaleInfo.small) * scaleInfo.largeFactor - (textHeight / 2)) + 'px';
           label.style.top = verticalMargin;
         } else {
           var textWidth = textMeasureContext.measureText(text).width;
-          var horizontalMargin = (this.labelsEvery * idx * scaleInfo.small * scaleInfo.largeFactor - (textWidth / 1)) + 'px';
+          var horizontalMargin = (this.labelsEvery * idx * Math.round(scaleInfo.small) * scaleInfo.largeFactor - (textWidth / 1)) + 'px';
           label.style.top = this.largeDashSize * 1.5 + 'px';
           label.style.left = horizontalMargin;
         }
@@ -425,6 +425,12 @@
     var _this = this;
     this.eventEmitter.subscribe('osdOpen.'+this.windowId, function() {
       var service = _this.currentImg.service;
+      // Handle multiple services, try to find first physical dimensions service
+      if (service && Array.isArray(service)) {
+        service = service.find(function(s) {
+          return s.profile === "http://iiif.io/api/annex/services/physdim";
+        });
+      }
       if (service && service.profile === "http://iiif.io/api/annex/services/physdim") {
         if ((!service.physicalScale || !service.physicalUnits) && service['@id']) {
           // Remote Service
@@ -432,7 +438,17 @@
         } else if (service.physicalScale && service.physicalUnits) {
           // Embedded Service
           _this.enablePhysicalRuler(service);
+        } else {
+          return;
         }
+
+        // Adjust styling
+        // move annotation, image tools away from scale
+        document.querySelector('.mirador-osd-context-controls').style.left = '2.3%';
+        // keep thumbnails and ruler from overlapping
+        document.querySelector('.bottomPanel').style.left = '40px';
+        // move navigation arrow right
+        document.querySelector('.mirador-osd-previous').style.left = '2.3%';
       }
     });
   }
