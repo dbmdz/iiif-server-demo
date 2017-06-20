@@ -50,8 +50,14 @@ ul.api-description {
   margin-bottom: 30px;
 }
 
-.panel-body > div.list-group {
+.panel-body > div.list-group,
+.panel-body > ul.list-group {
   margin-bottom: 0;
+}
+
+#mirador-plugins li.list-group-item:focus,
+#mirador-plugins li.list-group-item:hover {
+    background-color: #f5f5f5;
 }
 
 div.alert.alert-warning {

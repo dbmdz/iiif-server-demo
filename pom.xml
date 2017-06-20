@@ -74,6 +74,7 @@
     <version.thymeleaf-extras-conditionalcomments>2.1.2.RELEASE</version.thymeleaf-extras-conditionalcomments>
     <version.versions-maven-plugin>2.2</version.versions-maven-plugin>
     <version.webjar-bootstrap>3.3.7</version.webjar-bootstrap>
+    <version.webjar-fontawesome>4.7.0</version.webjar-fontawesome>
     <version.webjar-highlightjs>9.10.0</version.webjar-highlightjs>
     <version.webjar-html5shiv>3.7.3</version.webjar-html5shiv>
     <version.webjar-ie10-viewport-bug-workaround>1.0.3</version.webjar-ie10-viewport-bug-workaround>
@@ -202,6 +203,11 @@
           <artifactId>jquery</artifactId>
         </exclusion>
       </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>org.webjars</groupId>
+      <artifactId>font-awesome</artifactId>
+      <version>${version.webjar-fontawesome}</version>
     </dependency>
     <dependency>
       <groupId>org.webjars</groupId>
