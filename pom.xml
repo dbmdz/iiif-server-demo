@@ -55,7 +55,7 @@
     <maven.compiler.target>1.8</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-    <version.digitalcollections-commons>1.2.2-SNAPSHOT</version.digitalcollections-commons>
+    <version.digitalcollections-commons>1.2.2</version.digitalcollections-commons>
     <version.iiif-image>2.2.6-SNAPSHOT</version.iiif-image>
     <version.iiif-mirador>2.4.0</version.iiif-mirador>
     <version.iiif-presentation>3.2.5-SNAPSHOT</version.iiif-presentation>
