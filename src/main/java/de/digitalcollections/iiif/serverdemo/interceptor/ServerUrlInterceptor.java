@@ -21,6 +21,7 @@ public class ServerUrlInterceptor extends HandlerInterceptorAdapter {
       String serverUrl = retrieveServerUrl(requestUrl, requestUri, contextPath);
       demoPresentationServiceImpl.setServerUrl(serverUrl);
     }
+    response.addHeader("Access-Control-Allow-Origin", "*");
     return true;
   }
 
