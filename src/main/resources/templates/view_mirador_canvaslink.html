@@ -3,7 +3,7 @@
   xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
   layout:decorator="base">
   <head>
-    <link rel="stylesheet" type="text/css" th:href="@{/webjars/mirador/2.4.0/css/mirador-combined.min.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/webjars/mirador/2.5.1/css/mirador-combined.min.css}" />
     <link rel="stylesheet" type="text/css" th:href="@{/css/canvasLink.css}" />
     <title>Mirador Viewer</title>
     <style type="text/css">
@@ -21,13 +21,13 @@
     </section>
 
   <th:block layout:fragment="morejs">
-    <script th:src="@{/webjars/mirador/2.4.0/mirador.min.js}"></script>
+    <script th:src="@{/webjars/mirador/2.5.1/mirador.min.js}"></script>
     <script th:src="@{/js/canvasLink.js}"></script>
     <script type="text/javascript" th:inline="javascript">
       $(function(){
         Mirador({
           'id': 'viewer',
-          'buildPath': /*[[@{/webjars/mirador/2.4.0/}]]*/,
+          'buildPath': /*[[@{/webjars/mirador/2.5.1/}]]*/,
           'workspaceType': 'bookReading',
           'layout': '1x1',
           'mainMenuSettings': {
