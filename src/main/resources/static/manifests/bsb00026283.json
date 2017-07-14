@@ -78,13 +78,14 @@
               "resource": {
                 "@id": "http://localhost:8080/presentation/v2/bsb00026283/res/bsb00026283_00041",
                 "@type": "dctypes:Image",
+                "format" : "image/jpeg",
                 "height": 6420,
-                "width": 4512,
                 "service": {
                   "@context": "http://iiif.io/api/image/2/context.json",
                   "@id": "http://localhost:8080/image/v2/bsb00026283_00041",
                   "profile": "http://iiif.io/api/image/2/level1.json"
-                }
+                },
+                "width": 4512
               }
             }
           ]
@@ -99,15 +100,16 @@
               "motivation": "sc:painting",
               "on": "http://localhost:8080/presentation/v2/bsb00026283_00042/canvas/2",
               "resource": {
+                "@id": "http://localhost:8080/presentation/v2/bsb00026283/res/bsb00026283_00042",
+                "@type": "dctypes:Image",
+                "format" : "image/jpeg",
+                "height": 1423,
                 "service": {
                   "profile": "http://iiif.io/api/image/2/level1.json",
                   "@context": "http://iiif.io/api/image/2/context.json",
                   "@id": "http://localhost:8080/image/v2/bsb00026283_00042"
                 },
-                "height": 1423,
-                "width": 1000,
-                "@id": "http://localhost:8080/presentation/v2/bsb00026283/res/bsb00026283_00042",
-                "@type": "dctypes:Image"
+                "width": 1000
               },
               "@id": "http://localhost:8080/presentation/v2/bsb00026283/image/bsb00026283_00042",
               "@type": "oa:Annotation"
@@ -125,15 +127,16 @@
               "motivation": "sc:painting",
               "on": "http://localhost:8080/presentation/v2/bsb00026283_00043/canvas/3",
               "resource": {
+                "@id": "http://localhost:8080/presentation/v2/bsb00026283/res/bsb00026283_00043",
+                "@type": "dctypes:Image",
+                "format" : "image/jpeg",
+                "height": 1423,
                 "service": {
                   "profile": "http://iiif.io/api/image/2/level1.json",
                   "@context": "http://iiif.io/api/image/2/context.json",
                   "@id": "http://localhost:8080/image/v2/bsb00026283_00043"
                 },
-                "height": 1423,
-                "width": 1000,
-                "@id": "http://localhost:8080/presentation/v2/bsb00026283/res/bsb00026283_00043",
-                "@type": "dctypes:Image"
+                "width": 1000
               },
               "@id": "http://localhost:8080/presentation/v2/bsb00026283/image/bsb00026283_00043",
               "@type": "oa:Annotation"
@@ -151,15 +154,16 @@
               "motivation": "sc:painting",
               "on": "http://localhost:8080/presentation/v2/bsb00026283_00044/canvas/4",
               "resource": {
+                "@id": "http://localhost:8080/presentation/v2/bsb00026283/res/bsb00026283_00044",
+                "@type": "dctypes:Image",
+                "format" : "image/jpeg",
+                "height": 1423,
                 "service": {
                   "profile": "http://iiif.io/api/image/2/level1.json",
                   "@context": "http://iiif.io/api/image/2/context.json",
                   "@id": "http://localhost:8080/image/v2/bsb00026283_00044"
                 },
-                "height": 1423,
-                "width": 1000,
-                "@id": "http://localhost:8080/presentation/v2/bsb00026283/res/bsb00026283_00044",
-                "@type": "dctypes:Image"
+                "width": 1000
               },
               "@id": "http://localhost:8080/presentation/v2/bsb00026283/image/bsb00026283_00044",
               "@type": "oa:Annotation"
@@ -177,15 +181,16 @@
               "motivation": "sc:painting",
               "on": "http://localhost:8080/presentation/v2/bsb00026283_00045/canvas/5",
               "resource": {
+                "@id": "http://localhost:8080/presentation/v2/bsb00026283/res/bsb00026283_00045",
+                "@type": "dctypes:Image",
+                "format" : "image/jpeg",
+                "height": 1423,
                 "service": {
                   "profile": "http://iiif.io/api/image/2/level1.json",
                   "@context": "http://iiif.io/api/image/2/context.json",
                   "@id": "http://localhost:8080/image/v2/bsb00026283_00045"
                 },
-                "height": 1423,
-                "width": 1000,
-                "@id": "http://localhost:8080/presentation/v2/bsb00026283/res/bsb00026283_00045",
-                "@type": "dctypes:Image"
+                "width": 1000
               },
               "@id": "http://localhost:8080/presentation/v2/bsb00026283/image/bsb00026283_00045",
               "@type": "oa:Annotation"
