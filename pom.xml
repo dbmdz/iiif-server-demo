@@ -6,15 +6,15 @@
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
-    <version>1.2.8.RELEASE</version>
+    <version>1.5.6.RELEASE</version>
   </parent>
 
+  <name>DigitalCollections: IIIF Server Demo</name>
   <groupId>de.digitalcollections</groupId>
   <artifactId>iiif-server-demo</artifactId>
   <version>2.1.6-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>DigitalCollections: IIIF Server Demo</name>
   <description>A standalone IIIF server demonstrating the use of IIIF Image API Java Libraries (https://github.com/dbmdz/iiif-image-api) and IIIF Presentation API Java Libraries (https://github.com/dbmdz/iiif-presentation-api) (Java implementations of the IIIF specifications: http://iiif.io/technical-details/).</description>
   <url>https://github.com/dbmdz/iiif-server-demo</url>
   <licenses>
@@ -90,22 +90,18 @@
     <dependency>
       <groupId>ch.qos.logback</groupId>
       <artifactId>logback-classic</artifactId>
-      <version>${version.logback-classic}</version>
     </dependency>
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
       <artifactId>jackson-annotations</artifactId>
-      <version>${version.jackson}</version>
     </dependency>
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
       <artifactId>jackson-core</artifactId>
-      <version>${version.jackson}</version>
     </dependency>
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
       <artifactId>jackson-databind</artifactId>
-      <version>${version.jackson}</version>
     </dependency>
     <dependency>
       <groupId>de.digitalcollections</groupId>
@@ -262,7 +258,7 @@
   </dependencies>
 
   <build>
-    <finalName>iiif-server-demo</finalName>
+    <finalName>iiif-server-demo-${project.version}</finalName>
 
     <plugins>
       <plugin>
@@ -274,6 +270,13 @@ The Spring Boot Maven plugin provides many convenient features:
         -->
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
+        <executions>
+          <execution>
+            <goals>
+              <goal>repackage</goal>
+            </goals>
+          </execution>
+        </executions>
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>

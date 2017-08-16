@@ -2,7 +2,6 @@ package de.digitalcollections.iiif.serverdemo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.ApplicationContext;
 
 /**
  * Demo IIIF Server (see https://spring.io/guides/gs/spring-boot/)<br>
@@ -19,7 +18,6 @@ import org.springframework.context.ApplicationContext;
 public class Application {
 
   public static void main(String[] args) {
-    System.setProperty("spring.profiles.active", "PROD");
-    ApplicationContext ctx = SpringApplication.run(Application.class, args);
+    SpringApplication.run(Application.class, args);
   }
 }

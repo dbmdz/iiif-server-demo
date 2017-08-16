@@ -1,2 +1,6 @@
 server:
   contextPath: /iiif
+
+spring:
+  profiles:
+    active: PROD
