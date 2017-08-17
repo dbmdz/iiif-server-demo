@@ -15,9 +15,9 @@
     <title>IIIF Server Demo</title>
 
     <!-- Bootstrap core CSS -->
-    <link th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}" rel="stylesheet"/>
+    <link th:href="@{/webjars/bootstrap/3.3.7/dist/css/bootstrap.min.css}" rel="stylesheet"/>
     <!-- Bootstrap theme -->
-    <link th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap-theme.min.css}" rel="stylesheet"/>
+    <link th:href="@{/webjars/bootstrap/3.3.7/dist/css/bootstrap-theme.min.css}" rel="stylesheet"/>
     <!-- Font awesome CSS -->
     <link th:href="@{/webjars/font-awesome/4.7.0/css/font-awesome.min.css}" rel="stylesheet" />
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
@@ -42,11 +42,11 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script th:inline="javascript">
       /*<![CDATA[*/
-      var url = /*[[@{/webjars/jquery/1.11.3/jquery.min.js}]]*/;
+      var url = /*[[@{/webjars/jquery/3.2.1/dist/jquery.min.js}]]*/;
               window.jQuery || document.write('<script src="' + url + '"><\/script>');
       /*]]>*/
     </script>
-    <script th:src="@{/webjars/bootstrap/3.3.7/js/bootstrap.min.js}"></script>
+    <script th:src="@{/webjars/bootstrap/3.3.7/dist/js/bootstrap.min.js}"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script th:src="@{/webjars/ie10-viewport-bug-workaround/1.0.3/dist/ie10-viewport-bug-workaround.min.js}"></script>
 
