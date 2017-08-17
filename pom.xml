@@ -57,7 +57,6 @@
 
     <version.digitalcollections-commons>1.2.3</version.digitalcollections-commons>
     <version.iiif-image>2.2.6</version.iiif-image>
-    <version.iiif-mirador>2.5.1</version.iiif-mirador>
     <version.iiif-presentation>3.2.6</version.iiif-presentation>
     <version.jacoco-maven-plugin>0.7.4.201502262128</version.jacoco-maven-plugin>
     <version.logback-ext-spring>0.1.4</version.logback-ext-spring>
@@ -79,6 +78,7 @@
     <version.webjar-jquery>1.11.3</version.webjar-jquery>
     <version.webjar-leaflet>1.0.3</version.webjar-leaflet>
     <version.webjar-leaflet-iiif>1.1.1</version.webjar-leaflet-iiif>
+    <version.webjar-mirador>2.5.1</version.webjar-mirador>
     <version.webjar-openseadragon>2.2.1</version.webjar-openseadragon>
     <version.webjar-respond>1.4.2</version.webjar-respond>
     <version.webjar-universalviewer>2.0.0</version.webjar-universalviewer>
@@ -195,7 +195,7 @@
     <dependency>
       <groupId>org.webjars</groupId>
       <artifactId>mirador</artifactId>
-      <version>${version.iiif-mirador}</version>
+      <version>${version.webjar-mirador}</version>
     </dependency>
     <dependency>
       <groupId>org.webjars</groupId>
