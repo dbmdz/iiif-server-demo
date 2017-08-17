@@ -11,7 +11,7 @@ and open the template in the editor.
     <title>IIIF-Leaflet Viewer</title>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" th:href="@{/webjars/leaflet/1.0.3/dist/leaflet.css}" />
+    <link rel="stylesheet" th:href="@{/webjars/leaflet/1.1.0/dist/leaflet.css}" />
   </head>
   <body>
     <section layout:fragment="content">
@@ -26,8 +26,8 @@ and open the template in the editor.
         It is under the "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"-License (see <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">http://creativecommons.org/licenses/by-nc-sa/4.0/</a>)
       </div>
 
-      <script th:src="@{/webjars/leaflet/1.0.3/dist/leaflet.js}"></script>
-      <script th:src="@{/webjars/leaflet-iiif/1.1.1/leaflet-iiif.js}"></script>
+      <script th:src="@{/webjars/leaflet/1.1.0/dist/leaflet.js}"></script>
+      <script th:src="@{/webjars/leaflet-iiif/1.2.1/leaflet-iiif.js}"></script>
       <script type="text/javascript" th:inline="javascript">
         /*<![CDATA[*/
         var map = L.map('map', {
