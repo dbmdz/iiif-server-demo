@@ -15,12 +15,12 @@
 
       <main>
         <div id="preview" class="openseadragon" style="height: 700px;"></div>
-        <script th:src="@{/webjars/openseadragon/2.2.1/openseadragon.min.js}"></script>
+        <script th:src="@{/webjars/openseadragon/2.3.0/build/openseadragon/openseadragon.min.js}"></script>
         <script type="application/javascript" th:inline="javascript">
           var viewer = OpenSeadragon({
           id: "preview",
           /*<![CDATA[*/
-          prefixUrl: /*[[@{/webjars/openseadragon/2.2.1/images/}]]*/,
+          prefixUrl: /*[[@{/webjars/openseadragon/2.3.0/build/openseadragon/images/}]]*/,
           /*]]>*/
           tileWidth: 64,
           /*<![CDATA[*/

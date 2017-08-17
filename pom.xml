@@ -79,7 +79,7 @@
     <version.webjar-leaflet>1.0.3</version.webjar-leaflet>
     <version.webjar-leaflet-iiif>1.1.1</version.webjar-leaflet-iiif>
     <version.webjar-mirador>2.5.1</version.webjar-mirador>
-    <version.webjar-openseadragon>2.2.1</version.webjar-openseadragon>
+    <version.webjar-openseadragon>2.3.0</version.webjar-openseadragon>
     <version.webjar-respond>1.4.2</version.webjar-respond>
     <version.webjar-universalviewer>2.0.0</version.webjar-universalviewer>
   </properties>
@@ -198,11 +198,6 @@
       <version>${version.webjar-mirador}</version>
     </dependency>
     <dependency>
-      <groupId>org.webjars</groupId>
-      <artifactId>openseadragon</artifactId>
-      <version>${version.webjar-openseadragon}</version>
-    </dependency>
-    <dependency>
       <groupId>org.webjars.bower</groupId>
       <artifactId>highlightjs</artifactId>
       <version>${version.webjar-highlightjs}</version>
@@ -242,6 +237,11 @@
       <groupId>org.webjars.npm</groupId>
       <artifactId>leaflet-iiif</artifactId>
       <version>${version.webjar-leaflet-iiif}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.webjars.npm</groupId>
+      <artifactId>openseadragon</artifactId>
+      <version>${version.webjar-openseadragon}</version>
     </dependency>
     <dependency>
       <groupId>org.webjars.npm</groupId>
