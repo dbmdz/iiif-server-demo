@@ -189,29 +189,8 @@
     </dependency>
     <dependency>
       <groupId>org.webjars</groupId>
-      <artifactId>bootstrap</artifactId>
-      <version>${version.webjar-bootstrap}</version>
-      <exclusions>
-        <exclusion>
-          <groupId>org.webjars</groupId>
-          <artifactId>jquery</artifactId>
-        </exclusion>
-      </exclusions>
-    </dependency>
-    <dependency>
-      <groupId>org.webjars</groupId>
-      <artifactId>font-awesome</artifactId>
-      <version>${version.webjar-fontawesome}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.webjars</groupId>
       <artifactId>html5shiv</artifactId>
       <version>${version.webjar-html5shiv}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.webjars</groupId>
-      <artifactId>jquery</artifactId>
-      <version>${version.webjar-jquery}</version>
     </dependency>
     <dependency>
       <groupId>org.webjars</groupId>
@@ -222,11 +201,6 @@
       <groupId>org.webjars</groupId>
       <artifactId>openseadragon</artifactId>
       <version>${version.webjar-openseadragon}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.webjars</groupId>
-      <artifactId>respond</artifactId>
-      <version>${version.webjar-respond}</version>
     </dependency>
     <dependency>
       <groupId>org.webjars.bower</groupId>
@@ -240,6 +214,27 @@
     </dependency>
     <dependency>
       <groupId>org.webjars.npm</groupId>
+      <artifactId>bootstrap</artifactId>
+      <version>${version.webjar-bootstrap}</version>
+      <exclusions>
+        <exclusion>
+          <groupId>org.webjars</groupId>
+          <artifactId>jquery</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>org.webjars.npm</groupId>
+      <artifactId>font-awesome</artifactId>
+      <version>${version.webjar-fontawesome}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.webjars.npm</groupId>
+      <artifactId>jquery</artifactId>
+      <version>${version.webjar-jquery}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.webjars.npm</groupId>
       <artifactId>leaflet</artifactId>
       <version>${version.webjar-leaflet}</version>
     </dependency>
@@ -247,6 +242,11 @@
       <groupId>org.webjars.npm</groupId>
       <artifactId>leaflet-iiif</artifactId>
       <version>${version.webjar-leaflet-iiif}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.webjars.npm</groupId>
+      <artifactId>respond.js</artifactId>
+      <version>${version.webjar-respond}</version>
     </dependency>
     <dependency>
       <groupId>org.webjars.npm</groupId>
