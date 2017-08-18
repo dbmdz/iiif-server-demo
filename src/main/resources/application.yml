@@ -19,6 +19,11 @@ management:
   security:
     enabled: true
 
+security:
+  headers:
+    # disables pragma no-cache header
+    cache: false
+
 server:
   contextPath: /iiif
   server-header: "IIIF Server Demo v@project.version@"
