@@ -1,6 +1,37 @@
+info:
+  app:
+    encoding: @project.build.sourceEncoding@
+    java:
+      source: @maven.compiler.source@
+      target: @maven.compiler.target@
+    project:
+      name: '@project.name@'
+      groupId: @project.groupId@
+      artifactId: @project.artifactId@
+      version: @project.version@
+
+management:
+  port: 9898
+  security:
+    enabled: true
+
 server:
   contextPath: /iiif
+  server-header: "IIIF Server Demo v@project.version@"
 
 spring:
   profiles:
     active: PROD
+  thymeleaf:
+    cache: true
+
+---
+
+spring:
+  profiles: local
+  thymeleaf:
+    cache: false
+
+management:
+  security:
+    enabled: false

@@ -11,7 +11,6 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.FilterType;
 import org.springframework.context.annotation.Import;
-import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
@@ -25,9 +24,6 @@ import org.thymeleaf.templateresolver.ClassLoaderTemplateResolver;
   "de.digitalcollections.iiif.serverdemo.controller"
 }, excludeFilters = {
   @ComponentScan.Filter(value = ErrorController.class, type = FilterType.ASSIGNABLE_TYPE)
-})
-@PropertySource(value = {
-  "classpath:de/digitalcollections/iiif/serverdemo/config/SpringConfigWeb-${spring.profiles.active:PROD}.properties"
 })
 @Import(SpringConfigCommonsMvc.class)
 public class SpringConfigWeb extends WebMvcConfigurerAdapter { // implements EmbeddedServletContainerCustomizer
