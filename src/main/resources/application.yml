@@ -1,3 +1,7 @@
+endpoints:
+  hypermedia:
+    enabled: true
+
 info:
   app:
     encoding: @project.build.sourceEncoding@
