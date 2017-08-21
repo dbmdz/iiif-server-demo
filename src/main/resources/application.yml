@@ -46,3 +46,13 @@ spring:
 management:
   security:
     enabled: false
+
+---
+
+spring:
+  profiles: PROD
+
+security:
+  user:
+    name: admin
+    password: secret
