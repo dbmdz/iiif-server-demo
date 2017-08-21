@@ -20,6 +20,8 @@ management:
     enabled: true
 
 security:
+  basic:
+    enabled: false
   headers:
     # disables pragma no-cache header
     cache: false
