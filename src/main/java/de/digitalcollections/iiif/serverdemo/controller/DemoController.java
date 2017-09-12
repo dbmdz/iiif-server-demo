@@ -94,6 +94,13 @@ public class DemoController {
     return "view_mirador_canvaslink";
   }
 
+  @RequestMapping(value = "/{identifier}/view_mirador_imagecropper.html", method = RequestMethod.GET)
+  public String getMiradorImageCropperPage(@PathVariable String identifier, Model model) {
+    model.addAttribute("active", "demos");
+    model.addAttribute("manifestId", "/presentation/v2/" + identifier + "/manifest");
+    return "view_mirador_imagecropper";
+  }
+
   @RequestMapping(value = "/{identifier}/view_mirador_keyboardnavigation.html", method = RequestMethod.GET)
   public String getMiradorKeyboardNavigationPage(@PathVariable String identifier, Model model) {
     model.addAttribute("active", "demos");
