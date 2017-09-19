@@ -29,15 +29,11 @@ body {
   position: relative;
 }
 
-#viewer * {
+#viewer .mirador-osd-annotation-controls * {
   box-sizing: content-box;
 }
 
-.overlay * {
-  box-sizing: border-box !important;
-}
-
-.window-manifest-title {
+#viewer .window-manifest-title {
   height: 1.25em;
 }
 
