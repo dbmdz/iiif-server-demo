@@ -86,7 +86,7 @@
     <version.webjar-mirador-multipagenavigation>1.1.1</version.webjar-mirador-multipagenavigation>
     <version.webjar-mirador-physicalruler>1.2.1</version.webjar-mirador-physicalruler>
     <version.webjar-mirador-viewfromurl>1.1.0</version.webjar-mirador-viewfromurl>
-    <version.webjar-openseadragon>2.3.0</version.webjar-openseadragon>
+    <version.webjar-openseadragon>2.3.1</version.webjar-openseadragon>
     <version.webjar-respond>1.4.2</version.webjar-respond>
     <version.webjar-universalviewer>2.0.2</version.webjar-universalviewer>
   </properties>
