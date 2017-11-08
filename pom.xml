@@ -78,7 +78,7 @@
     <version.webjar-jquery>3.2.1</version.webjar-jquery>
     <version.webjar-leaflet>1.2.0</version.webjar-leaflet>
     <version.webjar-leaflet-iiif>1.2.1</version.webjar-leaflet-iiif>
-    <version.webjar-mirador>2.5.1</version.webjar-mirador>
+    <version.webjar-mirador>2.6.0</version.webjar-mirador>
     <version.webjar-mirador-canvaslink>1.1.1</version.webjar-mirador-canvaslink>
     <version.webjar-mirador-imagecropper>2.2.1</version.webjar-mirador-imagecropper>
     <version.webjar-mirador-keyboardnavigation>1.1.0</version.webjar-mirador-keyboardnavigation>
