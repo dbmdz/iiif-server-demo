@@ -4,7 +4,7 @@
   layout:decorator="base">
   <head>
     <link rel="stylesheet" type="text/css" th:href="@{/webjars/mirador/2.5.1/css/mirador-combined.min.css}" />
-    <link rel="stylesheet" type="text/css" th:href="@{/webjars/dbmdz__mirador-imagecropper/2.2.0/imageCropper.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/webjars/dbmdz__mirador-imagecropper/2.2.1/imageCropper.css}" />
     <title>Mirador Viewer</title>
     <style type="text/css">
       body { font-size: 14px; }
@@ -22,7 +22,7 @@
 
   <th:block layout:fragment="morejs">
     <script th:src="@{/webjars/mirador/2.5.1/mirador.min.js}"></script>
-    <script th:src="@{/webjars/dbmdz__mirador-imagecropper/2.2.0/imageCropper.js}"></script>
+    <script th:src="@{/webjars/dbmdz__mirador-imagecropper/2.2.1/imageCropper.js}"></script>
     <script type="text/javascript" th:inline="javascript">
       $(function(){
         Mirador({
