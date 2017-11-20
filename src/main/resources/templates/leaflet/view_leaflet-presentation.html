@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html 
+  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+  layout:decorate="~{base}">
+  <head>
+    <title>IIIF-Leaflet Viewer</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" th:href="@{|/webjars/leaflet/${iiifVersions.leaflet}/dist/leaflet.css|}" />
+  </head>
+  <body>
+    <section layout:fragment="content">
+      <header>
+        <h1>Object-Viewer: Leaflet-IIIF</h1>
+      </header>
+      <div id="map" style="height: 700px;"></div>
+
+      <div class="alert alert-warning" role="alert">
+        <strong>License:</strong>
+        The demo images are under the "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"-License (see <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">http://creativecommons.org/licenses/by-nc-sa/4.0/</a>)
+      </div>
+
+      <script th:src="@{|/webjars/leaflet/${iiifVersions.leaflet}/dist/leaflet.js|}"></script>
+      <script th:src="@{|/webjars/leaflet-iiif/${iiifVersions['leaflet-iiif']}/leaflet-iiif.js|}"></script>
+      <script type="text/javascript" th:inline="javascript">
+        var map;
+        var iiifLayers = {};
+
+        map = L.map('map', {
+          center: [0, 0],
+          crs: L.CRS.Simple,
+          zoom: 0
+        });
+        /*<![CDATA[*/
+        var manifestUrl = /*[[@{__${manifestId}__}]]*/;
+        /*]]>*/
+        // Grab a IIIF manifest
+        $.getJSON(manifestUrl, function (data) {
+          // For each image create a L.TileLayer.Iiif object and add that to an object literal for the layer control
+          $.each(data.sequences[0].canvases, function (_, val) {
+            iiifLayers[val.label] = L.tileLayer.iiif(val.images[0].resource.service['@id'] + '/info.json');
+          });
+          // Add layers control to the map
+          L.control.layers(iiifLayers).addTo(map);
+
+          // Access the first Iiif object and add it to the map
+          iiifLayers[Object.keys(iiifLayers)[0]].addTo(map);
+        });
+      </script>
+    </section>
+  </body>
+</html>

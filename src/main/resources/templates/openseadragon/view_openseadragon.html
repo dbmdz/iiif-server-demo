@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html 
+  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+  layout:decorate="~{base}">
+  <head>
+    <title>OpenSeadragon Viewer</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  </head>
+  <body>
+    <section layout:fragment="content">
+      <header>
+        <h1>Image-Viewer: Openseadragon</h1>
+      </header>
+
+      <main>
+        <div id="preview" class="openseadragon" style="height: 700px;"></div>
+        <script th:src="@{|/webjars/openseadragon/${iiifVersions.openseadragon}/build/openseadragon/openseadragon.min.js|}"></script>
+        <script type="application/javascript" th:inline="javascript">
+          var viewer = OpenSeadragon({
+          id: "preview",
+          /*<![CDATA[*/
+          prefixUrl: /*[[@{/webjars/openseadragon/__${iiifVersions.openseadragon}__/build/openseadragon/images/}]]*/,
+          /*]]>*/
+          tileWidth: 64,
+          /*<![CDATA[*/
+          tileSources: /*[[@{__${infoUrl}__}]]*/
+          /*]]>*/
+          });
+        </script>
+      </main>
+
+      <div class="alert alert-warning" role="alert">
+        <strong>License:</strong>
+        The demo image is part of the "Ottheinrich-Bibel" page "Einzug in Jerusalem" presented by the <a href="https://www.bsb-muenchen.de">Bavarian State Library</a> utilizing IIIF-Viewer Mirador <a href="https://api.digitale-sammlungen.de/iiif/presentation/bsb00026283/view.html?view=ImageView&amp;manifest=https%3A%2F%2Fapi.digitale-sammlungen.de%2Fiiif%2Fpresentation%2Fv2%2Fbsb00026283%2Fmanifest&amp;canvas=https%3A%2F%2Fapi.digitale-sammlungen.de%2Fiiif%2Fpresentation%2Fv2%2Fbsb00026283%2Fcanvas%2F41" target="_blank">here</a>.<br/>
+        It is under the "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"-License (see <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">http://creativecommons.org/licenses/by-nc-sa/4.0/</a>)
+      </div>
+
+    </section>
+  </body>
+</html>

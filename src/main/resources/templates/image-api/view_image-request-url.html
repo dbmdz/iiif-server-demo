@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html 
+  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+  layout:decorate="~{base}">
+  <head>
+    <title>Image Request URI Syntax</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  </head>
+  <body>
+    <section layout:fragment="content">
+      <header>
+        <h1>IIIF Image API: Image Request URI Syntax</h1>
+      </header>
+
+      <main>
+        <p>The IIIF Image API URI for requesting an image must conform to the following URI Template:</p>
+
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <strong><i class="glyphicon glyphicon-info-sign"></i> Legend:</strong><br/>
+            <img id="api-legend" th:src="@{/images/iiif-image-api-url-v2.0.0-localhost.jpg}" />
+          </div>
+        </div>
+
+        Example:
+        <section id="urlbuilder" class="well">
+          Directly embedded in HTML as image:<br/>
+          <b>&lt;img src="http://localhost:8080
+            <span th:text="@{/image/v2/bsb00026283_00041/}">
+              /image/v2/bsb00026283_00041/
+            </span>
+            <select name="region">
+              <option>full</option>
+              <option>658,1757,3108,2647</option>
+              <option>2500,3000,1024,1024</option>
+              <option>pct:20,45,20,20</option>
+            </select>
+            /
+            <select name="size">
+              <option>full</option>
+              <option selected="selected">500,</option>
+              <option>,500</option>
+              <option>500,500</option>
+              <option>!500,500</option>
+              <option>pct:50</option>
+            </select>
+            /
+            <select name="rotation">
+              <option>0</option>
+              <option>90</option>
+              <option>180</option>
+              <option>270</option>
+            </select>
+            /
+            <select name="color">
+              <option>default</option>
+              <option>gray</option>
+              <option>bitonal</option>
+            </select>
+            .
+            <select name="format">
+              <option>jpg</option>
+              <option>png</option>
+            </select>
+            " /&gt;</b>
+        </section>
+        <section id="image-view">
+            <h3>Bible of Ottheinrich: "Einzug in Jerusalem"</h3>
+            <img id="imgrender" th:src="@{/image/v2/bsb00026283_00041/full/500,/0/default.jpg}" align="left" />
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. </p>
+
+            <p>Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. <i>Lorem ipsum dolor sit amet, consectetur adipiscing elit</i>. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. </p>
+
+            <p>Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. <b>Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh</b>. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. Proin quam. Etiam ultrices. </p>
+
+            <p>Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer euismod lacus luctus magna. Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi lacinia molestie dui. Praesent blandit dolor. Sed non quam. In vel mi sit amet augue congue elementum. Morbi in ipsum sit amet pede facilisis laoreet. <i>Ut fringilla</i>. Donec lacus nunc, viverra nec, blandit vel, egestas et, augue. Vestibulum tincidunt malesuada tellus. Ut ultrices ultrices enim. </p>
+
+            <p>Curabitur sit amet mauris. Morbi in dui quis est pulvinar ullamcorper. Nulla facilisi. Integer lacinia sollicitudin massa. Cras metus. Sed aliquet risus a tortor. <i>Suspendisse in justo eu magna luctus suscipit</i>. Integer id quam. Morbi mi. Quisque nisl felis, venenatis tristique, dignissim in, ultrices sit amet, augue. Proin sodales libero eget ante. Nulla quam. Aenean laoreet. Vestibulum nisi lectus, commodo ac, facilisis ac, ultricies eu, pede. Ut orci risus, accumsan porttitor, cursus quis, aliquet eget, justo. </p>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. </p>
+
+            <p>Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. <i>Lorem ipsum dolor sit amet, consectetur adipiscing elit</i>. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. </p>
+
+            <p>Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. <b>Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh</b>. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. Proin quam. Etiam ultrices. </p>
+
+            <p>Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer euismod lacus luctus magna. Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi lacinia molestie dui. Praesent blandit dolor. Sed non quam. In vel mi sit amet augue congue elementum. Morbi in ipsum sit amet pede facilisis laoreet. <i>Ut fringilla</i>. Donec lacus nunc, viverra nec, blandit vel, egestas et, augue. Vestibulum tincidunt malesuada tellus. Ut ultrices ultrices enim. </p>
+        </section>
+
+        <div class="alert alert-warning" role="alert">
+          <strong>License:</strong>
+          The demo image is part of the "Ottheinrich-Bibel" page "Einzug in Jerusalem" presented by the <a href="https://www.bsb-muenchen.de">Bavarian State Library</a> utilizing IIIF-Viewer Mirador <a href="https://api.digitale-sammlungen.de/iiif/presentation/bsb00026283/view.html?view=ImageView&amp;manifest=https%3A%2F%2Fapi.digitale-sammlungen.de%2Fiiif%2Fpresentation%2Fv2%2Fbsb00026283%2Fmanifest&amp;canvas=https%3A%2F%2Fapi.digitale-sammlungen.de%2Fiiif%2Fpresentation%2Fv2%2Fbsb00026283%2Fcanvas%2F41" target="_blank">here</a>.<br/>
+          It is under the "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"-License (see <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">http://creativecommons.org/licenses/by-nc-sa/4.0/</a>)
+        </div>
+
+        <script th:inline="javascript" defer="true">
+          // <![CDATA[
+          function onChange() {
+            var params = {};
+            params.region = document.getElementsByName('region')[0].value || 'full';
+            params.size = document.getElementsByName('size')[0].value || 'full';
+            params.rotation = document.getElementsByName('rotation')[0].value || 0;
+            params.color = document.getElementsByName('color')[0].value || 'default';
+            params.format = document.getElementsByName('format')[0].value || 'jpg';
+            var URL = buildIIIFUrl(params);
+            document.getElementById('imgrender').setAttribute('src', URL);
+          }
+
+          function  buildIIIFUrl(params) {
+            var baseURL = /*[[@{/image/v2/bsb00026283_00041/}]]*/;
+            var URL = baseURL + [params.region, params.size, params.rotation, params.color].join('/') +
+                    "." + params.format;
+            return URL;
+          }
+
+          var selects = document.getElementsByTagName("select");
+          for (var i = 0; i < selects.length; i++) {
+            selects[i].addEventListener('change', onChange);
+          }
+          // ]]>
+        </script>
+
+      </main>
+    </section>
+  </body>
+</html>

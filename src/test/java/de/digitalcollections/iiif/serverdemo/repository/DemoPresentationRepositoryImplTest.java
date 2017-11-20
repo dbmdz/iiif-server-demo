@@ -5,6 +5,7 @@
  */
 package de.digitalcollections.iiif.serverdemo.repository;
 
+import de.digitalcollections.iiif.hymir.demo.repository.DemoPresentationRepositoryImpl;
 import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;

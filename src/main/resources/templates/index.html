@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html 
   xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-  layout:decorator="base">
+  layout:decorate="~{base}">
   <body>
     <section layout:fragment="content">
 
@@ -39,11 +39,11 @@
                 </a>
                 <a th:href="@{/bsb00026283_00041/view_image.html}" class="list-group-item">
                   <h4 class="list-group-item-heading">Image-Viewer: OpenSeadragon</h4>
-                  <p class="list-group-item-text"><i class="fa fa-play-circle-o" aria-hidden="true"></i> View zoomable image demo (using OpenSeadragon 2.3.1 viewer)</p>
+                  <p class="list-group-item-text"><i class="fa fa-play-circle-o" aria-hidden="true"></i> View zoomable image demo (using OpenSeadragon <span th:text="${iiifVersions.openseadragon}">...</span> viewer)</p>
                 </a>
                 <a th:href="@{/bsb00026283_00041/view_leaflet-image.html}" class="list-group-item">
                   <h4 class="list-group-item-heading">Image-Viewer: Leaflet-IIIF</h4>
-                  <p class="list-group-item-text"><i class="fa fa-play-circle-o" aria-hidden="true"></i> View zoomable image demo (using Leaflet-IIIF 1.2.1 viewer)</p>
+                  <p class="list-group-item-text"><i class="fa fa-play-circle-o" aria-hidden="true"></i> View zoomable image demo (using Leaflet-IIIF <span th:text="${iiifVersions['leaflet-iiif']}">...</span> viewer)</p>
                 </a>
               </div>
             </div>
@@ -66,15 +66,15 @@
                 </a>
                 <a th:href="@{/bsb00026283/view_mirador.html}" class="list-group-item">
                   <h4 class="list-group-item-heading">Object-Viewer: Mirador</h4>
-                  <p class="list-group-item-text"><i class="fa fa-play-circle-o" aria-hidden="true"></i> View pagable image demo (using Mirador 2.6.0 viewer)</p>
+                  <p class="list-group-item-text"><i class="fa fa-play-circle-o" aria-hidden="true"></i> View pagable image demo (using Mirador <span th:text="${iiifVersions.mirador}">...</span> viewer)</p>
                 </a>
                 <a th:href="@{/bsb00026283/view_universal.html}" class="list-group-item">
                   <h4 class="list-group-item-heading">Object-Viewer: UniversalViewer</h4>
-                  <p class="list-group-item-text"><i class="fa fa-play-circle-o" aria-hidden="true"></i> View pagable image demo (using UniversalViewer 2.0.2 viewer)</p>
+                  <p class="list-group-item-text"><i class="fa fa-play-circle-o" aria-hidden="true"></i> View pagable image demo (using UniversalViewer <span th:text="${iiifVersions.universalviewer}">...</span> viewer)</p>
                 </a>
                 <a th:href="@{/bsb00026283/view_leaflet-presentation.html}" class="list-group-item">
                   <h4 class="list-group-item-heading">Object-Viewer: Leaflet-IIIF</h4>
-                  <p class="list-group-item-text"><i class="fa fa-play-circle-o" aria-hidden="true"></i> View pagable image demo (using Leaflet-IIIF 1.2.1 viewer)</p>
+                  <p class="list-group-item-text"><i class="fa fa-play-circle-o" aria-hidden="true"></i> View pagable image demo (using Leaflet-IIIF <span th:text="${iiifVersions['leaflet-iiif']}">...</span> viewer)</p>
                 </a>
               </div>
             </div>
@@ -85,7 +85,7 @@
         <div class="col-sm-12">
           <div class="panel panel-primary" id="mirador-plugins">
             <div class="panel-heading">
-              <h3 class="panel-title">Mirador 2.6.0 with plugins</h3>
+              <h3 class="panel-title">Mirador <span th:text="${iiifVersions.mirador}">...</span> with plugins</h3>
             </div>
             <div class="panel-body">
               <ul class="list-group">

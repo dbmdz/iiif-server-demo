@@ -1,5 +1,6 @@
 package de.digitalcollections.iiif.serverdemo.interceptor;
 
+import de.digitalcollections.iiif.hymir.demo.interceptor.ServerUrlInterceptor;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

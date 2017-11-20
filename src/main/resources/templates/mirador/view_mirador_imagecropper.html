@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html 
+  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+  layout:decorate="~{base}">
+  <head>
+    <link rel="stylesheet" type="text/css" th:href="@{|/webjars/mirador/${iiifVersions.mirador}/css/mirador-combined.min.css|}" />
+    <link rel="stylesheet" type="text/css" th:href="@{|/webjars/dbmdz__mirador-imagecropper/${iiifVersions['mirador-imagecropper']}/imageCropper.css|}" />
+    <title>Mirador Viewer</title>
+    <style type="text/css">
+      body { font-size: 14px; }
+      body > div.container { width: 100% !important; }
+    </style>
+  </head>
+  <body>
+    <section layout:fragment="content">
+      <div id="viewer"></div>
+    </section>
+
+  <th:block layout:fragment="morejs">
+    <script th:src="@{|/webjars/mirador/${iiifVersions.mirador}/mirador.min.js|}"></script>
+    <script th:src="@{|/webjars/dbmdz__mirador-imagecropper/${iiifVersions['mirador-imagecropper']}/imageCropper.js|}"></script>
+    <script type="text/javascript" th:inline="javascript">
+      $(function(){
+        Mirador({
+          'annotationEndpoint': {
+            'module': 'LocalStorageEndpoint',
+            'name': 'Local Storage'
+          },
+          'buildPath': /*[[@{|/webjars/mirador/${iiifVersions.mirador}/|}]]*/,
+          'data': [{
+            /*<![CDATA[*/
+            'manifestUri': /*[[@{__${manifestId}__}]]*/
+            /*]]>*/
+          }],
+          'id': 'viewer',
+          'imageCropper': {
+            'activeOnStart': true,
+            'showLicense': true
+          },
+          'mainMenuSettings': {
+            'userLogo': {
+              'attributes': {
+                'href': 'http://projectmirador.org/'
+              },
+              'label': 'Object-Viewer: Mirador',
+            }
+          },
+          'windowObjects': [{
+            /*<![CDATA[*/
+            'loadedManifest': /*[[@{__${manifestId}__}]]*/
+            /*]]>*/
+          }]
+        });
+      });
+    </script>
+  </th:block>
+</body>
+</html>

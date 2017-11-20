@@ -1,3 +1,4 @@
+# local/default
 endpoints:
   hypermedia:
     enabled: true
@@ -16,9 +17,9 @@ info:
 
 management:
   context-path: '/monitoring'
-  port: 9898
+  port: 9001
   security:
-    enabled: true
+    enabled: false
 
 security:
   basic:
@@ -28,32 +29,29 @@ security:
     cache: false
 
 server:
-  contextPath: /iiif
-  server-header: "IIIF Server Demo v@project.version@"
+  contextPath: /iiif-demo
+  server-header: "@project.name@ v@project.version@"
 
 spring:
   profiles:
-    active: PROD
-  thymeleaf:
-    cache: true
-
----
-
-spring:
-  profiles: local
+    active: local
   thymeleaf:
     cache: false
-
-management:
-  security:
-    enabled: false
+    mode: HTML
 
 ---
 
-spring:
-  profiles: PROD
+# PROD
+management:
+  security:
+    enabled: true
 
 security:
   user:
     name: admin
     password: secret
+
+spring:
+  profiles: PROD
+  thymeleaf:
+    cache: true
