@@ -29,7 +29,7 @@ security:
     cache: false
 
 server:
-  contextPath: /iiif-demo
+  contextPath: /iiif
   server-header: "@project.name@ v@project.version@"
 
 spring:
