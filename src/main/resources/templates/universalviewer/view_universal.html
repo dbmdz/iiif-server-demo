@@ -4,14 +4,15 @@
   layout:decorate="~{base}">
   <head>
     <title>UniversalViewer</title>
+    <link rel="stylesheet" th:href="@{/css/viewer.css}" />
   </head>
   <body>
     <section layout:fragment="content">
       <header>
         <h1>Object-Viewer: UniversalViewer</h1>
       </header>
-      
-      <div class="uv" data-locale="en-GB:English (GB),cy-GB:Cymraeg" data-config="" th:attr="data-uri=@{__${manifestId}__}" style="height:850px;"></div>
+
+      <div class="uv" id="uv-container" th:attr="data-uri=@{|${manifestId}|}"></div>
 
       <div class="alert alert-warning" role="alert">
         <strong>License:</strong>

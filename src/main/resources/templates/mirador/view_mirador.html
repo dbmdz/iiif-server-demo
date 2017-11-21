@@ -4,15 +4,15 @@
   layout:decorate="~{base}">
   <head>
     <title>Mirador Viewer</title>
+    <link rel="stylesheet" th:href="@{/css/viewer.css}" />
     <link rel="stylesheet" type="text/css" th:href="@{|/webjars/mirador/${iiifVersions.mirador}/css/mirador-combined.min.css|}" />
     <style type="text/css">
-      body { font-size: 14px; }
       body > div.container { width: 100% !important; }
     </style>
   </head>
   <body>
     <section layout:fragment="content">
-      <div id="viewer"></div>
+      <div id="mirador-container"></div>
     </section>
 
   <th:block layout:fragment="morejs">
@@ -27,10 +27,10 @@
           'buildPath': /*[[@{|/webjars/mirador/${iiifVersions.mirador}/|}]]*/,
           'data': [{
             /*<![CDATA[*/
-            'manifestUri': /*[[@{__${manifestId}__}]]*/
+            'manifestUri': /*[[@{|${manifestId}|}]]*/
             /*]]>*/
           }],
-          'id': 'viewer',
+          'id': 'mirador-container',
           'mainMenuSettings': {
             'userLogo': {
               'attributes': {
@@ -41,7 +41,7 @@
           },
           'windowObjects': [{
             /*<![CDATA[*/
-            'loadedManifest': /*[[@{__${manifestId}__}]]*/
+            'loadedManifest': /*[[@{|${manifestId}|}]]*/
             /*]]>*/
           }]
         });

@@ -1,0 +1,12 @@
+#leaflet-container, #osd-container, #uv-container {
+  height: calc(100vh - 290px);
+}
+
+#mirador-container {
+  height: calc(100vh - 110px);
+  position: relative;
+}
+
+#mirador-container .mirador-osd-annotation-controls * {
+  box-sizing: content-box;
+}

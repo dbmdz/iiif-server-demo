@@ -4,6 +4,7 @@
   layout:decorate="~{base}">
   <head>
     <title>IIIF-Leaflet Viewer</title>
+    <link rel="stylesheet" th:href="@{/css/viewer.css}" />
     <link rel="stylesheet" th:href="@{|/webjars/leaflet/${iiifVersions.leaflet}/dist/leaflet.css|}" />
   </head>
   <body>
@@ -11,7 +12,7 @@
       <header>
         <h1>Object-Viewer: Leaflet-IIIF</h1>
       </header>
-      <div id="map" style="height: 700px;"></div>
+      <div id="leaflet-container"></div>
 
       <div class="alert alert-warning" role="alert">
         <strong>License:</strong>
@@ -24,13 +25,13 @@
         var map;
         var iiifLayers = {};
 
-        map = L.map('map', {
+        map = L.map('leaflet-container', {
           center: [0, 0],
           crs: L.CRS.Simple,
           zoom: 0
         });
         /*<![CDATA[*/
-        var manifestUrl = /*[[@{__${manifestId}__}]]*/;
+        var manifestUrl = /*[[@{|${manifestId}|}]]*/;
         /*]]>*/
         // Grab a IIIF manifest
         $.getJSON(manifestUrl, function (data) {

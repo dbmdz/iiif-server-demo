@@ -4,6 +4,7 @@
   layout:decorate="~{base}">
   <head>
     <title>OpenSeadragon Viewer</title>
+    <link rel="stylesheet" th:href="@{/css/viewer.css}" />
   </head>
   <body>
     <section layout:fragment="content">
@@ -12,17 +13,17 @@
       </header>
 
       <main>
-        <div id="preview" class="openseadragon" style="height: 700px;"></div>
+        <div id="osd-container"></div>
         <script th:src="@{|/webjars/openseadragon/${iiifVersions.openseadragon}/build/openseadragon/openseadragon.min.js|}"></script>
         <script type="application/javascript" th:inline="javascript">
           var viewer = OpenSeadragon({
-          id: "preview",
+          id: 'osd-container',
           /*<![CDATA[*/
-          prefixUrl: /*[[@{/webjars/openseadragon/__${iiifVersions.openseadragon}__/build/openseadragon/images/}]]*/,
+          prefixUrl: /*[[@{|/webjars/openseadragon/${iiifVersions.openseadragon}/build/openseadragon/images/|}]]*/,
           /*]]>*/
           tileWidth: 64,
           /*<![CDATA[*/
-          tileSources: /*[[@{__${infoUrl}__}]]*/
+          tileSources: /*[[@{|${infoUrl}|}]]*/
           /*]]>*/
           });
         </script>

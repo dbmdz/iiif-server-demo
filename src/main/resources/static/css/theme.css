@@ -1,45 +1,17 @@
+/* global */
 body {
-  padding-top: 85px;
+  padding-top: 60px;
 }
 
-.theme-dropdown .dropdown-menu {
-  position: static;
-  display: block;
-  margin-bottom: 20px;
-}
-
-.theme-showcase > p > .btn {
-  margin: 5px 0;
-}
-
-.theme-showcase .navbar .container {
-  width: auto;
-}
-
-.footer {
-  padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
-}
-
-#viewer {
-  background: #333;
-  width: 100%;
-  height: calc(100vh - 135px);
-  position: relative;
-}
-
-#viewer .mirador-osd-annotation-controls * {
-  box-sizing: content-box;
-}
-
-#viewer .window-manifest-title {
-  height: 1.25em;
-}
-
+/* navbar */
 .navbar-brand img {
   height: 19px;
   margin-top: -5px;
+}
+
+/* main content */
+.jumbotron {
+  margin-top: 10px;
 }
 
 ul.api-description {
@@ -53,11 +25,10 @@ ul.api-description {
 
 #mirador-plugins li.list-group-item:focus,
 #mirador-plugins li.list-group-item:hover {
-    background-color: #f5f5f5;
+  background: #f5f5f5;
 }
 
 div.alert.alert-warning {
-  clear: both;
   margin-top: 20px;
 }
 
@@ -65,24 +36,23 @@ pre > code {
   font-size: 16px;
 }
 
-.toc h2 {
-  font-size: 14px !important;
-}
-
 div.well.uri-template {
   font-size: 16px;
   font-weight: bold;
 }
 
-img#api-legend {
-  width: 100%;
-}
-
 img#imgrender {
-  margin: 0 10px 10px 0;
+  margin-right: 10px;
 }
 
 section#image-view {
-  border: solid 1px #AAA;
-  padding: 10px;
+  border: 1px solid gray;
+  padding: 0 10px;
+}
+
+/* footer */
+.footer {
+  border-top: 1px solid #e5e5e5;
+  color: #777;
+  padding-top: 15px;
 }

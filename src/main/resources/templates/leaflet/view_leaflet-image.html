@@ -4,6 +4,7 @@
   layout:decorate="~{base}">
   <head>
     <title>IIIF-Leaflet Viewer</title>
+    <link rel="stylesheet" th:href="@{/css/viewer.css}" />
     <link rel="stylesheet" th:href="@{|/webjars/leaflet/${iiifVersions.leaflet}/dist/leaflet.css|}" />
   </head>
   <body>
@@ -11,7 +12,7 @@
       <header>
         <h1>Image-Viewer: Leaflet-IIIF</h1>
       </header>
-      <div id="map" style="height: 700px;"></div>
+      <div id="leaflet-container"></div>
 
       <div class="alert alert-warning" role="alert">
         <strong>License:</strong>
@@ -23,12 +24,12 @@
       <script th:src="@{|/webjars/leaflet-iiif/${iiifVersions['leaflet-iiif']}/leaflet-iiif.js|}"></script>
       <script type="text/javascript" th:inline="javascript">
         /*<![CDATA[*/
-        var map = L.map('map', {
+        var map = L.map('leaflet-container', {
           center: [0, 0],
           crs: L.CRS.Simple,
           zoom: 0,
         });
-        L.tileLayer.iiif(/*[[@{__${infoUrl}__}]]*/).addTo(map);
+        L.tileLayer.iiif(/*[[@{|${infoUrl}|}]]*/).addTo(map);
         /*]]>*/
       </script>
     </section>
