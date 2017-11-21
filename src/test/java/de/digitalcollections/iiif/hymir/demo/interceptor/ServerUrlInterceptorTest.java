@@ -1,13 +1,18 @@
-package de.digitalcollections.iiif.serverdemo.interceptor;
+package de.digitalcollections.iiif.hymir.demo.interceptor;
 
-import de.digitalcollections.iiif.hymir.demo.interceptor.ServerUrlInterceptor;
+import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class ServerUrlInterceptorTest {
 
-  ServerUrlInterceptor instance = new ServerUrlInterceptor();
+  private ServerUrlInterceptor interceptor;
+
+  @Before
+  public void setUp() {
+    interceptor = new ServerUrlInterceptor();
+  }
 
   @Test
   public void testRetrieveServerUrl() {
@@ -15,28 +20,28 @@ public class ServerUrlInterceptorTest {
     String requestUri = "/presentation/v2/12345/manifest";
     String contextPath = "";
     String expectedServerUrl = "http://localhost:8080";
-    String resultingServerUrl = instance.retrieveServerUrl(requestUrl, requestUri, contextPath);
-    assertEquals(expectedServerUrl, resultingServerUrl);
+    String resultingServerUrl = interceptor.retrieveServerUrl(requestUrl, requestUri, contextPath);
+    assertThat(resultingServerUrl).isEqualTo(expectedServerUrl);
 
     requestUrl = "http://localhost:8080/iiif/presentation/v2/12345/manifest";
     requestUri = "/iiif/presentation/v2/12345/manifest";
     contextPath = "/iiif";
     expectedServerUrl = "http://localhost:8080/iiif";
-    resultingServerUrl = instance.retrieveServerUrl(requestUrl, requestUri, contextPath);
-    assertEquals(expectedServerUrl, resultingServerUrl);
+    resultingServerUrl = interceptor.retrieveServerUrl(requestUrl, requestUri, contextPath);
+    assertThat(resultingServerUrl).isEqualTo(expectedServerUrl);
 
     requestUrl = "http://localhost/iiif/presentation/v2/12345/manifest";
     requestUri = "/iiif/presentation/v2/12345/manifest";
     contextPath = "/iiif";
     expectedServerUrl = "http://localhost/iiif";
-    resultingServerUrl = instance.retrieveServerUrl(requestUrl, requestUri, contextPath);
-    assertEquals(expectedServerUrl, resultingServerUrl);
+    resultingServerUrl = interceptor.retrieveServerUrl(requestUrl, requestUri, contextPath);
+    assertThat(resultingServerUrl).isEqualTo(expectedServerUrl);
 
     requestUrl = "http://www.example.org/iiif/presentation/v2/12345/manifest";
     requestUri = "/iiif/presentation/v2/12345/manifest";
     contextPath = "/iiif";
     expectedServerUrl = "http://www.example.org/iiif";
-    resultingServerUrl = instance.retrieveServerUrl(requestUrl, requestUri, contextPath);
-    assertEquals(expectedServerUrl, resultingServerUrl);
+    resultingServerUrl = interceptor.retrieveServerUrl(requestUrl, requestUri, contextPath);
+    assertThat(resultingServerUrl).isEqualTo(expectedServerUrl);
   }
 }

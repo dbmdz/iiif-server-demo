@@ -27,7 +27,7 @@ public class ViewControllerTest {
   private MockMvc mockMvc;
 
   @Before
-  public void setup() {
+  public void setUp() {
     mockMvc = MockMvcBuilders.webAppContextSetup(webApplicationContext).build();
   }
 
