@@ -17,7 +17,7 @@ public class DemoPresentationRepositoryImpl extends PresentationRepositoryImpl {
 
   private static final Logger LOGGER = LoggerFactory.getLogger(DemoPresentationRepositoryImpl.class);
 
-  private String serverUrlPlaceholder = "http://localhost:8080";
+  private final String serverUrlPlaceholder = "http://localhost:8080";
   private String serverUrl;
 
   @Override
@@ -33,12 +33,13 @@ public class DemoPresentationRepositoryImpl extends PresentationRepositoryImpl {
   }
 
   public String replaceUrlEndpoints(String json) {
+    String resultingJson = json;
     if (!this.serverUrlPlaceholder.equals(this.serverUrl)) {
-      json = json.replaceAll(this.serverUrlPlaceholder, this.serverUrl);
+      resultingJson = resultingJson.replaceAll(this.serverUrlPlaceholder, this.serverUrl);
       LOGGER.info("replaced all occurrences of the placeholder {} with the application url {}",
               this.serverUrlPlaceholder, this.serverUrl);
     }
-    return json;
+    return resultingJson;
   }
 
 }

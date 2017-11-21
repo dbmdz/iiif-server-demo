@@ -11,7 +11,7 @@ import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 public class ServerUrlInterceptor extends HandlerInterceptorAdapter {
 
   @Autowired
-  DemoPresentationServiceImpl demoPresentationServiceImpl;
+  private DemoPresentationServiceImpl demoPresentationServiceImpl;
 
   // before the actual handler will be executed
   @Override
