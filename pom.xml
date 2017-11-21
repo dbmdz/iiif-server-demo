@@ -184,6 +184,7 @@
         <configuration>
           <excludes>
             <exclude>**/SpringConfig*</exclude>
+            <exclude>**/Application*</exclude>
           </excludes>
         </configuration>
       </plugin>
