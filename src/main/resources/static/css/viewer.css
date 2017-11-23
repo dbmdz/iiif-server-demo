@@ -28,3 +28,12 @@
 #mirador-container .metadata-listing img {
   display: block;
 }
+
+main > .tify-app {
+  height: calc(100vh - 290px);
+  position: relative;
+}
+
+.tify-app > .tify-header .tify-header_title {
+  font-size: 20px;
+}

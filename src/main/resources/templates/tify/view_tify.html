@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html 
+  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+  layout:decorate="~{base}">
+  <head>
+    <title>TIFY Viewer</title>
+    <link rel="stylesheet" th:href="@{/css/viewer.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{|/webjars/tify/${iiifVersions.tify}/tify.css|}" />
+    <style type="text/css">
+      body > div.container { width: 100% !important; }
+    </style>
+  </head>
+  <body>
+    <section layout:fragment="content">
+      <div class="container">
+        <header>
+          <h1>Object-Viewer: TIFY</h1>
+        </header>
+      </div>
+
+      <main>
+        <div id="tify-container"></div>
+        <script type="application/javascript" th:inline="javascript">
+          tifyOptions = {
+            'container': '#tify-container',
+            'manifest': /*[[@{|${manifestId}|}]]*/
+          }
+        </script>
+        <script th:src="@{|/webjars/tify/${iiifVersions.tify}/tify.js|}"></script>
+      </main>
+
+      <div class="alert alert-warning container" role="alert">
+        <strong>License:</strong>
+        The demo image is part of the "Ottheinrich-Bibel" page "Einzug in Jerusalem" presented by the <a href="https://www.bsb-muenchen.de">Bavarian State Library</a> utilizing IIIF-Viewer Mirador <a href="https://api.digitale-sammlungen.de/iiif/presentation/bsb00026283/view.html?view=ImageView&amp;manifest=https%3A%2F%2Fapi.digitale-sammlungen.de%2Fiiif%2Fpresentation%2Fv2%2Fbsb00026283%2Fmanifest&amp;canvas=https%3A%2F%2Fapi.digitale-sammlungen.de%2Fiiif%2Fpresentation%2Fv2%2Fbsb00026283%2Fcanvas%2F41" target="_blank">here</a>.<br/>
+        It is under the "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"-License (see <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">http://creativecommons.org/licenses/by-nc-sa/4.0/</a>)
+      </div>
+
+    </section>
+  </body>
+</html>

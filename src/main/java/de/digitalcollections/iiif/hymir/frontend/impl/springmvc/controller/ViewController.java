@@ -99,6 +99,13 @@ public class ViewController {
     return "universalviewer/view_universal";
   }
 
+  @RequestMapping(value = "/{identifier}/view_tify.html", method = RequestMethod.GET)
+  public String getTifyPage(@PathVariable String identifier, Model model) {
+    model.addAttribute("active", "demos");
+    model.addAttribute("manifestId", "/presentation/v2/" + identifier + "/manifest");
+    return "tify/view_tify";
+  }
+
   @RequestMapping(value = "/{identifier}/view_leaflet-presentation.html", method = RequestMethod.GET)
   public String getLeafletManifestViewerPage(@PathVariable String identifier, Model model) {
     model.addAttribute("active", "demos");
