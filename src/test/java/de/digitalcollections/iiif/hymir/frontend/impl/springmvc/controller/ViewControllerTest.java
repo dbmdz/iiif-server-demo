@@ -100,6 +100,14 @@ public class ViewControllerTest {
   }
 
   @Test
+  public void shouldGetTifyPage() throws Exception {
+    ResultActions perform = mockMvc.perform(get("/12345/view_tify.html").accept(MediaType.TEXT_HTML));
+    perform.andExpect(status().isOk());
+    perform.andExpect(model().attribute("active", is("demos")));
+    perform.andExpect(model().attribute("manifestId", is("/presentation/v2/12345/manifest")));
+  }
+
+  @Test
   public void shouldGetUniversalViewerPage() throws Exception {
     ResultActions perform = mockMvc.perform(get("/12345/view_universal.html").accept(MediaType.TEXT_HTML));
     perform.andExpect(status().isOk());
