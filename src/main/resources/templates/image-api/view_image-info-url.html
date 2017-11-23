@@ -15,12 +15,12 @@
         <p>The IIIF Image API URI for requesting an image must conform to the following URI Template:</p>
         <div class="well uri-template">{scheme}://{server}{/prefix}/{identifier}/info.json</div>
 
-        Example:
+        <h2>Example</h2>
         <div class="well">
           <a th:href="@{/image/v2/bsb00026283_00041/info.json}" th:text="${baseUrl} + @{/image/v2/bsb00026283_00041/info.json}" target="_blank">/image/v2/bsb00026283_00041/info.json</a>
         </div>
 
-        Response (JSON-LD):
+        <h3>Response (JSON-LD)</h3>
         <pre><code class="json">
   {
     tiles: [

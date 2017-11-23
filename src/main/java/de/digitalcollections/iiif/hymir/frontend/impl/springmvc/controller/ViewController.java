@@ -35,8 +35,10 @@ public class ViewController {
 
   /* Image API */
   @RequestMapping(value = {"/image-request-url.html"}, method = RequestMethod.GET)
-  public String getImageRequestUrlDemo(Model model) {
+  public String getImageRequestUrlDemo(Model model, HttpServletRequest request) {
     model.addAttribute("active", "demos");
+    String baseUrl = String.format("%s://%s:%d", request.getScheme(), request.getServerName(), request.getServerPort());
+    model.addAttribute("baseUrl", baseUrl);
     return "image-api/view_image-request-url";
   }
 

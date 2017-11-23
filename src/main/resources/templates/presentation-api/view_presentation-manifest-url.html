@@ -23,12 +23,12 @@
 
         <div class="well uri-template">{scheme}://{host}/{prefix}/{identifier}/manifest</div>
 
-        Example:
+        <h2>Example</h2>
         <div class="well">
           <a th:href="@{|${manifestId}|}" th:text="${baseUrl} + @{|${manifestId}|}" target="_blank">/presentation/v2/bsb00026283/manifest</a>
         </div>
 
-        Response (JSON-LD):
+        <h3>Response (JSON-LD)</h3>
         <pre><code class="json">
   {
     "@context": "http://iiif.io/api/presentation/2/context.json",
