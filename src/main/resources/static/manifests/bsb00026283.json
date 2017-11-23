@@ -6,7 +6,7 @@
   "description": "Um 1430 entstandene, aber erst hundert Jahre später vollendete Handschrift des Neuen Testaments in mittelbairischer Schreibsprache. Früheste erhaltene illustrierte Handschrift eines Neuen Testaments in deutscher Sprache.",
   "attribution": "Bayerische Staatsbibliothek",
   "license": "http://creativecommons.org/licenses/by/3.0",
-  "logo": "http://localhost:8080/images/bsb_logo.png",
+  "logo": "http://localhost:8080/images/logo-bsb.png",
   "viewingDirection": "left-to-right",
   "viewingHint": "paged",
   "within": "http://daten.digitale-sammlungen.de/~db/0002/bsb00026283/images",
