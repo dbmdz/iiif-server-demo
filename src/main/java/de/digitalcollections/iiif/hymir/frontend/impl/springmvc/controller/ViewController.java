@@ -37,7 +37,7 @@ public class ViewController {
   @RequestMapping(value = {"/image-request-url.html"}, method = RequestMethod.GET)
   public String getImageRequestUrlDemo(Model model, HttpServletRequest request) {
     model.addAttribute("active", "demos");
-    String baseUrl = String.format("%s://%s:%d", request.getScheme(), request.getServerName(), request.getServerPort());
+    String baseUrl = getBaseUrl(request);
     model.addAttribute("baseUrl", baseUrl);
     return "image-api/view_image-request-url";
   }
@@ -45,7 +45,7 @@ public class ViewController {
   @RequestMapping(value = {"/image-info-url.html"}, method = RequestMethod.GET)
   public String getImageInfoUrlDemo(Model model, HttpServletRequest request) {
     model.addAttribute("active", "demos");
-    String baseUrl = String.format("%s://%s:%d", request.getScheme(), request.getServerName(), request.getServerPort());
+    String baseUrl = getBaseUrl(request);
     model.addAttribute("baseUrl", baseUrl);
     return "image-api/view_image-info-url";
   }
@@ -69,7 +69,7 @@ public class ViewController {
           method = RequestMethod.GET)
   public String getPresentationManifestUrlDemo(@PathVariable String identifier, Model model, HttpServletRequest request) {
     model.addAttribute("active", "demos");
-    String baseUrl = String.format("%s://%s:%d", request.getScheme(), request.getServerName(), request.getServerPort());
+    String baseUrl = getBaseUrl(request);
     model.addAttribute("baseUrl", baseUrl);
     model.addAttribute("manifestId", "/presentation/v2/" + identifier + "/manifest");
     return "presentation-api/view_presentation-manifest-url";
@@ -79,7 +79,7 @@ public class ViewController {
           method = RequestMethod.GET)
   public String getPresentationCollectionUrlDemo(@PathVariable String name, Model model, HttpServletRequest request) {
     model.addAttribute("active", "demos");
-    String baseUrl = String.format("%s://%s:%d", request.getScheme(), request.getServerName(), request.getServerPort());
+    String baseUrl = getBaseUrl(request);
     model.addAttribute("baseUrl", baseUrl);
     model.addAttribute("manifestId", "/presentation/v2/collection/" + name);
     return "presentation-api/view_presentation-collection-url";
@@ -166,6 +166,14 @@ public class ViewController {
   @ModelAttribute("iiifVersions")
   protected Map<String, String> getIIIFVersions() {
     return iiifVersions;
+  }
+
+  private String getBaseUrl(HttpServletRequest request) {
+    int serverPort = request.getServerPort();
+    if (serverPort != 80) {
+      return String.format("%s://%s:%d", request.getScheme(), request.getServerName(), request.getServerPort());
+    }
+    return String.format("%s://%s", request.getScheme(), request.getServerName());
   }
 
 }
