@@ -96,17 +96,19 @@
       </div>
     </nav>
 
-    <div class="container theme-showcase" role="main">
+    <div class="container" role="main">
 
       <section layout:fragment="content">
         ...
       </section>
 
-      <footer class="footer">
-        <p>visit us on <a href="https://github.com/dbmdz" target="_blank">GitHub</a> - License: <a href="https://opensource.org/licenses/MIT" target="_blank">MIT</a></p>
-      </footer>
-
     </div> <!-- /container -->
+
+    <footer class="footer">
+      <div class="container" role="footer">
+        <p class="text-muted">visit us on <a href="https://github.com/dbmdz" target="_blank">GitHub</a> - License: <a href="https://opensource.org/licenses/MIT" target="_blank">MIT</a></p>
+      </div>
+    </footer>
 
     <script th:src="@{/webjars/highlightjs/9.12.0/highlight.pack.min.js}"></script>
     <script>hljs.initHighlightingOnLoad();</script>
