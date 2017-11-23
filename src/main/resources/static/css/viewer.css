@@ -10,3 +10,21 @@
 #mirador-container .mirador-osd-annotation-controls * {
   box-sizing: content-box;
 }
+
+#mirador-container .metadata-listing .metadata-item {
+  padding-top: 5px;
+}
+
+#mirador-container .metadata-listing .metadata-label,
+#mirador-container .metadata-listing .metadata-value {
+  display: inline;
+}
+
+#mirador-container .metadata-listing .metadata-label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+#mirador-container .metadata-listing img {
+  display: block;
+}
