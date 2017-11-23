@@ -14,10 +14,7 @@
       </header>
       <div id="leaflet-container"></div>
 
-      <div class="alert alert-warning" role="alert">
-        <strong>License:</strong>
-        The demo images are under the "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"-License (see <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">http://creativecommons.org/licenses/by-nc-sa/4.0/</a>)
-      </div>
+      <div th:replace="fragments/license :: images"></div>
 
       <script th:src="@{|/webjars/leaflet/${iiifVersions.leaflet}/dist/leaflet.js|}"></script>
       <script th:src="@{|/webjars/leaflet-iiif/${iiifVersions['leaflet-iiif']}/leaflet-iiif.js|}"></script>

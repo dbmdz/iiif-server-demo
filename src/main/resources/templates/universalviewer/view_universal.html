@@ -14,10 +14,7 @@
 
       <div class="uv" id="uv-container" th:attr="data-uri=@{|${manifestId}|}"></div>
 
-      <div class="alert alert-warning" role="alert">
-        <strong>License:</strong>
-        The demo images are under the "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"-License (see <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">http://creativecommons.org/licenses/by-nc-sa/4.0/</a>)
-      </div>
+      <div th:replace="fragments/license :: images"></div>
 
       <script type="text/javascript" id="embedUV" th:src="@{|/webjars/universalviewer/${iiifVersions.universalviewer}/dist/uv-${iiifVersions.universalviewer}/lib/embed.js|}"></script>
     </section>

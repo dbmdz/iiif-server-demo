@@ -85,11 +85,7 @@
             <p>Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer euismod lacus luctus magna. Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi lacinia molestie dui. Praesent blandit dolor. Sed non quam. In vel mi sit amet augue congue elementum. Morbi in ipsum sit amet pede facilisis laoreet. <i>Ut fringilla</i>. Donec lacus nunc, viverra nec, blandit vel, egestas et, augue. Vestibulum tincidunt malesuada tellus. Ut ultrices ultrices enim. </p>
         </section>
 
-        <div class="alert alert-warning" role="alert">
-          <strong>License:</strong>
-          The demo image is part of the "Ottheinrich-Bibel" page "Einzug in Jerusalem" presented by the <a href="https://www.bsb-muenchen.de">Bavarian State Library</a> utilizing IIIF-Viewer Mirador <a href="https://api.digitale-sammlungen.de/iiif/presentation/bsb00026283/view.html?view=ImageView&amp;manifest=https%3A%2F%2Fapi.digitale-sammlungen.de%2Fiiif%2Fpresentation%2Fv2%2Fbsb00026283%2Fmanifest&amp;canvas=https%3A%2F%2Fapi.digitale-sammlungen.de%2Fiiif%2Fpresentation%2Fv2%2Fbsb00026283%2Fcanvas%2F41" target="_blank">here</a>.<br/>
-          It is under the "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"-License (see <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">http://creativecommons.org/licenses/by-nc-sa/4.0/</a>)
-        </div>
+        <div th:replace="fragments/license :: image"></div>
 
         <script th:inline="javascript" defer="true">
           // <![CDATA[

@@ -47,5 +47,5 @@ Images are resolved by the demo specific classpath-access and currently only can
 
 ## License of images
 
-The demo images are part of the "Ottheinrich-Bibel" page "Einzug in Jerusalem" presented by the Bavarian State Library here: <a href="http://daten.digitale-sammlungen.de/bsb00026283/image_41">http://daten.digitale-sammlungen.de/bsb00026283/image_41</a>.
-They are under the "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"-License (see <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">http://creativecommons.org/licenses/by-nc-sa/4.0/</a>)
+The demo images are part of the "Ottheinrich-Bibel" presented by the Bavarian State Library <a href="https://api.digitale-sammlungen.de/iiif/presentation/v2/bsb00026283/canvas/41/view">here</a>.
+They are under the "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"-License (see <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">http://creativecommons.org/licenses/by-nc-sa/4.0/</a>).

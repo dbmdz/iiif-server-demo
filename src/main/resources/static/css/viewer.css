@@ -3,7 +3,7 @@
 }
 
 #mirador-container {
-  height: calc(100vh - 110px);
+  height: calc(100vh - 220px);
   position: relative;
 }
 
