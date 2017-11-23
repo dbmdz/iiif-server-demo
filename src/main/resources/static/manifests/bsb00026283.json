@@ -45,10 +45,6 @@
     {
       "label": "BVB Identifier",
       "value": "BV021517860"
-    },
-    {
-      "label": "IIIF-Manifest",
-      "value": "http://localhost:8080/presentation/v2/bsb00026283/manifest"
     }
   ],
   "sequences": [
