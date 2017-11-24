@@ -1,10 +1,13 @@
 # IIIF Server Demo
 
+[![Javadocs](http://javadoc.io/badge/de.digitalcollections/iiif-server-demo.svg)](http://javadoc.io/doc/de.digitalcollections/iiif-server-demo)
 [![Build Status](https://travis-ci.org/dbmdz/iiif-server-demo.svg?branch=master)](https://travis-ci.org/dbmdz/iiif-server-demo)
+[![Codacy](https://api.codacy.com/project/badge/Grade/6af6b5a2fa6d4883a1a270ceda2680bc)](https://www.codacy.com/app/dbmdz/iiif-server-demo_2?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=dbmdz/iiif-server-demo&amp;utm_campaign=Badge_Grade)
+[![Codebeat](https://codebeat.co/badges/5260f53b-76bd-4e49-a4c1-dd8a729b3d44)](https://codebeat.co/projects/github-com-dbmdz-iiif-server-demo-master)
+[![Codecov](https://codecov.io/gh/dbmdz/iiif-server-demo/branch/master/graph/badge.svg)](https://codecov.io/gh/dbmdz/iiif-server-demo)
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![GitHub release](https://img.shields.io/github/release/dbmdz/iiif-server-demo.svg?maxAge=2592000)](https://github.com/dbmdz/iiif-server-demo/releases)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/961bd34d44d748f3acdff4cf98c68e6e)](https://www.codacy.com/app/ralf-eichinger/iiif-server-demo?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=dbmdz/iiif-server-demo&amp;utm_campaign=Badge_Grade)
-[![codecov](https://codecov.io/gh/dbmdz/iiif-server-demo/branch/master/graph/badge.svg)](https://codecov.io/gh/dbmdz/iiif-server-demo)
+[![Maven Central](https://img.shields.io/maven-central/v/de.digitalcollections/iiif-server-demo.svg?maxAge=2592000)](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22iiif-server-demo%22)
 
 A standalone IIIF server demonstrating the use of [IIIF Image API Java Libraries](https://github.com/dbmdz/iiif-image-api "IIIF Image API Java Libraries") and [IIIF Presentation API Java Libraries](https://github.com/dbmdz/iiif-presentation-api "IIIF Presentation API Java Libraries") (Java implementations of the [IIIF specifications](http://iiif.io/technical-details/ "IIIF specifications")) and annotations stored in the local storage of the browser.
 

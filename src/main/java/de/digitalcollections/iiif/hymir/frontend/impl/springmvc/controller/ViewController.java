@@ -65,8 +65,7 @@ public class ViewController {
   }
 
   /* Presentation API */
-  @RequestMapping(value = {"/{identifier}/presentation-manifest-url.html"},
-          method = RequestMethod.GET)
+  @RequestMapping(value = {"/{identifier}/presentation-manifest-url.html"}, method = RequestMethod.GET)
   public String getPresentationManifestUrlDemo(@PathVariable String identifier, Model model, HttpServletRequest request) {
     model.addAttribute("active", "demos");
     String baseUrl = getBaseUrl(request);
@@ -75,8 +74,7 @@ public class ViewController {
     return "presentation-api/view_presentation-manifest-url";
   }
 
-  @RequestMapping(value = {"/{name}/presentation-collection-url.html"},
-          method = RequestMethod.GET)
+  @RequestMapping(value = {"/{name}/presentation-collection-url.html"}, method = RequestMethod.GET)
   public String getPresentationCollectionUrlDemo(@PathVariable String name, Model model, HttpServletRequest request) {
     model.addAttribute("active", "demos");
     String baseUrl = getBaseUrl(request);
