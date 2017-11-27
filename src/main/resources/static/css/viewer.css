@@ -29,7 +29,7 @@
   display: block;
 }
 
-main > .tify-app {
+main .tify-app {
   height: calc(100vh - 290px);
   position: relative;
 }
