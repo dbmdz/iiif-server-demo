@@ -5,7 +5,7 @@
   "label": "Ottheinrich-Bibel",
   "description": "Um 1430 entstandene, aber erst hundert Jahre später vollendete Handschrift des Neuen Testaments in mittelbairischer Schreibsprache. Früheste erhaltene illustrierte Handschrift eines Neuen Testaments in deutscher Sprache.",
   "attribution": "Bayerische Staatsbibliothek",
-  "license": "http://creativecommons.org/licenses/by/3.0",
+  "license": "http://creativecommons.org/licenses/by-nc-sa/4.0/",
   "logo": "http://localhost:8080/images/logo-bsb.png",
   "viewingDirection": "left-to-right",
   "viewingHint": "paged",
@@ -32,7 +32,7 @@
     },
     {
       "label": "URN",
-      "value": "http://nbn-resolving.de/urn/resolver.pl?urn=urn:nbn:de:bvb:12-bsb00026283-3"
+      "value": "<a href='https://nbn-resolving.org/urn:nbn:de:bvb:12-bsb00026283-3'>urn:nbn:de:bvb:12-bsb00026283-3</a>"
     },
     {
       "label": "Shelf Number",
@@ -209,8 +209,7 @@
     "ranges" : [ "http://localhost:8080/presentation/v2/bsb00026283/range/21", "http://localhost:8080/presentation/v2/bsb00026283/range/22" ],
     "@type" : "sc:Range",
     "@id" : "http://localhost:8080/presentation/v2/bsb00026283/range/0"
-  },
-  {
+  }, {
     "label" : {
       "@language" : "und-Latn",
       "@value" : "Miniatur: Einzug in Jerusalem"
