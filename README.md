@@ -18,7 +18,7 @@ A standalone IIIF server demonstrating the use of [IIIF Image API Java Libraries
 ## Run Demo Server
 
 - Download iiif-server-demo.jar from [Releases on GitHub](https://github.com/dbmdz/iiif-server-demo/releases)
-- Start server: `$ java -jar iiif-server-demo.jar`
+- Start server: `$ java -jar iiif-server-demo-3.0.0.jar`
 - View Homepage: [http://localhost:8080/iiif](http://localhost:8080/iiif)
 
 ## Build from source and run it
