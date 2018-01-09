@@ -8,7 +8,7 @@
   <packaging>jar</packaging>
 
   <name>DigitalCollections: IIIF Server Demo</name>
-  <description>A standalone IIIF server demonstrating the use of IIIF Image API Java Libraries (https://github.com/dbmdz/iiif-image-api) and IIIF Presentation API Java Libraries (https://github.com/dbmdz/iiif-presentation-api) (Java implementations of the IIIF specifications: http://iiif.io/technical-details/).</description>
+  <description>A standalone IIIF server demonstrating the features of the IIIF APIs (see http://iiif.io/technical-details/) and and showcasing different IIIF viewers.</description>
   <url>https://github.com/dbmdz/iiif-server-demo</url>
   <licenses>
     <license>

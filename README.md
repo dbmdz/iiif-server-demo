@@ -9,7 +9,7 @@
 [![GitHub release](https://img.shields.io/github/release/dbmdz/iiif-server-demo.svg?maxAge=2592000)](https://github.com/dbmdz/iiif-server-demo/releases)
 [![Maven Central](https://img.shields.io/maven-central/v/de.digitalcollections/iiif-server-demo.svg?maxAge=2592000)](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22iiif-server-demo%22)
 
-A standalone IIIF server demonstrating the use of [IIIF Image API Java Libraries](https://github.com/dbmdz/iiif-image-api "IIIF Image API Java Libraries") and [IIIF Presentation API Java Libraries](https://github.com/dbmdz/iiif-presentation-api "IIIF Presentation API Java Libraries") (Java implementations of the [IIIF specifications](http://iiif.io/technical-details/ "IIIF specifications")) and annotations stored in the local storage of the browser.
+A standalone IIIF server demonstrating the features of the IIIF Image API (http://iiif.io/api/image/2.1/) and the IIIF Presentation API (http://iiif.io/api/presentation/2.1/) and showcasing different IIIF viewers.
 
 ## Prerequisites
 
