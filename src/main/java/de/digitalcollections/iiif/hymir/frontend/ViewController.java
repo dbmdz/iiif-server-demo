@@ -1,4 +1,4 @@
-package de.digitalcollections.iiif.hymir.frontend.impl.springmvc.controller;
+package de.digitalcollections.iiif.hymir.frontend;
 
 import java.util.Map;
 import javax.servlet.http.HttpServletRequest;

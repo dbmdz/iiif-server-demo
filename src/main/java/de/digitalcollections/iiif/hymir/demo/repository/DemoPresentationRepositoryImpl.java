@@ -1,7 +1,7 @@
 package de.digitalcollections.iiif.hymir.demo.repository;
 
-import de.digitalcollections.iiif.hymir.model.api.exception.ResolvingException;
-import de.digitalcollections.iiif.hymir.presentation.backend.impl.repository.v2.PresentationRepositoryImpl;
+import de.digitalcollections.iiif.hymir.model.exception.ResolvingException;
+import de.digitalcollections.iiif.hymir.presentation.backend.PresentationRepositoryImpl;
 import java.net.URI;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
