@@ -6,9 +6,8 @@
     <section layout:fragment="content">
 
       <!-- Main jumbotron for a primary marketing message or call to action -->
-      <div class="jumbotron">
-        <h1>IIIF Server Demo</h1>
-        <p>This is a standalone IIIF server demonstrating the features of the IIIF Image API and the IIIF Presentation API and showcasing different IIIF viewers.</p>
+      <div th:replace="fragments/content-header :: header">
+        ...
       </div>
 
       <div class="row">
