@@ -5,10 +5,10 @@
     <appender name="default" class="ch.qos.logback.core.rolling.RollingFileAppender">
       <file>./iiif-server-demo.log</file>
       <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-        <fileNamePattern>hymir.%d{yyyy-MM-dd}.log</fileNamePattern>
+        <fileNamePattern>iiif-server-demo.%d{yyyy-MM-dd}.log</fileNamePattern>
       </rollingPolicy>
       <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
-        <fileNamePattern>hymir.%d{yyyy-MM}.%i.log.gz</fileNamePattern>
+        <fileNamePattern>iiif-server-demo.%d{yyyy-MM}.%i.log.gz</fileNamePattern>
         <maxFileSize>100MB</maxFileSize>
         <maxHistory>90</maxHistory>
         <totalSizeCap>5GB</totalSizeCap>
