@@ -210,7 +210,8 @@
         <artifactId>spring-boot-maven-plugin</artifactId>
         <version>${version.spring-boot}</version>
         <configuration>
-          <mainClass>de.digitalcollections.iiif.hymir.Application</mainClass>
+          <mainClass>de.digitalcollections.iiif.demo.Application</mainClass>
+          <classifier>exec</classifier>
         </configuration>
         <executions>
           <execution>
