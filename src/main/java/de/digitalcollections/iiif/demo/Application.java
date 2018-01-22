@@ -1,4 +1,4 @@
-package de.digitalcollections.iiif.hymir;
+package de.digitalcollections.iiif.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

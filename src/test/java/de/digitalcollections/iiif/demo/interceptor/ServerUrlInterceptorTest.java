@@ -1,5 +1,6 @@
-package de.digitalcollections.iiif.hymir.demo.interceptor;
+package de.digitalcollections.iiif.demo.interceptor;
 
+import de.digitalcollections.iiif.demo.interceptor.ServerUrlInterceptor;
 import org.junit.Before;
 import org.junit.Test;
 

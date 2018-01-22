@@ -1,6 +1,6 @@
-package de.digitalcollections.iiif.hymir.demo.interceptor;
+package de.digitalcollections.iiif.demo.interceptor;
 
-import de.digitalcollections.iiif.hymir.demo.service.DemoPresentationServiceImpl;
+import de.digitalcollections.iiif.demo.service.DemoPresentationServiceImpl;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;

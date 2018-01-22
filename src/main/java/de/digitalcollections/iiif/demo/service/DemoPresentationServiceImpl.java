@@ -1,6 +1,6 @@
-package de.digitalcollections.iiif.hymir.demo.service;
+package de.digitalcollections.iiif.demo.service;
 
-import de.digitalcollections.iiif.hymir.demo.repository.DemoPresentationRepositoryImpl;
+import de.digitalcollections.iiif.demo.repository.DemoPresentationRepositoryImpl;
 import de.digitalcollections.iiif.hymir.presentation.business.PresentationServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Primary;

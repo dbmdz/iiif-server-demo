@@ -1,4 +1,4 @@
-package de.digitalcollections.iiif.hymir.frontend;
+package de.digitalcollections.iiif.demo.frontend;
 
 import org.junit.Before;
 import org.junit.Test;

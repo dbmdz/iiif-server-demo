@@ -1,4 +1,4 @@
-package de.digitalcollections.iiif.hymir.demo.repository;
+package de.digitalcollections.iiif.demo.repository;
 
 import org.junit.Before;
 import org.junit.Test;

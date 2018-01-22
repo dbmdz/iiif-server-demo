@@ -1,4 +1,4 @@
-package de.digitalcollections.iiif.hymir.demo.repository;
+package de.digitalcollections.iiif.demo.repository;
 
 import de.digitalcollections.iiif.hymir.model.exception.ResolvingException;
 import de.digitalcollections.iiif.hymir.presentation.backend.PresentationRepositoryImpl;
