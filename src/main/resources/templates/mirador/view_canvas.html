@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html 
+  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+  layout:decorate="~{base}">
+  <head>
+    <title>Mirador Viewer</title>
+    <link rel="stylesheet" th:href="@{/css/viewer.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{|/webjars/mirador/${iiifVersions.mirador}/css/mirador-combined.min.css|}" />
+    <style type="text/css">
+      body > div.container { width: 100% !important; }
+    </style>
+  </head>
+  <body>
+    <section layout:fragment="content">
+      <div id="mirador-container"></div>
+      <div class="container" th:include="fragments/license :: images"></div>
+    </section>
+
+  <th:block layout:fragment="morejs">
+    <script th:src="@{|/webjars/mirador/${iiifVersions.mirador}/mirador.min.js|}"></script>
+    <script type="text/javascript" th:inline="javascript">
+      $(function(){
+        Mirador({
+          'annotationEndpoint': {
+            'module': 'LocalStorageEndpoint',
+            'name': 'Local Storage'
+          },
+          'buildPath': /*[[@{|/webjars/mirador/${iiifVersions.mirador}/|}]]*/,
+          'data': [{
+            /*<![CDATA[*/
+            'manifestUri': /*[[@{|${manifestId}|}]]*/
+            /*]]>*/
+          }],
+          'id': 'mirador-container',
+          'mainMenuSettings': {
+            'userLogo': {
+              'attributes': {
+                'href': 'http://projectmirador.org/'
+              },
+              'label': 'Object-Viewer: Mirador',
+            }
+          },
+          'windowObjects': [{
+            /*<![CDATA[*/
+            'canvasID': /*[[${canvasId}]]*/,
+            'loadedManifest': /*[[@{|${manifestId}|}]]*/
+            /*]]>*/
+          }]
+        });
+      });
+    </script>
+  </th:block>
+</body>
+</html>

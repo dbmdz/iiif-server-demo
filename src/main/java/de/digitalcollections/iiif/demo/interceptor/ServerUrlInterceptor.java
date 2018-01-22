@@ -17,7 +17,7 @@ public class ServerUrlInterceptor extends HandlerInterceptorAdapter {
   @Override
   public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
     String requestUrl = request.getRequestURL().toString();
-    if (requestUrl.endsWith("/manifest")) {
+    if (requestUrl.endsWith("/manifest") || requestUrl.matches(".*?/canvas/.*?/view$")) {
       String contextPath = request.getContextPath();
       String requestUri = request.getRequestURI();
       String serverUrl = retrieveServerUrl(requestUrl, requestUri, contextPath);
