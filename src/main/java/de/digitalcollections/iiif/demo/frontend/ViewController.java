@@ -1,5 +1,6 @@
 package de.digitalcollections.iiif.demo.frontend;
 
+import de.digitalcollections.iiif.demo.util.UrlHelper;
 import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +22,9 @@ public class ViewController {
   @Value("#{iiifVersions}")
   private Map<String, String> iiifVersions;
 
+  @Autowired
+  private UrlHelper urlHelper;
+
   @RequestMapping(value = {"", "/"}, method = RequestMethod.GET)
   public String getHomepage(Model model) {
     model.addAttribute("active", "home");
@@ -37,7 +41,7 @@ public class ViewController {
   @RequestMapping(value = {"/image-request-url.html"}, method = RequestMethod.GET)
   public String getImageRequestUrlDemo(Model model, HttpServletRequest request) {
     model.addAttribute("active", "demos");
-    String baseUrl = getBaseUrl(request);
+    String baseUrl = urlHelper.getBaseUrl(request);
     model.addAttribute("baseUrl", baseUrl);
     return "image-api/view_image-request-url";
   }
@@ -45,7 +49,7 @@ public class ViewController {
   @RequestMapping(value = {"/image-info-url.html"}, method = RequestMethod.GET)
   public String getImageInfoUrlDemo(Model model, HttpServletRequest request) {
     model.addAttribute("active", "demos");
-    String baseUrl = getBaseUrl(request);
+    String baseUrl = urlHelper.getBaseUrl(request);
     model.addAttribute("baseUrl", baseUrl);
     return "image-api/view_image-info-url";
   }
@@ -68,7 +72,7 @@ public class ViewController {
   @RequestMapping(value = {"/{identifier}/presentation-manifest-url.html"}, method = RequestMethod.GET)
   public String getPresentationManifestUrlDemo(@PathVariable String identifier, Model model, HttpServletRequest request) {
     model.addAttribute("active", "demos");
-    String baseUrl = getBaseUrl(request);
+    String baseUrl = urlHelper.getBaseUrl(request);
     model.addAttribute("baseUrl", baseUrl);
     model.addAttribute("manifestId", "/presentation/v2/" + identifier + "/manifest");
     return "presentation-api/view_presentation-manifest-url";
@@ -77,7 +81,7 @@ public class ViewController {
   @RequestMapping(value = {"/{name}/presentation-collection-url.html"}, method = RequestMethod.GET)
   public String getPresentationCollectionUrlDemo(@PathVariable String name, Model model, HttpServletRequest request) {
     model.addAttribute("active", "demos");
-    String baseUrl = getBaseUrl(request);
+    String baseUrl = urlHelper.getBaseUrl(request);
     model.addAttribute("baseUrl", baseUrl);
     model.addAttribute("manifestId", "/presentation/v2/collection/" + name);
     return "presentation-api/view_presentation-collection-url";
@@ -165,13 +169,4 @@ public class ViewController {
   protected Map<String, String> getIIIFVersions() {
     return iiifVersions;
   }
-
-  private String getBaseUrl(HttpServletRequest request) {
-    int serverPort = request.getServerPort();
-    if (serverPort != 80) {
-      return String.format("%s://%s:%d", request.getScheme(), request.getServerName(), request.getServerPort());
-    }
-    return String.format("%s://%s", request.getScheme(), request.getServerName());
-  }
-
 }

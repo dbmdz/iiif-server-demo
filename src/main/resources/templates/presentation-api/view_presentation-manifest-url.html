@@ -25,7 +25,7 @@
 
         <h2>Example</h2>
         <div class="well">
-          <a th:href="@{|${manifestId}|}" th:text="${baseUrl} + @{|${manifestId}|}" target="_blank">/presentation/v2/bsb00026283/manifest</a>
+          <a th:href="@{|${manifestId}|}" th:text="${baseUrl} + ${manifestId}" target="_blank">/presentation/v2/bsb00026283/manifest</a>
         </div>
 
         <h3>Response (JSON-LD)</h3>

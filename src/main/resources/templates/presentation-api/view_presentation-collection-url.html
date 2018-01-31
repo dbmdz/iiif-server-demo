@@ -26,10 +26,10 @@
         <h2>Example</h2>
         <div class="well">
           <div>
-            <a th:href="@{|${manifestId}|}" th:text="${baseUrl} + @{|${manifestId}|}" target="_blank">/presentation/v2/bsb00026283/manifest</a>
+            <a th:href="@{|${manifestId}|}" th:text="${baseUrl} + ${manifestId}" target="_blank">/presentation/v2/bsb00026283/manifest</a>
           </div>
           <div>
-            <a th:href="@{/presentation/v2/collection/kba}" th:text="${baseUrl} + @{/presentation/v2/collection/kba}" target="_blank">/presentation/v2/bsb00026283/manifest</a>
+            <a th:href="@{/presentation/v2/collection/kba}" th:text="${baseUrl} + '/presentation/v2/collection/kba'" target="_blank">/presentation/v2/bsb00026283/manifest</a>
           </div>
         </div>
 
