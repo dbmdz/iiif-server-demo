@@ -50,7 +50,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
     <!-- dependencies -->
-    <version.iiif-server-hymir>3.4.1</version.iiif-server-hymir>
+    <version.iiif-server-hymir>3.5.0-SNAPSHOT</version.iiif-server-hymir>
     <version.logback-core>1.1.11</version.logback-core>
     <version.spring-boot>1.5.8.RELEASE</version.spring-boot>
     <version.webjar-fontawesome>4.7.0</version.webjar-fontawesome>
