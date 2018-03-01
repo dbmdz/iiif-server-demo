@@ -115,6 +115,13 @@ public class ViewController {
     return "leaflet/view_presentation";
   }
 
+  @RequestMapping(value = "/{identifier}/view_diva.html", method = RequestMethod.GET)
+  public String getDivaPage(@PathVariable String identifier, Model model) {
+    model.addAttribute("active", "demos");
+    model.addAttribute("manifestId", "/presentation/v2/" + identifier + "/manifest");
+    return "diva/view";
+  }
+
   /* Mirador with plugins */
   @RequestMapping(value = "/{identifier}/view_mirador_canvaslink.html", method = RequestMethod.GET)
   public String getMiradorCanvasLinkPage(@PathVariable String identifier, Model model) {

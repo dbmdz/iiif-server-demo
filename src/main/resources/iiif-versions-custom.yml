@@ -1,4 +1,5 @@
 ---
+diva: @version.webjar-diva@
 leaflet: @version.webjar-leaflet@
 leaflet-iiif: @version.webjar-leaflet-iiif@
 mirador-multipagenavigation: @version.webjar-mirador-multipagenavigation@

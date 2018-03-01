@@ -1,4 +1,4 @@
-#leaflet-container, #osd-container, #uv-container {
+#diva-container, #leaflet-container, #osd-container, #uv-container {
   height: calc(100vh - 290px);
 }
 
@@ -36,4 +36,8 @@ main .tify-app {
 
 .tify-app > .tify-header .tify-header_title {
   font-size: 20px;
+}
+
+div#diva-canvas-backdrop {
+  z-index: 1040;
 }
