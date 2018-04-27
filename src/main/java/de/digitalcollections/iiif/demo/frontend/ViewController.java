@@ -130,6 +130,13 @@ public class ViewController {
     return "mirador/view_canvaslink";
   }
 
+  @RequestMapping(value = "/{identifier}/view_mirador_downloadmenu.html", method = RequestMethod.GET)
+  public String getMiradorDownloadMenuPage(@PathVariable String identifier, Model model) {
+    model.addAttribute("active", "demos");
+    model.addAttribute("manifestId", "/presentation/v2/" + identifier + "/manifest");
+    return "mirador/view_downloadmenu";
+  }
+
   @RequestMapping(value = "/{identifier}/view_mirador_imagecropper.html", method = RequestMethod.GET)
   public String getMiradorImageCropperPage(@PathVariable String identifier, Model model) {
     model.addAttribute("active", "demos");

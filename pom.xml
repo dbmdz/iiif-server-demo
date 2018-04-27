@@ -59,6 +59,7 @@
     <version.webjar-leaflet>1.3.1</version.webjar-leaflet>
     <version.webjar-leaflet-iiif>1.2.2</version.webjar-leaflet-iiif>
     <version.webjar-mirador-multipagenavigation>1.1.1</version.webjar-mirador-multipagenavigation>
+    <version.webjar-mirador-downloadmenu>1.0.0</version.webjar-mirador-downloadmenu>
     <version.webjar-tify>0.19.3</version.webjar-tify>
     <version.webjar-universalviewer>2.0.2</version.webjar-universalviewer>
 
@@ -99,6 +100,11 @@
       <groupId>org.webjars.bower</groupId>
       <artifactId>highlightjs</artifactId>
       <version>${version.webjar-highlightjs}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.webjars.npm</groupId>
+      <artifactId>dbmdz__mirador-downloadmenu</artifactId>
+      <version>${version.webjar-mirador-downloadmenu}</version>
     </dependency>
     <dependency>
       <groupId>org.webjars.npm</groupId>
