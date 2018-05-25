@@ -8,11 +8,11 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
 @Import(SpringConfigWeb.class)
-public class SpringConfigWebDemo extends WebMvcConfigurerAdapter {
+public class SpringConfigWebDemo implements WebMvcConfigurer {
 
   @Autowired
   private ServerUrlInterceptor serverUrlInterceptor;
