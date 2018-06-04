@@ -1,6 +1,6 @@
 /* global */
 body {
-  padding-top: 60px;
+  padding-top: 65px;
 }
 
 /* navbar */
@@ -12,6 +12,7 @@ body {
 /* main content */
 .jumbotron {
   margin-top: 10px;
+  text-align: center;
 }
 
 ul.api-description {
