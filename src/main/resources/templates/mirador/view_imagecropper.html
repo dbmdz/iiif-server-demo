@@ -7,6 +7,7 @@
     <link rel="stylesheet" th:href="@{/css/viewer.css}" />
     <link rel="stylesheet" type="text/css" th:href="@{|/webjars/mirador/${iiifVersions.mirador}/css/mirador-combined.min.css|}" />
     <link rel="stylesheet" type="text/css" th:href="@{|/webjars/dbmdz__mirador-imagecropper/${iiifVersions['mirador-imagecropper']}/imageCropper.css|}" />
+    <link rel="stylesheet" type="text/css" th:href="@{|/webjars/dbmdz__mirador-sharebuttons/${iiifVersions['mirador-sharebuttons']}/shareButtons.css|}" />
     <style type="text/css">
       body > div.container { width: 100% !important; }
     </style>
@@ -20,6 +21,7 @@
   <th:block layout:fragment="morejs">
     <script th:src="@{|/webjars/mirador/${iiifVersions.mirador}/mirador.min.js|}"></script>
     <script th:src="@{|/webjars/dbmdz__mirador-imagecropper/${iiifVersions['mirador-imagecropper']}/imageCropper.js|}"></script>
+    <script th:src="@{|/webjars/dbmdz__mirador-sharebuttons/${iiifVersions['mirador-sharebuttons']}/shareButtons.js|}"></script>
     <script type="text/javascript" th:inline="javascript">
       $(function(){
         Mirador({
