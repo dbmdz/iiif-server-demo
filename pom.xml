@@ -69,13 +69,13 @@
     <version.webjar-universalviewer>2.0.2</version.webjar-universalviewer>
 
     <!-- plugins -->
-    <version.jacoco-maven-plugin>0.7.8</version.jacoco-maven-plugin>
+    <version.jacoco-maven-plugin>0.8.2</version.jacoco-maven-plugin>
     <version.junit-platform-surefire-provider>1.2.0</version.junit-platform-surefire-provider>
     <version.maven-compiler-plugin>3.7.0</version.maven-compiler-plugin>
     <version.maven-gpg-plugin>1.6</version.maven-gpg-plugin>
-    <version.maven-javadoc-plugin>2.10.4</version.maven-javadoc-plugin>
+    <version.maven-javadoc-plugin>3.0.1</version.maven-javadoc-plugin>
     <version.maven-source-plugin>3.0.1</version.maven-source-plugin>
-    <version.maven-surefire-plugin>2.21.0</version.maven-surefire-plugin>
+    <version.maven-surefire-plugin>2.22.1</version.maven-surefire-plugin>
     <version.nexus-staging-maven-plugin>1.6.7</version.nexus-staging-maven-plugin>
     <version.versions-maven-plugin>2.5</version.versions-maven-plugin>
   </properties>
