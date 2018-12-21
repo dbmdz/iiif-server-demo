@@ -5,7 +5,7 @@
 [![Codecov](https://img.shields.io/codecov/c/github/dbmdz/iiif-server-demo/master.svg)](https://codecov.io/gh/dbmdz/iiif-server-demo)
 [![License](https://img.shields.io/github/license/dbmdz/iiif-server-demo.svg)](LICENSE)
 [![GitHub release](https://img.shields.io/github/release/dbmdz/iiif-server-demo.svg)](https://github.com/dbmdz/iiif-server-demo/releases)
-[![Maven Central](https://img.shields.io/maven-central/v/de.digitalcollections/dc-cudami.svg)](https://search.maven.org/search?q=a:iiif-server-demo)
+[![Maven Central](https://img.shields.io/maven-central/v/de.digitalcollections/iiif-server-demo.svg)](https://search.maven.org/search?q=a:iiif-server-demo)
 
 A standalone IIIF server demonstrating the features of the IIIF Image API (http://iiif.io/api/image/2.1/) and the IIIF Presentation API (http://iiif.io/api/presentation/2.1/) and showcasing different IIIF viewers.
 
