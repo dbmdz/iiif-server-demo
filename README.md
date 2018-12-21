@@ -1,13 +1,11 @@
 # IIIF Server Demo
 
-[![Javadocs](http://javadoc.io/badge/de.digitalcollections/iiif-server-demo.svg)](http://javadoc.io/doc/de.digitalcollections/iiif-server-demo)
-[![Build Status](https://travis-ci.org/dbmdz/iiif-server-demo.svg?branch=master)](https://travis-ci.org/dbmdz/iiif-server-demo)
-[![Codacy](https://api.codacy.com/project/badge/Grade/6af6b5a2fa6d4883a1a270ceda2680bc)](https://www.codacy.com/app/dbmdz/iiif-server-demo_2?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=dbmdz/iiif-server-demo&amp;utm_campaign=Badge_Grade)
-[![Codebeat](https://codebeat.co/badges/5260f53b-76bd-4e49-a4c1-dd8a729b3d44)](https://codebeat.co/projects/github-com-dbmdz-iiif-server-demo-master)
-[![Codecov](https://codecov.io/gh/dbmdz/iiif-server-demo/branch/master/graph/badge.svg)](https://codecov.io/gh/dbmdz/iiif-server-demo)
-[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![GitHub release](https://img.shields.io/github/release/dbmdz/iiif-server-demo.svg?maxAge=2592000)](https://github.com/dbmdz/iiif-server-demo/releases)
-[![Maven Central](https://img.shields.io/maven-central/v/de.digitalcollections/iiif-server-demo.svg?maxAge=2592000)](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22iiif-server-demo%22)
+[![Javadocs](https://javadoc.io/badge/de.digitalcollections/iiif-server-demo.svg)](https://javadoc.io/doc/de.digitalcollections/iiif-server-demo)
+[![Build Status](https://img.shields.io/travis/dbmdz/iiif-server-demo/master.svg)](https://travis-ci.org/dbmdz/iiif-server-demo)
+[![Codecov](https://img.shields.io/codecov/c/github/dbmdz/iiif-server-demo/master.svg)](https://codecov.io/gh/dbmdz/iiif-server-demo)
+[![License](https://img.shields.io/github/license/dbmdz/iiif-server-demo.svg)](LICENSE)
+[![GitHub release](https://img.shields.io/github/release/dbmdz/iiif-server-demo.svg)](https://github.com/dbmdz/iiif-server-demo/releases)
+[![Maven Central](https://img.shields.io/maven-central/v/de.digitalcollections/dc-cudami.svg)](https://search.maven.org/search?q=a:iiif-server-demo)
 
 A standalone IIIF server demonstrating the features of the IIIF Image API (http://iiif.io/api/image/2.1/) and the IIIF Presentation API (http://iiif.io/api/presentation/2.1/) and showcasing different IIIF viewers.
 
