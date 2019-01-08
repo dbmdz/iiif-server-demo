@@ -2,6 +2,7 @@ package de.digitalcollections.iiif.demo.repository;
 
 import de.digitalcollections.iiif.hymir.model.exception.ResolvingException;
 import de.digitalcollections.iiif.hymir.presentation.backend.PresentationRepositoryImpl;
+import de.digitalcollections.model.api.identifiable.resource.exceptions.ResourceNotFoundException;
 import java.net.URI;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -21,7 +22,7 @@ public class DemoPresentationRepositoryImpl extends PresentationRepositoryImpl {
   private String serverUrl;
 
   @Override
-  public String getResourceJson(URI manifestUri) throws ResolvingException {
+  public String getResourceJson(URI manifestUri) throws ResolvingException, ResourceNotFoundException {
     String json = super.getResourceJson(manifestUri);
     json = replaceUrlEndpoints(json);
     LOGGER.debug("manifest json: " + json);
