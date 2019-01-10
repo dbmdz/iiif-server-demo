@@ -178,5 +178,4 @@ public class ViewControllerTest {
     perform.andExpect(model().attribute("active", is("demos")));
     perform.andExpect(model().attribute("manifestId", is("/presentation/v2/12345/manifest")));
   }
-
 }
