@@ -21,11 +21,21 @@
 
         <p>The IIIF Presentation API URI for requesting a manifest must conform to the following URI Template:</p>
 
-        <div class="well uri-template">{scheme}://{host}/{prefix}/{identifier}/manifest</div>
+        <div class="card mb-4">
+          <div class="card-body">
+            {scheme}://{host}/{prefix}/{identifier}/manifest
+          </div>
+        </div>
 
-        <h2>Example</h2>
-        <div class="well">
-          <a th:href="@{|${manifestId}|}" th:text="${baseUrl} + ${manifestId}" target="_blank">/presentation/v2/bsb00026283/manifest</a>
+        <div class="card mb-4">
+
+          <div class="card-header">
+            Example
+          </div>
+
+          <div class="card-body">
+            <a th:href="@{|${manifestId}|}" th:text="${baseUrl} + ${manifestId}" target="_blank">/presentation/v2/bsb00026283/manifest</a>
+          </div>
         </div>
 
         <h3>Response (JSON-LD)</h3>
