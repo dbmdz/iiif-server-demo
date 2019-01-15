@@ -15,11 +15,12 @@
     <title>IIIF Server Demo</title>
 
     <!-- Bootstrap core CSS -->
-    <link th:href="@{/webjars/bootstrap/3.3.7/dist/css/bootstrap.min.css}" rel="stylesheet"/>
+    <link th:href="@{/webjars/bootstrap/4.2.1/dist/css/bootstrap.min.css}" rel="stylesheet"/>
     <!-- Bootstrap theme -->
-    <link th:href="@{/webjars/bootstrap/3.3.7/dist/css/bootstrap-theme.min.css}" rel="stylesheet"/>
-    <!-- Font awesome CSS -->
-    <link th:href="@{/webjars/font-awesome/4.7.0/css/font-awesome.min.css}" rel="stylesheet" />
+    <link th:href="@{/webjars/bootstrap/4.2.1/dist/css/bootstrap-theme.min.css}" rel="stylesheet"/>
+    <!-- Font Material Icons CSS -->
+    <link th:href="@{/webjars/material-icons/0.2.3/iconfont/material-icons.css}" rel="stylesheet" />
+
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link th:href="@{/webjars/ie10-viewport-bug-workaround/1.0.3/dist/ie10-viewport-bug-workaround.min.css}" rel="stylesheet"/>
 
@@ -46,55 +47,61 @@
               window.jQuery || document.write('<script src="' + url + '"><\/script>');
       /*]]>*/
     </script>
-    <script th:src="@{/webjars/bootstrap/3.3.7/dist/js/bootstrap.min.js}"></script>
+    <script th:src="@{/webjars/bootstrap/4.2.1/dist/js/bootstrap.min.js}"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script th:src="@{/webjars/ie10-viewport-bug-workaround/1.0.3/dist/ie10-viewport-bug-workaround.min.js}"></script>
 
-    <!-- Fixed navbar -->
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <nav class="navbar navbar-dark bg-dark fixed-top navbar-expand-md">
       <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" th:href="@{/}">
-            <span>
-              <img th:src="@{/images/logo-iiif.png}" />
-            </span> IIIF Server Demo
-          </a>
-        </div>
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse"
+                data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span>
+          &#x2630;</button> <a class="navbar-brand" th:href="@{/}">
+
+                <span>
+                  <img th:src="@{/images/logo-iiif.png}" />
+                </span> IIIF Server Demo
+
+      </a>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li th:class="${active == 'home'} ? 'active'">
-              <a th:href="@{/}">Home</a>
+              <a th:href="@{/}" class="nav-link">Home</a>
             </li>
-            <li th:class="${active == 'about'} ? 'active'">
-              <a th:href="@{/about}">About</a>
+            <li class="nav-item"> <a th:href="@{/about}" class="nav-link">About</a>
             </li>
-            <li class="dropdown" th:classappend="${active == 'demos'} ? 'active'">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Demos <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li class="dropdown-header">IIIF Image API</li>
-                <li><a th:href="@{/image-request-url.html}">Basics: Image Request URI Syntax</a></li>
-                <li><a th:href="@{/image-info-url.html}">Basics: Image Information URI Syntax</a></li>
-                <li><a th:href="@{/bsb00026283_00041/view_image.html}">Image-Viewer: OpenSeadragon</a></li>
-                <li><a th:href="@{/bsb00026283_00041/view_leaflet-image.html}">Image-Viewer: Leaflet-IIIF</a></li>
-                <li role="separator" class="divider"></li>
-                <li class="dropdown-header">IIIF Presentation API</li>
-                <li><a th:href="@{/bsb00026283/presentation-manifest-url.html}">Basics: Presentation manifest</a></li>
-                <li><a th:href="@{/ecodices/presentation-collection-url.html}">Basics: Collection manifest</a></li>
-                <li><a th:href="@{/bsb00026283/view_mirador.html}">Object-Viewer: Mirador</a></li>
-                <li><a th:href="@{/bsb00026283/view_tify.html}">Object-Viewer: TIFY</a></li>
-                <li><a th:href="@{/bsb00026283/view_universal.html}">Object-Viewer: UniversalViewer</a></li>
-                <li><a th:href="@{/bsb00026283/view_leaflet-presentation.html}">Object-Viewer: Leaflet-IIIF</a></li>
-                <li><a th:href="@{/bsb00026283/view_diva.html}">Object-Viewer: Diva</a></li>
+            <li class="dropdown nav-item"> <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button"
+                                              aria-haspopup="true" aria-expanded="false">Demos <span class="caret"></span></a>
+              <ul
+                  class="dropdown-menu">
+                <li class="dropdown-header dropdown-item">IIIF Image API</li>
+                <li class="dropdown-item"><a class="dropdown-item" th:href="@{/image-request-url.html}">Basics: Image Request URI Syntax</a>
+                </li>
+                <li class="dropdown-item"><a class="dropdown-item" th:href="@{/image-info-url.html}">Basics: Image Information URI Syntax</a>
+                </li>
+                <li class="dropdown-item"><a class="dropdown-item" th:href="@{/bsb00026283_00041/view_image.html}">Image-Viewer: OpenSeadragon</a>
+                </li>
+                <li class="dropdown-item"><a class="dropdown-item" th:href="@{/bsb00026283_00041/view_leaflet-image.html}">Image-Viewer: Leaflet-IIIF</a>
+                </li>
+                <li role="separator" class="divider dropdown-item"></li>
+                <li class="dropdown-header dropdown-item">IIIF Presentation API</li>
+                <li class="dropdown-item"><a class="dropdown-item" th:href="@{/bsb00026283/presentation-manifest-url.html}">Basics: Presentation manifest</a>
+                </li>
+                <li class="dropdown-item"><a class="dropdown-item" th:href="@{/ecodices/presentation-collection-url.html}">Basics: Collection manifest</a>
+                </li>
+                <li class="dropdown-item"><a class="dropdown-item" th:href="@{/bsb00026283/view_mirador.html}">Object-Viewer: Mirador</a>
+                </li>
+                <li class="dropdown-item"><a class="dropdown-item" th:href="@{/bsb00026283/view_tify.html}">Object-Viewer: TIFY</a>
+                </li>
+                <li class="dropdown-item"><a class="dropdown-item" th:href="@{/bsb00026283/view_universal.html}">Object-Viewer: UniversalViewer</a>
+                </li>
+                <li class="dropdown-item"><a class="dropdown-item" th:href="@{/bsb00026283/view_leaflet-presentation.html}">Object-Viewer: Leaflet-IIIF</a>
+                </li>
+                <li class="dropdown-item"><a class="dropdown-item" th:href="@{/bsb00026283/view_diva.html}">Object-Viewer: Diva</a>
+                </li>
               </ul>
             </li>
           </ul>
-        </div><!--/.nav-collapse -->
+        </div>
       </div>
     </nav>
 
@@ -107,8 +114,8 @@
     </div> <!-- /container -->
 
     <footer class="footer">
-      <div class="container" role="footer">
-        <p class="text-muted">visit us on <a href="https://github.com/dbmdz" target="_blank">GitHub</a> - License: <a href="https://opensource.org/licenses/MIT" target="_blank">MIT</a></p>
+      <div class="container">
+        <span class="text-muted">visit us on <a href="https://github.com/dbmdz" target="_blank">GitHub</a> - License: <a href="https://opensource.org/licenses/MIT" target="_blank">MIT</a></span>
       </div>
     </footer>
 
