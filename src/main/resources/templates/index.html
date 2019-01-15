@@ -15,184 +15,148 @@
           <ul class="api-description">
             <li>The <b>IIIF Image API</b> for accessing images provided by an IIIF server is specified at <a href="http://iiif.io/api/image/2.1/" target="_blank">http://iiif.io/api/image/2.1/</a>.</li>
 
-            <li>The main objective of the <b>IIIF Presentation API</b> (specified at <a href="http://iiif.io/api/presentation/2.1/" target="_blank">http://iiif.io/api/presentation/2.1/</a>) is to provide the information necessary to allow a rich, online viewing environment for primarily image-based objects to be presented to a human user.</li>
+            <li>The main objective of the <b>IIIF Presentation API</b> (specified at <a href="http://iiif.io/api/presentation/2.1/" target="_blank">http://iiif.io/api/presentation/2.1/</a>)
+              is to provide the information necessary to allow a rich, online viewing
+              environment for primarily image-based objects to be presented to a
+              human user.</li>
           </ul>
         </div>
       </div>
 
-      <div class="row">
-        <div class="col-sm-6">
-          <div class="panel panel-primary">
-            <div class="panel-heading">
-              <h3 class="panel-title">IIIF Image API 2.1: Access to images</h3>
-            </div>
-            <div class="panel-body">
+      <div class="row mb-4">
+        <div class="col-md-6">
+          <div class="card border-primary">
+            <div class="card-header bg-primary text-white">IIIF Image API 2.1: Access to images</div>
+            <div class="card-body">
               <div class="list-group">
-                <a th:href="@{/image-request-url.html}" class="list-group-item">
-                  <h4 class="list-group-item-heading">Basics: Image Request URI Syntax</h4>
-                  <p class="list-group-item-text"><i class="fa fa-play-circle-o" aria-hidden="true"></i> Request an image, which may be part of a larger image.</p>
+                <a href="http://localhost:8080/iiif/image-request-url.html" class="list-group-item list-group-item-action">
+                  <h5 class="mb-1">Basics: Image Request URI Syntax</h5>
+                  <small><i class="material-icons md-18">play_circle_outline</i> Request an image, which may be part of a larger image.</small>
                 </a>
-                <a th:href="@{/image-info-url.html}" class="list-group-item">
-                  <h4 class="list-group-item-heading">Basics: Image Information Request URI Syntax</h4>
-                  <p class="list-group-item-text"><i class="fa fa-play-circle-o" aria-hidden="true"></i> Request information about the image, including characteristics, functionality available, and related services.</p>
+                <a href="http://localhost:8080/iiif/image-info-url.html" class="list-group-item list-group-item-action">
+                  <h5 class="mb-1">Basics: Image Information Request URI Syntax</h5>
+                  <small><i class="material-icons md-18">play_circle_outline</i> Request information about the image, including characteristics, functionality available, and related services.</small>
                 </a>
-                <a th:href="@{/bsb00026283_00041/view_image.html}" class="list-group-item">
-                  <h4 class="list-group-item-heading">Image-Viewer: OpenSeadragon</h4>
-                  <p class="list-group-item-text"><i class="fa fa-play-circle-o" aria-hidden="true"></i> View zoomable image demo (using OpenSeadragon <span th:text="${iiifVersions.openseadragon}">...</span> viewer)</p>
+                <a href="http://localhost:8080/iiif/bsb00026283_00041/view_image.html" class="list-group-item list-group-item-action">
+                  <h5 class="mb-1">Image-Viewer: OpenSeadragon</h5>
+                  <small><i class="material-icons md-18">play_circle_outline</i> View zoomable image demo (using OpenSeadragon <span>2.3.1</span> viewer)</small>
                 </a>
-                <a th:href="@{/bsb00026283_00041/view_leaflet-image.html}" class="list-group-item">
-                  <h4 class="list-group-item-heading">Image-Viewer: Leaflet-IIIF</h4>
-                  <p class="list-group-item-text"><i class="fa fa-play-circle-o" aria-hidden="true"></i> View zoomable image demo (using Leaflet-IIIF <span th:text="${iiifVersions['leaflet-iiif']}">...</span> viewer)</p>
+                <a href="http://localhost:8080/iiif/bsb00026283_00041/view_leaflet-image.html" class="list-group-item list-group-item-action">
+                  <h5 class="mb-1">Image-Viewer: Leaflet-IIIF</h5>
+                  <small><i class="material-icons md-18">play_circle_outline</i>View zoomable image demo (using Leaflet-IIIF <span>2.0.1</span> viewer)</small>
                 </a>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-sm-6">
-          <div class="panel panel-primary">
-            <div class="panel-heading">
-              <h3 class="panel-title">IIIF Presentation API 2.1: Presentation of objects</h3>
-            </div>
-            <div class="panel-body">
+        <div class="col-md-6">
+          <div class="card border-primary">
+            <div class="card-header bg-primary text-white">IIIF Presentation API 2.1: Presentation of objects</div>
+            <div class="card-body">
               <div class="list-group">
-                <a th:href="@{/bsb00026283/presentation-manifest-url.html}" class="list-group-item">
-                  <h4 class="list-group-item-heading">Basics: Presentation manifest</h4>
-                  <p class="list-group-item-text"><i class="fa fa-play-circle-o" aria-hidden="true"></i> Request a presentation manifest for an IIIF-object.</p>
+                <a href="http://localhost:8080/iiif/bsb00026283/presentation-manifest-url.html" class="list-group-item list-group-item-action">
+                  <h5 class="mb-1">Basics: Presentation manifest</h5>
+                  <small><i class="material-icons md-18">play_circle_outline</i> Request a presentation manifest for an IIIF-object.</small>
                 </a>
-                <a th:href="@{/ecodices/presentation-collection-url.html}" class="list-group-item">
-                  <h4 class="list-group-item-heading">Basics: Collection manifest</h4>
-                  <p class="list-group-item-text"><i class="fa fa-play-circle-o" aria-hidden="true"></i> Request a collection manifest for a curated list of IIIF-objects or subcollections..</p>
+                <a href="http://localhost:8080/iiif/ecodices/presentation-collection-url.html" class="list-group-item list-group-item-action">
+                  <h5 class="mb-1">Basics: Collection manifest</h5>
+                  <small><i class="material-icons md-18">play_circle_outline</i> Request a collection manifest for a curated list of IIIF-objects or subcollections..</small>
                 </a>
-                <a th:href="@{/bsb00026283/view_mirador.html}" class="list-group-item">
-                  <h4 class="list-group-item-heading">Object-Viewer: Mirador</h4>
-                  <p class="list-group-item-text"><i class="fa fa-play-circle-o" aria-hidden="true"></i> View pagable image demo (using Mirador <span th:text="${iiifVersions.mirador}">...</span> viewer)</p>
+                <a href="http://localhost:8080/iiif/bsb00026283/view_mirador.html" class="list-group-item list-group-item-action">
+                  <h5 class="mb-1">Object-Viewer: Mirador</h5>
+                  <small><i class="material-icons md-18">play_circle_outline</i> View pagable image demo (using Mirador <span>2.6.0</span> viewer)</small>
                 </a>
-                <a th:href="@{/bsb00026283/view_tify.html}" class="list-group-item">
-                  <h4 class="list-group-item-heading">Object-Viewer: TIFY</h4>
-                  <p class="list-group-item-text"><i class="fa fa-play-circle-o" aria-hidden="true"></i> View pagable image demo (using TIFY <span th:text="${iiifVersions.tify}">...</span> viewer)</p>
+                <a href="http://localhost:8080/iiif/bsb00026283/view_tify.html" class="list-group-item list-group-item-action">
+                  <h5 class="mb-1">Object-Viewer: TIFY</h5>
+                  <small><i class="material-icons md-18">play_circle_outline</i> View pagable image demo (using TIFY <span>0.19.3</span> viewer)</small>
                 </a>
-                <a th:href="@{/bsb00026283/view_universal.html}" class="list-group-item">
-                  <h4 class="list-group-item-heading">Object-Viewer: UniversalViewer</h4>
-                  <p class="list-group-item-text"><i class="fa fa-play-circle-o" aria-hidden="true"></i> View pagable image demo (using UniversalViewer <span th:text="${iiifVersions.universalviewer}">...</span> viewer)</p>
+                <a href="http://localhost:8080/iiif/bsb00026283/view_universal.html" class="list-group-item list-group-item-action">
+                  <h5 class="mb-1">Object-Viewer: UniversalViewer</h5>
+                  <small><i class="material-icons md-18">play_circle_outline</i> View pagable image demo (using UniversalViewer <span>2.0.2</span> viewer)</small>
                 </a>
-                <a th:href="@{/bsb00026283/view_leaflet-presentation.html}" class="list-group-item">
-                  <h4 class="list-group-item-heading">Object-Viewer: Leaflet-IIIF</h4>
-                  <p class="list-group-item-text"><i class="fa fa-play-circle-o" aria-hidden="true"></i> View pagable image demo (using Leaflet-IIIF <span th:text="${iiifVersions['leaflet-iiif']}">...</span> viewer)</p>
+                <a href="http://localhost:8080/iiif/bsb00026283/view_leaflet-presentation.html" class="list-group-item list-group-item-action">
+                  <h5 class="mb-1">Object-Viewer: Leaflet-IIIF</h5>
+                  <small><i class="material-icons md-18">play_circle_outline</i>  View pagable image demo (using Leaflet-IIIF <span>2.0.1</span> viewer)</small>
                 </a>
-                <a th:href="@{/bsb00026283/view_diva.html}" class="list-group-item">
-                  <h4 class="list-group-item-heading">Object-Viewer: Diva</h4>
-                  <p class="list-group-item-text"><i class="fa fa-play-circle-o" aria-hidden="true"></i> View pagable image demo (using Diva <span th:text="${iiifVersions['diva']}">...</span> viewer)</p>
+                <a href="http://localhost:8080/iiif/bsb00026283/view_diva.html" class="list-group-item list-group-item-action">
+                  <h5 class="mb-1">Object-Viewer: Diva</h5>
+                  <small><i class="material-icons md-18">play_circle_outline</i>  View pagable image demo (using Diva <span>5.1.3</span> viewer)</small>
                 </a>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="panel panel-primary" id="mirador-plugins">
-            <div class="panel-heading">
-              <h3 class="panel-title">Mirador <span th:text="${iiifVersions.mirador}">...</span> with plugins</h3>
-            </div>
-            <div class="panel-body">
-              <ul class="list-group">
+      <div class="row mb-4">
+        <div class="col-md-12">
+          <div class="card border-primary">
+            <div class="card-header bg-primary text-white">Mirador <span>2.6.0</span> with plugins</div>
+            <div class="card-body">
+              <div class="list-group">
                 <li class="list-group-item">
-                  <h4 class="list-group-item-heading">
-                    <a th:href="@{/bsb00026283/view_mirador_canvaslink.html}">
-                      Link to the current canvas
-                    </a>
-                  </h4>
-                  <p class="list-group-item-text">
-                    <i class="fa fa-play-circle-o" aria-hidden="true"></i>
-                    View pagable image demo (using Mirador viewer with the
-                    <a href="https://github.com/dbmdz/mirador-plugins/tree/master/CanvasLink" target="_blank">canvas link plugin</a>)
-                  </p>
+                  <h5 class="mb-1"> <a href="http://localhost:8080/iiif/bsb00026283/view_mirador_canvaslink.html"> Link to the current canvas</a></h5>
+                  <small>
+                    <i class="material-icons md-18">play_circle_outline</i>
+                    View pagable image demo (using Mirador viewer with the <a href="https://github.com/dbmdz/mirador-plugins/tree/master/CanvasLink" target="_blank">canvas link plugin</a>)
+                  </small>
                 </li>
                 <li class="list-group-item">
-                  <h4 class="list-group-item-heading">
-                    <a th:href="@{/bsb00026283/view_mirador_downloadmenu.html}">
-                      Download menu
-                    </a>
-                  </h4>
-                  <p class="list-group-item-text">
-                    <i class="fa fa-play-circle-o" aria-hidden="true"></i>
+                  <h5 class="mb-1"> <a href="http://localhost:8080/iiif/bsb00026283/view_mirador_downloadmenu.html"> Download menu</a></h5>
+                  <small>
+                    <i class="material-icons md-18">play_circle_outline</i>
                     View pagable image demo (using Mirador viewer with the
                     <a href="https://github.com/dbmdz/mirador-plugins/tree/master/DownloadMenu" target="_blank">download menu plugin</a>)
-                  </p>
+                  </small>
                 </li>
                 <li class="list-group-item">
-                  <h4 class="list-group-item-heading">
-                    <a th:href="@{/bsb00026283/view_mirador_imagecropper.html}">
-                      Image Cropper
-                    </a>
-                  </h4>
-                  <p class="list-group-item-text">
-                    <i class="fa fa-play-circle-o" aria-hidden="true"></i>
+                  <h5 class="mb-1"> <a href="http://localhost:8080/iiif/bsb00026283/view_mirador_imagecropper.html"> Image Cropper</a></h5>
+                  <small>
+                    <i class="material-icons md-18">play_circle_outline</i>
                     View pagable image demo (using Mirador viewer with the
                     <a href="https://github.com/dbmdz/mirador-plugins/tree/master/ImageCropper" target="_blank">image cropper plugin</a>)
-                  </p>
+                  </small>
                 </li>
                 <li class="list-group-item">
-                  <h4 class="list-group-item-heading">
-                    <a th:href="@{/bsb00026283/view_mirador_keyboardnavigation.html}">
-                      Keyboard navigation
-                    </a>
-                  </h4>
-                  <p class="list-group-item-text">
-                    <i class="fa fa-play-circle-o" aria-hidden="true"></i>
+                  <h5 class="mb-1"> <a href="http://localhost:8080/iiif/bsb00026283/view_mirador_keyboardnavigation.html"> Keyboard navigation</a></h5>
+                  <small>
+                    <i class="material-icons md-18">play_circle_outline</i>
                     View pagable image demo (using Mirador viewer with the
                     <a href="https://github.com/dbmdz/mirador-plugins/tree/master/KeyboardNavigation" target="_blank">keyboard navigation plugin</a>)
-                  </p>
+                  </small>
                 </li>
                 <li class="list-group-item">
-                  <h4 class="list-group-item-heading">
-                    <a th:href="@{/bsb00026283/view_mirador_manifestbutton.html}">
-                      Manifest button
-                    </a>
-                  </h4>
-                  <p class="list-group-item-text">
-                    <i class="fa fa-play-circle-o" aria-hidden="true"></i>
+                  <h5 class="mb-1"> <a href="http://localhost:8080/iiif/bsb00026283/view_mirador_manifestbutton.html"> Manifest button</a></h5>
+                  <small>
+                    <i class="material-icons md-18">play_circle_outline</i>
                     View pagable image demo (using Mirador viewer with the
                     <a href="https://github.com/dbmdz/mirador-plugins/tree/master/ManifestButton" target="_blank">manifest button plugin</a>)
-                  </p>
+                  </small>
                 </li>
                 <li class="list-group-item">
-                  <h4 class="list-group-item-heading">
-                    <a th:href="@{/bsb00026283/view_mirador_multipagenavigation.html}">
-                      Multi-Page navigation
-                    </a>
-                  </h4>
-                  <p class="list-group-item-text">
-                    <i class="fa fa-play-circle-o" aria-hidden="true"></i>
+                  <h5 class="mb-1"> <a href="http://localhost:8080/iiif/bsb00026283/view_mirador_multipagenavigation.html"> Multi-Page navigation</a></h5>
+                  <small>
+                    <i class="material-icons md-18">play_circle_outline</i>
                     View pagable image demo (using Mirador viewer with the
                     <a href="https://github.com/dbmdz/mirador-plugins/tree/master/MultiPageNavigation" target="_blank">multipage navigation plugin</a>)
-                  </p>
+                  </small>
                 </li>
                 <li class="list-group-item">
-                  <h4 class="list-group-item-heading">
-                    <a th:href="@{/bsb00026283/view_mirador_physicalruler.html}">
-                      Dynamic physical ruler
-                    </a>
-                  </h4>
-                  <p class="list-group-item-text">
-                    <i class="fa fa-play-circle-o" aria-hidden="true"></i>
+                  <h5 class="mb-1"> <a href="http://localhost:8080/iiif/bsb00026283/view_mirador_physicalruler.html"> Dynamic physical ruler</a></h5>
+                  <small>
+                    <i class="material-icons md-18">play_circle_outline</i>
                     View pagable image demo (using Mirador viewer with the
                     <a href="https://github.com/dbmdz/mirador-plugins/tree/master/PhysicalRuler" target="_blank">physical ruler plugin</a>)
-                  </p>
+                  </small>
                 </li>
                 <li class="list-group-item">
-                  <h4 class="list-group-item-heading">
-                    <a th:href="@{/bsb00026283/view_mirador_viewfromurl.html}">
-                      Bookmarkable Viewer State
-                    </a>
-                  </h4>
-                  <p class="list-group-item-text">
-                    <i class="fa fa-play-circle-o" aria-hidden="true"></i>
+                  <h5 class="mb-1"> <a href="http://localhost:8080/iiif/bsb00026283/view_mirador_viewfromurl.html"> Bookmarkable Viewer State</a></h5>
+                  <small>
+                    <i class="material-icons md-18">play_circle_outline</i>
                     View pagable image demo (using Mirador viewer with the
                     <a href="https://github.com/dbmdz/mirador-plugins/tree/master/ViewFromUrl" target="_blank">"view from url" plugin</a>)
-                  </p>
+                  </small>
                 </li>
-              </ul>
+              </div>
             </div>
           </div>
         </div>
