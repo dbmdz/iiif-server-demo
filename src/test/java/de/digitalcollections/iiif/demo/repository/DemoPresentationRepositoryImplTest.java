@@ -38,5 +38,4 @@ public class DemoPresentationRepositoryImplTest {
     String expectedResult = "{\"@id\":\"http://virtualbox:8080/demo/presentation/v2/bsb00026283/manifest\"}";
     assertThat(result).isEqualTo(expectedResult);
   }
-
 }
