@@ -12,25 +12,27 @@
       <header>
         <h1>Object-Viewer: Diva</h1>
       </header>
+
       <div id="diva-container"></div>
 
       <div th:replace="fragments/license :: images"></div>
-
-      <script th:src="@{|/webjars/diva.js/${iiifVersions.diva}/build/js/diva.min.js|}"></script>
-      <script type="text/javascript" th:inline="javascript">
-        /*<![CDATA[*/
-        $('#diva-container').diva({
-          enableCanvas: true,
-          enableDownload: true,
-          enableFullscreen: false,
-          enableIIIFMetadata: true,
-          enableZoomControls: 'slider',
-          minZoomLevel: 0.10,
-          objectData: /*[[@{|${manifestId}|}]]*/,
-          zoomLevel: 1
-        });
-        /*]]>*/
-      </script>
     </section>
+  <th:block layout:fragment="morejs">
+    <script th:src="@{|/webjars/diva.js/${iiifVersions.diva}/build/js/diva.min.js|}"></script>
+    <script type="text/javascript" th:inline="javascript">
+      /*<![CDATA[*/
+      $('#diva-container').diva({
+      enableCanvas: true,
+      enableDownload: true,
+      enableFullscreen: false,
+      enableIIIFMetadata: true,
+      enableZoomControls: 'slider',
+      minZoomLevel: 0.10,
+      objectData: /*[[@{|${manifestId}|}]]*/,
+      zoomLevel: 1
+      });
+      /*]]>*/
+    </script>
+  </th:block>
   </body>
 </html>
