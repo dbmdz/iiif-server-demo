@@ -50,13 +50,15 @@
         </a>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li th:class="${active == 'home'} ? 'active'">
+            <li class="nav-item" th:classappend="${active == 'home'} ? 'active'">
               <a th:href="@{/}" class="nav-link">Home</a>
             </li>
-            <li class="nav-item"> <a th:href="@{/about}" class="nav-link">About</a>
+            <li class="nav-item"th:classappend="${active == 'about'} ? 'active'">
+              <a th:href="@{/about}" class="nav-link">About</a>
             </li>
-            <li class="dropdown nav-item"> <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button"
-                                              aria-haspopup="true" aria-expanded="false">Demos <span class="caret"></span></a>
+            <li class="dropdown nav-item" th:classappend="${active == 'demos'} ? 'active'">
+              <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button"
+                 aria-haspopup="true" aria-expanded="false">Demos <span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li class="dropdown-header dropdown-item">IIIF Image API</li>
                 <li class="dropdown-item"><a class="dropdown-item" th:href="@{/image-request-url.html}">Basics: Image Request URI Syntax</a>
