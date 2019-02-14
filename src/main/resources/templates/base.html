@@ -37,30 +37,17 @@
   </head>
 
   <body role="document">
-    <!-- Bootstrap core JavaScript
-        ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script th:inline="javascript">
-      /*<![CDATA[*/
-      var url = /*[[@{/webjars/jquery/3.2.1/dist/jquery.min.js}]]*/;
-              window.jQuery || document.write('<script src="' + url + '"><\/script>');
-      /*]]>*/
-    </script>
-    <script th:src="@{/webjars/bootstrap/4.2.1/dist/js/bootstrap.min.js}"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script th:src="@{/webjars/ie10-viewport-bug-workaround/1.0.3/dist/ie10-viewport-bug-workaround.min.js}"></script>
-
     <nav class="navbar navbar-dark bg-dark fixed-top navbar-expand-md">
       <div class="container">
         <button type="button" class="navbar-toggler collapsed" data-toggle="collapse"
                 data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span>
           &#x2630;</button> <a class="navbar-brand" th:href="@{/}">
 
-                <span>
-                  <img th:src="@{/images/logo-iiif.png}" />
-                </span> IIIF Server Demo
+          <span>
+            <img th:src="@{/images/logo-iiif.png}" />
+          </span> IIIF Server Demo
 
-      </a>
+        </a>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li th:class="${active == 'home'} ? 'active'">
@@ -70,8 +57,7 @@
             </li>
             <li class="dropdown nav-item"> <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button"
                                               aria-haspopup="true" aria-expanded="false">Demos <span class="caret"></span></a>
-              <ul
-                  class="dropdown-menu">
+              <ul class="dropdown-menu">
                 <li class="dropdown-header dropdown-item">IIIF Image API</li>
                 <li class="dropdown-item"><a class="dropdown-item" th:href="@{/image-request-url.html}">Basics: Image Request URI Syntax</a>
                 </li>
@@ -120,6 +106,15 @@
 
     <script th:src="@{/webjars/highlightjs/9.12.0/highlight.pack.min.js}"></script>
     <script>hljs.initHighlightingOnLoad();</script>
+
+  <th:block layout:fragment="basejs">
+    <!--/*  Footer Ende  */-->
+    <script th:src="@{/webjars/jquery/3.3.1/dist/jquery.min.js}"></script>
+    <script th:src="@{/webjars/bootstrap/4.2.1/dist/js/bootstrap.min.js}"></script>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script th:src="@{/webjars/ie10-viewport-bug-workaround/1.0.3/dist/ie10-viewport-bug-workaround.min.js}"></script>
+  </th:block>
 
   <th:block layout:fragment="morejs"> </th:block>
 </body>
