@@ -50,13 +50,15 @@
         </a>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li th:class="${active == 'home'} ? 'active'">
+            <li class="nav-item" th:classappend="${active == 'home'} ? 'active'">
               <a th:href="@{/}" class="nav-link">Home</a>
             </li>
-            <li class="nav-item"> <a th:href="@{/about}" class="nav-link">About</a>
+            <li class="nav-item"th:classappend="${active == 'about'} ? 'active'">
+              <a th:href="@{/about}" class="nav-link">About</a>
             </li>
-            <li class="dropdown nav-item"> <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button"
-                                              aria-haspopup="true" aria-expanded="false">Demos <span class="caret"></span></a>
+            <li class="dropdown nav-item" th:classappend="${active == 'demos'} ? 'active'">
+              <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button"
+                 aria-haspopup="true" aria-expanded="false">Demos <span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li class="dropdown-header dropdown-item">IIIF Image API</li>
                 <li class="dropdown-item"><a class="dropdown-item" th:href="@{/image-request-url.html}">Basics: Image Request URI Syntax</a>
@@ -99,21 +101,20 @@
     </div> <!-- /container -->
 
     <footer class="footer">
-      <div class="container">
+      <div class="container pb-3">
         <span class="text-muted">visit us on <a href="https://github.com/dbmdz" target="_blank">GitHub</a> - License: <a href="https://opensource.org/licenses/MIT" target="_blank">MIT</a></span>
       </div>
     </footer>
 
-    <script th:src="@{/webjars/highlightjs/9.12.0/highlight.pack.min.js}"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-
   <th:block layout:fragment="basejs">
-    <!--/*  Footer Ende  */-->
     <script th:src="@{/webjars/jquery/3.3.1/dist/jquery.min.js}"></script>
     <script th:src="@{/webjars/bootstrap/4.3.1/dist/js/bootstrap.min.js}"></script>
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script th:src="@{/webjars/ie10-viewport-bug-workaround/1.0.3/dist/ie10-viewport-bug-workaround.min.js}"></script>
+
+    <script th:src="@{/webjars/highlightjs/9.12.0/highlight.pack.min.js}"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
   </th:block>
 
   <th:block layout:fragment="morejs"></th:block>

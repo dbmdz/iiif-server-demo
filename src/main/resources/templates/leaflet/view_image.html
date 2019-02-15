@@ -15,19 +15,20 @@
       <div id="leaflet-container"></div>
 
       <div th:replace="fragments/license :: image"></div>
-
-      <script th:src="@{|/webjars/leaflet/${iiifVersions.leaflet}/dist/leaflet.js|}"></script>
-      <script th:src="@{|/webjars/leaflet-iiif/${iiifVersions['leaflet-iiif']}/leaflet-iiif.js|}"></script>
-      <script type="text/javascript" th:inline="javascript">
-        /*<![CDATA[*/
-        var map = L.map('leaflet-container', {
-          center: [0, 0],
-          crs: L.CRS.Simple,
-          zoom: 0,
-        });
-        L.tileLayer.iiif(/*[[@{|${infoUrl}|}]]*/).addTo(map);
-        /*]]>*/
-      </script>
     </section>
-  </body>
+  <th:block layout:fragment="morejs">
+    <script th:src="@{|/webjars/leaflet/${iiifVersions.leaflet}/dist/leaflet.js|}"></script>
+    <script th:src="@{|/webjars/leaflet-iiif/${iiifVersions['leaflet-iiif']}/leaflet-iiif.js|}"></script>
+    <script type="text/javascript" th:inline="javascript">
+      /*<![CDATA[*/
+      var map = L.map('leaflet-container', {
+      center: [0, 0],
+      crs: L.CRS.Simple,
+      zoom: 0,
+      });
+      L.tileLayer.iiif(/*[[@{|${infoUrl}|}]]*/).addTo(map);
+      /*]]>*/
+    </script>
+  </th:block>
+</body>
 </html>
