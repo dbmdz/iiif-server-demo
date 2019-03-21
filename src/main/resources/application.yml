@@ -11,6 +11,18 @@ info:
       artifactId: @project.artifactId@
       version: @project.version@
 
+javamelody:
+  enabled: true
+  init-parameters:
+    allowed-addr-pattern: 'localhost|127\.0\.0\.1|0:0:0:0:0:0:0:1'
+    authorized-users: 'admin:somepassword'
+    http-transform-pattern: '(\\d+|(?<=currenttitles/).*|(?<=citationtitles/).*|(?<=occurrences/).*|(?<=periodical/).*|(?<=issues/).*)'
+    # log http requests:
+    log: false
+    monitoring-path: '/monitoring/javamelody'
+    storage-directory: '/local/javamelody-iiif-server-demo'
+    url-exclude-pattern: '^(/webjars|/jsondoc|/monitoring).*'
+
 management:
   endpoints:
     web:
@@ -33,13 +45,26 @@ resourceRepository:
           - classpath:/static/manifests/collection-$1.json
 
 server:
+  error:
+    include-exception: true
+    include-stacktrace: always
   server-header: "@project.name@ v@project.version@"
   servlet:
     contextPath: /iiif
+  tomcat:
+    accesslog:
+      directory: "/var/log/digitalcollections"
+      enabled: true
+      prefix: access_log_iiif_server_demo
+      rename-on-rotate: true
 
 spring:
   profiles:
     active: local
+  security:
+    user:
+      name: admin
+      password: secret
   thymeleaf:
     cache: false
     mode: HTML
@@ -47,12 +72,12 @@ spring:
 ---
 
 # PROD
+server:
+  error:
+    include-exception: false
+    include-stacktrace: 'never'
+
 spring:
   profiles: PROD
-  security:
-    user:
-      name: admin
-      password: secret
-      roles: ACTUATOR
   thymeleaf:
     cache: true
