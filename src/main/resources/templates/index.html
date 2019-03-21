@@ -29,19 +29,19 @@
             <div class="card-header bg-primary text-white">IIIF Image API 2.1: Access to images</div>
             <div class="card-body">
               <div class="list-group">
-                <a href="http://localhost:8080/iiif/image-request-url.html" class="list-group-item list-group-item-action">
+                <a href="@{/image-request-url.html}" class="list-group-item list-group-item-action">
                   <h5 class="mb-1">Basics: Image Request URI Syntax</h5>
-                  <small><i class="material-icons md-18">play_circle_outline</i> Request an image, which may be part of a larger image.</small>
+                  <small><i class="material-icons md-18">play_circle_outline</i> Request an image, which may be part of a larger image</small>
                 </a>
-                <a href="http://localhost:8080/iiif/image-info-url.html" class="list-group-item list-group-item-action">
+                <a href="@{/image-info-url.html}" class="list-group-item list-group-item-action">
                   <h5 class="mb-1">Basics: Image Information Request URI Syntax</h5>
-                  <small><i class="material-icons md-18">play_circle_outline</i> Request information about the image, including characteristics, functionality available, and related services.</small>
+                  <small><i class="material-icons md-18">play_circle_outline</i> Request information about the image, including characteristics, functionality available, and related services</small>
                 </a>
-                <a href="http://localhost:8080/iiif/bsb00026283_00041/view_image.html" class="list-group-item list-group-item-action">
+                <a href="@{/bsb00026283_00041/view_image.html}" class="list-group-item list-group-item-action">
                   <h5 class="mb-1">Image-Viewer: OpenSeadragon</h5>
                   <small><i class="material-icons md-18">play_circle_outline</i> View zoomable image demo (using OpenSeadragon <span th:text="${iiifVersions.openseadragon}">...</span> viewer)</small>
                 </a>
-                <a href="http://localhost:8080/iiif/bsb00026283_00041/view_leaflet-image.html" class="list-group-item list-group-item-action">
+                <a href="@{/bsb00026283_00041/view_leaflet-image.html}" class="list-group-item list-group-item-action">
                   <h5 class="mb-1">Image-Viewer: Leaflet-IIIF</h5>
                   <small><i class="material-icons md-18">play_circle_outline</i>View zoomable image demo (using Leaflet-IIIF <span th:text="${iiifVersions.leaflet}">...</span> viewer)</small>
                 </a>
@@ -54,31 +54,31 @@
             <div class="card-header bg-primary text-white">IIIF Presentation API 2.1: Presentation of objects</div>
             <div class="card-body">
               <div class="list-group">
-                <a href="http://localhost:8080/iiif/bsb00026283/presentation-manifest-url.html" class="list-group-item list-group-item-action">
+                <a href="@{/bsb00026283/presentation-manifest-url.html}" class="list-group-item list-group-item-action">
                   <h5 class="mb-1">Basics: Presentation manifest</h5>
-                  <small><i class="material-icons md-18">play_circle_outline</i> Request a presentation manifest for an IIIF-object.</small>
+                  <small><i class="material-icons md-18">play_circle_outline</i> Request a presentation manifest for an IIIF-object</small>
                 </a>
-                <a href="http://localhost:8080/iiif/ecodices/presentation-collection-url.html" class="list-group-item list-group-item-action">
+                <a href="@{/ecodices/presentation-collection-url.html}" class="list-group-item list-group-item-action">
                   <h5 class="mb-1">Basics: Collection manifest</h5>
-                  <small><i class="material-icons md-18">play_circle_outline</i> Request a collection manifest for a curated list of IIIF-objects or subcollections..</small>
+                  <small><i class="material-icons md-18">play_circle_outline</i> Request a collection manifest for a curated list of IIIF-objects or subcollections</small>
                 </a>
-                <a href="http://localhost:8080/iiif/bsb00026283/view_mirador.html" class="list-group-item list-group-item-action">
+                <a href="@{/bsb00026283/view_mirador.html}" class="list-group-item list-group-item-action">
                   <h5 class="mb-1">Object-Viewer: Mirador</h5>
                   <small><i class="material-icons md-18">play_circle_outline</i> View pagable image demo (using Mirador <span th:text="${iiifVersions.mirador}">...</span> viewer)</small>
                 </a>
-                <a href="http://localhost:8080/iiif/bsb00026283/view_tify.html" class="list-group-item list-group-item-action">
+                <a href="@{/bsb00026283/view_tify.html}" class="list-group-item list-group-item-action">
                   <h5 class="mb-1">Object-Viewer: TIFY</h5>
                   <small><i class="material-icons md-18">play_circle_outline</i> View pagable image demo (using TIFY <span th:text="${iiifVersions.tify}">...</span> viewer)</small>
                 </a>
-                <a href="http://localhost:8080/iiif/bsb00026283/view_universal.html" class="list-group-item list-group-item-action">
+                <a href="@{/bsb00026283/view_universal.html}" class="list-group-item list-group-item-action">
                   <h5 class="mb-1">Object-Viewer: UniversalViewer</h5>
                   <small><i class="material-icons md-18">play_circle_outline</i> View pagable image demo (using UniversalViewer <span th:text="${iiifVersions.universalviewer}">...</span> viewer)</small>
                 </a>
-                <a href="http://localhost:8080/iiif/bsb00026283/view_leaflet-presentation.html" class="list-group-item list-group-item-action">
+                <a href="@{/bsb00026283/view_leaflet-presentation.html}" class="list-group-item list-group-item-action">
                   <h5 class="mb-1">Object-Viewer: Leaflet-IIIF</h5>
                   <small><i class="material-icons md-18">play_circle_outline</i>  View pagable image demo (using Leaflet-IIIF <span th:text="${iiifVersions.leaflet}">...</span> viewer)</small>
                 </a>
-                <a href="http://localhost:8080/iiif/bsb00026283/view_diva.html" class="list-group-item list-group-item-action">
+                <a href="@{/bsb00026283/view_diva.html}" class="list-group-item list-group-item-action">
                   <h5 class="mb-1">Object-Viewer: Diva</h5>
                   <small><i class="material-icons md-18">play_circle_outline</i>  View pagable image demo (using Diva <span th:text="${iiifVersions.diva}">...</span> viewer)</small>
                 </a>
@@ -94,14 +94,14 @@
             <div class="card-body">
               <div class="list-group">
                 <li class="list-group-item">
-                  <h5 class="mb-1"> <a href="http://localhost:8080/iiif/bsb00026283/view_mirador_canvaslink.html"> Link to the current canvas</a></h5>
+                  <h5 class="mb-1"> <a href="@{/bsb00026283/view_mirador_canvaslink.html}"> Link to the current canvas</a></h5>
                   <small>
                     <i class="material-icons md-18">play_circle_outline</i>
                     View pagable image demo (using Mirador <span th:text="${iiifVersions.mirador}">...</span> viewer with the <a href="https://github.com/dbmdz/mirador-plugins/tree/master/CanvasLink" target="_blank">canvas link plugin</a>)
                   </small>
                 </li>
                 <li class="list-group-item">
-                  <h5 class="mb-1"> <a href="http://localhost:8080/iiif/bsb00026283/view_mirador_downloadmenu.html"> Download menu</a></h5>
+                  <h5 class="mb-1"> <a href="@{/bsb00026283/view_mirador_downloadmenu.html}"> Download menu</a></h5>
                   <small>
                     <i class="material-icons md-18">play_circle_outline</i>
                     View pagable image demo (using Mirador <span th:text="${iiifVersions.mirador}">...</span> viewer with the
@@ -109,7 +109,7 @@
                   </small>
                 </li>
                 <li class="list-group-item">
-                  <h5 class="mb-1"> <a href="http://localhost:8080/iiif/bsb00026283/view_mirador_imagecropper.html"> Image Cropper</a></h5>
+                  <h5 class="mb-1"> <a href="@{/bsb00026283/view_mirador_imagecropper.html}"> Image Cropper</a></h5>
                   <small>
                     <i class="material-icons md-18">play_circle_outline</i>
                     View pagable image demo (using Mirador <span th:text="${iiifVersions.mirador}">...</span> viewer with the
@@ -117,7 +117,7 @@
                   </small>
                 </li>
                 <li class="list-group-item">
-                  <h5 class="mb-1"> <a href="http://localhost:8080/iiif/bsb00026283/view_mirador_keyboardnavigation.html"> Keyboard navigation</a></h5>
+                  <h5 class="mb-1"> <a href="@{/bsb00026283/view_mirador_keyboardnavigation.html}"> Keyboard navigation</a></h5>
                   <small>
                     <i class="material-icons md-18">play_circle_outline</i>
                     View pagable image demo (using Mirador <span th:text="${iiifVersions.mirador}">...</span> viewer with the
@@ -125,7 +125,7 @@
                   </small>
                 </li>
                 <li class="list-group-item">
-                  <h5 class="mb-1"> <a href="http://localhost:8080/iiif/bsb00026283/view_mirador_manifestbutton.html"> Manifest button</a></h5>
+                  <h5 class="mb-1"> <a href="@{/bsb00026283/view_mirador_manifestbutton.html}"> Manifest button</a></h5>
                   <small>
                     <i class="material-icons md-18">play_circle_outline</i>
                     View pagable image demo (using Mirador <span th:text="${iiifVersions.mirador}">...</span> viewer with the
@@ -133,7 +133,7 @@
                   </small>
                 </li>
                 <li class="list-group-item">
-                  <h5 class="mb-1"> <a href="http://localhost:8080/iiif/bsb00026283/view_mirador_multipagenavigation.html"> Multi-Page navigation</a></h5>
+                  <h5 class="mb-1"> <a href="@{/bsb00026283/view_mirador_multipagenavigation.html}"> Multi-Page navigation</a></h5>
                   <small>
                     <i class="material-icons md-18">play_circle_outline</i>
                     View pagable image demo (using Mirador <span th:text="${iiifVersions.mirador}">...</span> viewer with the
@@ -141,7 +141,7 @@
                   </small>
                 </li>
                 <li class="list-group-item">
-                  <h5 class="mb-1"> <a href="http://localhost:8080/iiif/bsb00026283/view_mirador_physicalruler.html"> Dynamic physical ruler</a></h5>
+                  <h5 class="mb-1"> <a href="@{/bsb00026283/view_mirador_physicalruler.html}"> Dynamic physical ruler</a></h5>
                   <small>
                     <i class="material-icons md-18">play_circle_outline</i>
                     View pagable image demo (using Mirador <span th:text="${iiifVersions.mirador}">...</span> viewer with the
@@ -149,7 +149,7 @@
                   </small>
                 </li>
                 <li class="list-group-item">
-                  <h5 class="mb-1"> <a href="http://localhost:8080/iiif/bsb00026283/view_mirador_viewfromurl.html"> Bookmarkable Viewer State</a></h5>
+                  <h5 class="mb-1"> <a href="@{/bsb00026283/view_mirador_viewfromurl.html}"> Bookmarkable Viewer State</a></h5>
                   <small>
                     <i class="material-icons md-18">play_circle_outline</i>
                     View pagable image demo (using Mirador <span th:text="${iiifVersions.mirador}">...</span> viewer with the
