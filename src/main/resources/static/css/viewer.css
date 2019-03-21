@@ -1,9 +1,9 @@
 #diva-container, #leaflet-container, #osd-container, #uv-container {
-  height: calc(100vh - 290px);
+  height: calc(100vh - 335px);
 }
 
 #mirador-container {
-  height: calc(100vh - 220px);
+  height: calc(100vh - 280px);
   position: relative;
 }
 
@@ -30,7 +30,7 @@
 }
 
 main .tify-app {
-  height: calc(100vh - 290px);
+  height: calc(100vh - 335px);
   position: relative;
 }
 
