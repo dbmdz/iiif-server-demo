@@ -11,6 +11,10 @@ body {
   vertical-align: middle;
 }
 
+.error-page p {
+  text-align: left;
+}
+
 /* navbar */
 .navbar-brand.logo img {
   height: 20px;
