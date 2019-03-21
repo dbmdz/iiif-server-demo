@@ -20,6 +20,18 @@ management:
   server:
     port: 9001
 
+resourceRepository:
+  resolved:
+    patterns:
+      - pattern: iiiftest
+        substitutions:
+          - classpath:/static/images/iiiftest.png
+      - pattern: ^(.*)$
+        substitutions:
+          - classpath:/static/images/$1.jpg
+          - classpath:/static/manifests/$1.json
+          - classpath:/static/manifests/collection-$1.json
+
 server:
   server-header: "@project.name@ v@project.version@"
   servlet:
