@@ -37,10 +37,11 @@ public class DemoPresentationRepositoryImpl extends PresentationRepositoryImpl {
     String resultingJson = json;
     if (!this.serverUrlPlaceholder.equals(this.serverUrl)) {
       resultingJson = resultingJson.replaceAll(this.serverUrlPlaceholder, this.serverUrl);
-      LOGGER.info("replaced all occurrences of the placeholder {} with the application url {}",
-              this.serverUrlPlaceholder, this.serverUrl);
+      LOGGER.info(
+          "replaced all occurrences of the placeholder {} with the application url {}",
+          this.serverUrlPlaceholder, this.serverUrl
+      );
     }
     return resultingJson;
   }
-
 }
