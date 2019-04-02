@@ -16,7 +16,19 @@
 
       <div th:replace="fragments/license :: images"></div>
 
-      <script type="text/javascript" id="embedUV" th:src="@{|/webjars/universalviewer/${iiifVersions.universalviewer}/dist/uv-${iiifVersions.universalviewer}/lib/embed.js|}"></script>
     </section>
-  </body>
+
+  <th:block layout:fragment="morejs">
+    <script type="text/javascript" id="embedUV" th:src="@{|/webjars/universalviewer/${iiifVersions.universalviewer}/dist/uv-${iiifVersions.universalviewer}/lib/embed.js|}"></script>
+    <script type="text/javascript">
+      setTimeout(function(){
+        var iframe = $('#uv-container > iframe');
+        $('.iiif-metadata-component:first .item._logo img', iframe.contents()).css({
+          'background-color': 'white',
+          'padding': '3px'
+        });
+      }, 3000);
+    </script>
+  </th:block>
+</body>
 </html>
