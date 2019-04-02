@@ -14,23 +14,25 @@
 
       <main>
         <div id="osd-container"></div>
-        <script th:src="@{|/webjars/openseadragon/${iiifVersions.openseadragon}/build/openseadragon/openseadragon.min.js|}"></script>
-        <script type="application/javascript" th:inline="javascript">
-          var viewer = OpenSeadragon({
-          id: 'osd-container',
-          /*<![CDATA[*/
-          prefixUrl: /*[[@{|/webjars/openseadragon/${iiifVersions.openseadragon}/build/openseadragon/images/|}]]*/,
-          /*]]>*/
-          tileWidth: 64,
-          /*<![CDATA[*/
-          tileSources: /*[[@{|${infoUrl}|}]]*/
-          /*]]>*/
-          });
-        </script>
       </main>
 
       <div th:replace="fragments/license :: image"></div>
-
     </section>
-  </body>
+
+  <th:block layout:fragment="morejs">
+    <script th:src="@{|/webjars/openseadragon/${iiifVersions.openseadragon}/build/openseadragon/openseadragon.min.js|}"></script>
+    <script type="application/javascript" th:inline="javascript">
+      var viewer = OpenSeadragon({
+      id: 'osd-container',
+      /*<![CDATA[*/
+      prefixUrl: /*[[@{|/webjars/openseadragon/${iiifVersions.openseadragon}/build/openseadragon/images/|}]]*/,
+      /*]]>*/
+      tileWidth: 64,
+      /*<![CDATA[*/
+      tileSources: /*[[@{|${infoUrl}|}]]*/
+      /*]]>*/
+      });
+    </script>
+  </th:block>
+</body>
 </html>

@@ -17,17 +17,20 @@
 
       <main>
         <div id="tify-container"></div>
-        <script type="application/javascript" th:inline="javascript">
-          tifyOptions = {
-            'container': '#tify-container',
-            'manifest': /*[[@{|${manifestId}|}]]*/
-          }
-        </script>
-        <script th:src="@{|/webjars/tify/${iiifVersions.tify}/tify.js|}"></script>
       </main>
 
       <div class="container" th:include="fragments/license :: images"></div>
 
     </section>
-  </body>
+
+  <th:block layout:fragment="morejs">
+    <script type="application/javascript" th:inline="javascript">
+      tifyOptions = {
+        'container': '#tify-container',
+        'manifest': /*[[@{|${manifestId}|}]]*/
+      }
+    </script>
+    <script th:src="@{|/webjars/tify/${iiifVersions.tify}/tify.js|}"></script>
+  </th:block>
+</body>
 </html>
