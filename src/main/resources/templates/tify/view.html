@@ -6,12 +6,9 @@
     <title>TIFY Viewer</title>
     <link rel="stylesheet" th:href="@{/css/viewer.css}" />
     <link rel="stylesheet" type="text/css" th:href="@{|/webjars/tify/${iiifVersions.tify}/tify.css|}" />
-    <style type="text/css">
-      body > div.container { width: 100% !important; }
-    </style>
   </head>
   <body>
-    <section layout:fragment="content">
+    <section layout:fragment="content-fluid">
       <div class="container">
         <header>
           <h1>Object-Viewer: TIFY</h1>

@@ -8,12 +8,9 @@
     <link rel="stylesheet" type="text/css" th:href="@{|/webjars/mirador/${iiifVersions.mirador}/css/mirador-combined.min.css|}" />
     <link rel="stylesheet" type="text/css" th:href="@{|/webjars/dbmdz__mirador-canvaslink/${iiifVersions['mirador-canvaslink']}/canvasLink.min.css|}" />
     <link rel="stylesheet" type="text/css" th:href="@{|/webjars/dbmdz__mirador-sharebuttons/${iiifVersions['mirador-sharebuttons']}/shareButtons.css|}" />
-    <style type="text/css">
-      body > div.container { width: 100% !important; }
-    </style>
   </head>
   <body>
-    <section layout:fragment="content">
+    <section layout:fragment="content-fluid">
       <div id="mirador-container"></div>
       <div class="container" th:include="fragments/license :: images"></div>
     </section>
