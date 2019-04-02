@@ -67,7 +67,7 @@
     <version.webjar-mirador-manifestbutton>1.1.2</version.webjar-mirador-manifestbutton>
     <version.webjar-mirador-multipagenavigation>1.1.2</version.webjar-mirador-multipagenavigation>
     <version.webjar-tify>0.19.3</version.webjar-tify>
-    <version.webjar-universalviewer>2.0.2</version.webjar-universalviewer>
+    <version.webjar-universalviewer>3.0.22</version.webjar-universalviewer>
 
     <!-- plugins -->
     <version.jacoco-maven-plugin>0.8.3</version.jacoco-maven-plugin>
