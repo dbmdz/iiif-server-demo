@@ -39,11 +39,11 @@
                 </a>
                 <a th:href="@{/bsb00026283_00041/view_image.html}" class="list-group-item list-group-item-action">
                   <h5 class="mb-1">Image-Viewer: OpenSeadragon</h5>
-                  <small><i class="material-icons md-18">play_circle_outline</i> View zoomable image demo (using OpenSeadragon <span th:text="${iiifVersions.openseadragon}">...</span> viewer)</small>
+                  <small><i class="material-icons md-18">play_circle_outline</i> View zoomable image demo (using OpenSeadragon <span th:text="${webjarVersions.openseadragon}">...</span> viewer)</small>
                 </a>
                 <a th:href="@{/bsb00026283_00041/view_leaflet-image.html}" class="list-group-item list-group-item-action">
                   <h5 class="mb-1">Image-Viewer: Leaflet-IIIF</h5>
-                  <small><i class="material-icons md-18">play_circle_outline</i>View zoomable image demo (using Leaflet-IIIF <span th:text="${iiifVersions['leaflet-iiif']}">...</span> viewer)</small>
+                  <small><i class="material-icons md-18">play_circle_outline</i>View zoomable image demo (using Leaflet-IIIF <span th:text="${webjarVersions['leaflet-iiif']}">...</span> viewer)</small>
                 </a>
               </div>
             </div>
@@ -64,23 +64,23 @@
                 </a>
                 <a th:href="@{/bsb00026283/view_mirador.html}" class="list-group-item list-group-item-action">
                   <h5 class="mb-1">Object-Viewer: Mirador</h5>
-                  <small><i class="material-icons md-18">play_circle_outline</i> View pagable image demo (using Mirador <span th:text="${iiifVersions.mirador}">...</span> viewer)</small>
+                  <small><i class="material-icons md-18">play_circle_outline</i> View pagable image demo (using Mirador <span th:text="${webjarVersions.mirador}">...</span> viewer)</small>
                 </a>
                 <a th:href="@{/bsb00026283/view_tify.html}" class="list-group-item list-group-item-action">
                   <h5 class="mb-1">Object-Viewer: TIFY</h5>
-                  <small><i class="material-icons md-18">play_circle_outline</i> View pagable image demo (using TIFY <span th:text="${iiifVersions.tify}">...</span> viewer)</small>
+                  <small><i class="material-icons md-18">play_circle_outline</i> View pagable image demo (using TIFY <span th:text="${webjarVersions.tify}">...</span> viewer)</small>
                 </a>
                 <a th:href="@{/bsb00026283/view_universal.html}" class="list-group-item list-group-item-action">
                   <h5 class="mb-1">Object-Viewer: UniversalViewer</h5>
-                  <small><i class="material-icons md-18">play_circle_outline</i> View pagable image demo (using UniversalViewer <span th:text="${iiifVersions.universalviewer}">...</span> viewer)</small>
+                  <small><i class="material-icons md-18">play_circle_outline</i> View pagable image demo (using UniversalViewer <span th:text="${webjarVersions.universalviewer}">...</span> viewer)</small>
                 </a>
                 <a th:href="@{/bsb00026283/view_leaflet-presentation.html}" class="list-group-item list-group-item-action">
                   <h5 class="mb-1">Object-Viewer: Leaflet-IIIF</h5>
-                  <small><i class="material-icons md-18">play_circle_outline</i>  View pagable image demo (using Leaflet-IIIF <span th:text="${iiifVersions['leaflet-iiif']}">...</span> viewer)</small>
+                  <small><i class="material-icons md-18">play_circle_outline</i>  View pagable image demo (using Leaflet-IIIF <span th:text="${webjarVersions['leaflet-iiif']}">...</span> viewer)</small>
                 </a>
                 <a th:href="@{/bsb00026283/view_diva.html}" class="list-group-item list-group-item-action">
                   <h5 class="mb-1">Object-Viewer: Diva</h5>
-                  <small><i class="material-icons md-18">play_circle_outline</i>  View pagable image demo (using Diva <span th:text="${iiifVersions.diva}">...</span> viewer)</small>
+                  <small><i class="material-icons md-18">play_circle_outline</i>  View pagable image demo (using Diva <span th:text="${webjarVersions.diva}">...</span> viewer)</small>
                 </a>
               </div>
             </div>
@@ -90,21 +90,21 @@
       <div class="row mb-4">
         <div class="col-md-12">
           <div class="card border-primary">
-            <div class="card-header bg-primary text-white">Mirador <span th:text="${iiifVersions.mirador}">...</span> with plugins</div>
+            <div class="card-header bg-primary text-white">Mirador <span th:text="${webjarVersions.mirador}">...</span> with plugins</div>
             <div class="card-body">
               <div class="list-group">
                 <li class="list-group-item">
                   <h5 class="mb-1"> <a th:href="@{/bsb00026283/view_mirador_canvaslink.html}"> Link to the current canvas</a></h5>
                   <small>
                     <i class="material-icons md-18">play_circle_outline</i>
-                    View pagable image demo (using Mirador <span th:text="${iiifVersions.mirador}">...</span> viewer with the <a href="https://github.com/dbmdz/mirador-plugins/tree/master/CanvasLink" target="_blank">canvas link plugin</a>)
+                    View pagable image demo (using Mirador <span th:text="${webjarVersions.mirador}">...</span> viewer with the <a href="https://github.com/dbmdz/mirador-plugins/tree/master/CanvasLink" target="_blank">canvas link plugin</a>)
                   </small>
                 </li>
                 <li class="list-group-item">
                   <h5 class="mb-1"> <a th:href="@{/bsb00026283/view_mirador_downloadmenu.html}"> Download menu</a></h5>
                   <small>
                     <i class="material-icons md-18">play_circle_outline</i>
-                    View pagable image demo (using Mirador <span th:text="${iiifVersions.mirador}">...</span> viewer with the
+                    View pagable image demo (using Mirador <span th:text="${webjarVersions.mirador}">...</span> viewer with the
                     <a href="https://github.com/dbmdz/mirador-plugins/tree/master/DownloadMenu" target="_blank">download menu plugin</a>)
                   </small>
                 </li>
@@ -112,7 +112,7 @@
                   <h5 class="mb-1"> <a th:href="@{/bsb00026283/view_mirador_imagecropper.html}"> Image Cropper</a></h5>
                   <small>
                     <i class="material-icons md-18">play_circle_outline</i>
-                    View pagable image demo (using Mirador <span th:text="${iiifVersions.mirador}">...</span> viewer with the
+                    View pagable image demo (using Mirador <span th:text="${webjarVersions.mirador}">...</span> viewer with the
                     <a href="https://github.com/dbmdz/mirador-plugins/tree/master/ImageCropper" target="_blank">image cropper plugin</a>)
                   </small>
                 </li>
@@ -120,7 +120,7 @@
                   <h5 class="mb-1"> <a th:href="@{/bsb00026283/view_mirador_keyboardnavigation.html}"> Keyboard navigation</a></h5>
                   <small>
                     <i class="material-icons md-18">play_circle_outline</i>
-                    View pagable image demo (using Mirador <span th:text="${iiifVersions.mirador}">...</span> viewer with the
+                    View pagable image demo (using Mirador <span th:text="${webjarVersions.mirador}">...</span> viewer with the
                     <a href="https://github.com/dbmdz/mirador-plugins/tree/master/KeyboardNavigation" target="_blank">keyboard navigation plugin</a>)
                   </small>
                 </li>
@@ -128,7 +128,7 @@
                   <h5 class="mb-1"> <a th:href="@{/bsb00026283/view_mirador_manifestbutton.html}"> Manifest button</a></h5>
                   <small>
                     <i class="material-icons md-18">play_circle_outline</i>
-                    View pagable image demo (using Mirador <span th:text="${iiifVersions.mirador}">...</span> viewer with the
+                    View pagable image demo (using Mirador <span th:text="${webjarVersions.mirador}">...</span> viewer with the
                     <a href="https://github.com/dbmdz/mirador-plugins/tree/master/ManifestButton" target="_blank">manifest button plugin</a>)
                   </small>
                 </li>
@@ -136,7 +136,7 @@
                   <h5 class="mb-1"> <a th:href="@{/bsb00026283/view_mirador_multipagenavigation.html}"> Multi-Page navigation</a></h5>
                   <small>
                     <i class="material-icons md-18">play_circle_outline</i>
-                    View pagable image demo (using Mirador <span th:text="${iiifVersions.mirador}">...</span> viewer with the
+                    View pagable image demo (using Mirador <span th:text="${webjarVersions.mirador}">...</span> viewer with the
                     <a href="https://github.com/dbmdz/mirador-plugins/tree/master/MultiPageNavigation" target="_blank">multipage navigation plugin</a>)
                   </small>
                 </li>
@@ -144,7 +144,7 @@
                   <h5 class="mb-1"> <a th:href="@{/bsb00026283/view_mirador_physicalruler.html}"> Dynamic physical ruler</a></h5>
                   <small>
                     <i class="material-icons md-18">play_circle_outline</i>
-                    View pagable image demo (using Mirador <span th:text="${iiifVersions.mirador}">...</span> viewer with the
+                    View pagable image demo (using Mirador <span th:text="${webjarVersions.mirador}">...</span> viewer with the
                     <a href="https://github.com/dbmdz/mirador-plugins/tree/master/PhysicalRuler" target="_blank">physical ruler plugin</a>)
                   </small>
                 </li>
@@ -152,7 +152,7 @@
                   <h5 class="mb-1"> <a th:href="@{/bsb00026283/view_mirador_viewfromurl.html}"> Bookmarkable Viewer State</a></h5>
                   <small>
                     <i class="material-icons md-18">play_circle_outline</i>
-                    View pagable image demo (using Mirador <span th:text="${iiifVersions.mirador}">...</span> viewer with the
+                    View pagable image demo (using Mirador <span th:text="${webjarVersions.mirador}">...</span> viewer with the
                     <a href="https://github.com/dbmdz/mirador-plugins/tree/master/ViewFromUrl" target="_blank">"view from url" plugin</a>)
                   </small>
                 </li>

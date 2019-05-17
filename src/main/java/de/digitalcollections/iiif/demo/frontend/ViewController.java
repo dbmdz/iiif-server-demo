@@ -19,8 +19,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class ViewController {
 
   @Autowired
-  @Value("#{iiifVersions}")
-  private Map<String, String> iiifVersions;
+  @Value("#{webjarVersions}")
+  private Map<String, String> webjarVersions;
 
   @Autowired
   private UrlHelper urlHelper;
@@ -179,8 +179,8 @@ public class ViewController {
     return "mirador/view_viewfromurl";
   }
 
-  @ModelAttribute("iiifVersions")
-  protected Map<String, String> getIIIFVersions() {
-    return iiifVersions;
+  @ModelAttribute("webjarVersions")
+  protected Map<String, String> getWebjarVersions() {
+    return webjarVersions;
   }
 }

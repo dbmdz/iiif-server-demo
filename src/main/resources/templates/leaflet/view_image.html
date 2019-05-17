@@ -5,7 +5,7 @@
   <head>
     <title>IIIF-Leaflet Viewer</title>
     <link rel="stylesheet" th:href="@{/css/viewer.css}" />
-    <link rel="stylesheet" th:href="@{|/webjars/leaflet/${iiifVersions.leaflet}/dist/leaflet.css|}" />
+    <link rel="stylesheet" th:href="@{|/webjars/leaflet/${webjarVersions.leaflet}/dist/leaflet.css|}" />
   </head>
   <body>
     <section layout:fragment="content">
@@ -17,8 +17,8 @@
       <div th:replace="fragments/license :: image"></div>
     </section>
   <th:block layout:fragment="morejs">
-    <script th:src="@{|/webjars/leaflet/${iiifVersions.leaflet}/dist/leaflet.js|}"></script>
-    <script th:src="@{|/webjars/leaflet-iiif/${iiifVersions['leaflet-iiif']}/leaflet-iiif.js|}"></script>
+    <script th:src="@{|/webjars/leaflet/${webjarVersions.leaflet}/dist/leaflet.js|}"></script>
+    <script th:src="@{|/webjars/leaflet-iiif/${webjarVersions['leaflet-iiif']}/leaflet-iiif.js|}"></script>
     <script type="text/javascript" th:inline="javascript">
       /*<![CDATA[*/
       var map = L.map('leaflet-container', {
