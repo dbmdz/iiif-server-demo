@@ -5,7 +5,7 @@
   <head>
     <title>Mirador Viewer</title>
     <link rel="stylesheet" th:href="@{/css/viewer.css}" />
-    <link rel="stylesheet" type="text/css" th:href="@{|/webjars/mirador/${iiifVersions.mirador}/css/mirador-combined.min.css|}" />
+    <link rel="stylesheet" type="text/css" th:href="@{|/webjars/mirador/${webjarVersions.mirador}/css/mirador-combined.min.css|}" />
   </head>
   <body>
     <section layout:fragment="content-fluid">
@@ -14,7 +14,7 @@
     </section>
 
   <th:block layout:fragment="morejs">
-    <script th:src="@{|/webjars/mirador/${iiifVersions.mirador}/mirador.min.js|}"></script>
+    <script th:src="@{|/webjars/mirador/${webjarVersions.mirador}/mirador.min.js|}"></script>
     <script type="text/javascript" th:inline="javascript">
       $(function(){
         Mirador({
@@ -22,7 +22,7 @@
             'module': 'LocalStorageEndpoint',
             'name': 'Local Storage'
           },
-          'buildPath': /*[[@{|/webjars/mirador/${iiifVersions.mirador}/|}]]*/,
+          'buildPath': /*[[@{|/webjars/mirador/${webjarVersions.mirador}/|}]]*/,
           'data': [{
             /*<![CDATA[*/
             'manifestUri': /*[[@{|${manifestId}|}]]*/
