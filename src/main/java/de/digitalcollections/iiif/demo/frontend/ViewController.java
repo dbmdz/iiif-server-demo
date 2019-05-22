@@ -1,13 +1,10 @@
 package de.digitalcollections.iiif.demo.frontend;
 
 import de.digitalcollections.iiif.demo.util.UrlHelper;
-import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -17,10 +14,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
  */
 @Controller
 public class ViewController {
-
-  @Autowired
-  @Value("#{webjarVersions}")
-  private Map<String, String> webjarVersions;
 
   @Autowired
   private UrlHelper urlHelper;
@@ -177,10 +170,5 @@ public class ViewController {
     model.addAttribute("active", "demos");
     model.addAttribute("manifestId", "/presentation/v2/" + identifier + "/manifest");
     return "mirador/view_viewfromurl";
-  }
-
-  @ModelAttribute("webjarVersions")
-  protected Map<String, String> getWebjarVersions() {
-    return webjarVersions;
   }
 }
