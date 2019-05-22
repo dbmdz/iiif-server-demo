@@ -1,0 +1,10 @@
+---
+diva: '@version.webjar-diva@'
+highlightjs: '@version.webjar-highlightjs@'
+leaflet: '@version.webjar-leaflet@'
+leaflet-iiif: '@version.webjar-leaflet-iiif@'
+material-icons: '@version.webjar-material-icons@'
+mirador-manifestbutton: '@version.webjar-mirador-manifestbutton@'
+mirador-multipagenavigation: '@version.webjar-mirador-multipagenavigation@'
+tify: '@version.webjar-tify@'
+universalviewer: '@version.webjar-universalviewer@'
