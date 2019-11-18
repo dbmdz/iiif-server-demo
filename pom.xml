@@ -81,6 +81,12 @@
       <groupId>de.digitalcollections</groupId>
       <artifactId>iiif-server-hymir</artifactId>
       <version>${version.iiif-server-hymir}</version>
+      <exclusions>
+        <exclusion>
+          <groupId>net.bull.javamelody</groupId>
+          <artifactId>javamelody-spring-boot-starter</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>org.junit.jupiter</groupId>
