@@ -7,6 +7,4 @@ import org.springframework.context.annotation.Import;
 
 @Configuration
 @Import({SpringConfigBackendImage.class, SpringConfigBackendPresentation.class})
-public class SpringConfigBackendDemo {
-
-}
+public class SpringConfigBackendDemo {}

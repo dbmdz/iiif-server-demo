@@ -3,9 +3,7 @@ package de.digitalcollections.iiif.demo.util;
 import javax.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Component;
 
-/**
- * Helper class that aids in retrieving the base url
- */
+/** Helper class that aids in retrieving the base url */
 @Component
 public class UrlHelper {
 

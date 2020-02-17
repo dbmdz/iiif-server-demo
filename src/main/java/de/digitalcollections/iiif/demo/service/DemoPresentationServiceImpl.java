@@ -12,15 +12,15 @@ import org.springframework.stereotype.Service;
 @Service
 public class DemoPresentationServiceImpl extends PresentationServiceImpl {
 
-  @Autowired
-  private DemoPresentationRepositoryImpl demoPresentationRepository;
+  @Autowired private DemoPresentationRepositoryImpl demoPresentationRepository;
 
-  public DemoPresentationServiceImpl(PresentationRepository presentationRepository, @Autowired(required = false) PresentationSecurityService presentationSecurityService) {
+  public DemoPresentationServiceImpl(
+      PresentationRepository presentationRepository,
+      @Autowired(required = false) PresentationSecurityService presentationSecurityService) {
     super(presentationRepository, presentationSecurityService);
   }
 
   public void setServerUrl(String serverUrl) {
     demoPresentationRepository.setServerUrl(serverUrl);
   }
-
 }
