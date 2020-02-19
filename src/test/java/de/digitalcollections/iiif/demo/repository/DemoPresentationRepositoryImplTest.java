@@ -1,9 +1,9 @@
 package de.digitalcollections.iiif.demo.repository;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import static org.assertj.core.api.Assertions.assertThat;
 
 public class DemoPresentationRepositoryImplTest {
 
@@ -27,7 +27,8 @@ public class DemoPresentationRepositoryImplTest {
   public void testReplaceUrlEndpointsWithContext() throws Exception {
     repository.setServerUrl("http://localhost:8080/demo");
     String result = repository.replaceUrlEndpoints(jsonStringtoModify);
-    String expectedResult = "{\"@id\":\"http://localhost:8080/demo/presentation/v2/bsb00026283/manifest\"}";
+    String expectedResult =
+        "{\"@id\":\"http://localhost:8080/demo/presentation/v2/bsb00026283/manifest\"}";
     assertThat(result).isEqualTo(expectedResult);
   }
 
@@ -35,7 +36,8 @@ public class DemoPresentationRepositoryImplTest {
   public void testReplaceUrlEndpointsWithOtherHost() throws Exception {
     repository.setServerUrl("http://virtualbox:8080/demo");
     String result = repository.replaceUrlEndpoints(jsonStringtoModify);
-    String expectedResult = "{\"@id\":\"http://virtualbox:8080/demo/presentation/v2/bsb00026283/manifest\"}";
+    String expectedResult =
+        "{\"@id\":\"http://virtualbox:8080/demo/presentation/v2/bsb00026283/manifest\"}";
     assertThat(result).isEqualTo(expectedResult);
   }
 }

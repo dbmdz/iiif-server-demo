@@ -6,12 +6,11 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 
-@ComponentScan(basePackages = {
-  "de.digitalcollections.iiif.hymir.image",
-  "de.digitalcollections.iiif.hymir.presentation"
-})
+@ComponentScan(
+    basePackages = {
+      "de.digitalcollections.iiif.hymir.image",
+      "de.digitalcollections.iiif.hymir.presentation"
+    })
 @Configuration
 @Import({CustomResponseHeaders.class, SpringConfig.class})
-public class SpringConfigDemo {
-
-}
+public class SpringConfigDemo {}

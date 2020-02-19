@@ -11,15 +11,14 @@ import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 @Component
 public class ServerUrlInterceptor extends HandlerInterceptorAdapter {
 
-  @Autowired
-  private DemoPresentationServiceImpl demoPresentationServiceImpl;
+  @Autowired private DemoPresentationServiceImpl demoPresentationServiceImpl;
 
-  @Autowired
-  private UrlHelper urlHelper;
+  @Autowired private UrlHelper urlHelper;
 
   // before the actual handler will be executed
   @Override
-  public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
+  public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
+      throws Exception {
     String requestUrl = request.getRequestURL().toString();
     if (requestUrl.endsWith("/manifest") || requestUrl.matches(".*?/canvas/.*?/view$")) {
       String serverUrl = urlHelper.getBaseUrl(request);

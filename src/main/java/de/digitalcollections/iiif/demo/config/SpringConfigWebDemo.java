@@ -16,8 +16,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @Import(SpringConfigWeb.class)
 public class SpringConfigWebDemo implements WebMvcConfigurer {
 
-  @Autowired
-  private ServerUrlInterceptor serverUrlInterceptor;
+  @Autowired private ServerUrlInterceptor serverUrlInterceptor;
 
   @Override
   public void addInterceptors(InterceptorRegistry registry) {

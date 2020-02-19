@@ -6,6 +6,4 @@ import org.springframework.context.annotation.Import;
 
 @Configuration
 @Import(SpringConfigSecurity.class)
-public class SpringConfigSecurityDemo {
-
-}
+public class SpringConfigSecurityDemo {}
