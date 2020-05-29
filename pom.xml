@@ -37,12 +37,12 @@
     </developer>
   </developers>
   <ciManagement>
-    <url>https://travis-ci.org/dbmdz/iiif-server-demo</url>
-    <system>Travis CI</system>
+    <system>GitLab CI</system>
+    <url>https://gitlab.com/dbmdz/iiif-server-demo/pipelines</url>
   </ciManagement>
   <issueManagement>
-    <url>https://github.com/dbmdz/iiif-server-demo/issues</url>
     <system>GitHub Issues</system>
+    <url>https://github.com/dbmdz/iiif-server-demo/issues</url>
   </issueManagement>
   <scm>
     <connection>https://github.com/dbmdz/iiif-server-demo.git</connection>
