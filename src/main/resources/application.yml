@@ -49,6 +49,7 @@ server:
 spring:
   profiles:
     active: local
+    include: webjars, webjars-demo
   security:
     user:
       name: admin
