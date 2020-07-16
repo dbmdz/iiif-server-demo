@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org"
+<html th:attr="lang=${#locale.getLanguage()}"
+      xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       xmlns:sec="https://github.com/thymeleaf/thymeleaf-extras-springsecurity"
       xmlns:data="https://github.com/mxab/thymeleaf-extras-data-attribute">
@@ -41,7 +42,7 @@
       <div class="container">
         <div class="navbar-brand logo">
           <a th:href="@{/}">
-            <img th:src="@{/images/logo-iiif.png}">
+            <img th:src="@{/images/logo-iiif.png}" alt="">
             <span class="navbar-text text-white">IIIF Server Demo</span>
           </a>
         </div>

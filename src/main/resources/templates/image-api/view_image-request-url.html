@@ -17,7 +17,7 @@
         <div class="card mb-4">
           <div class="card-body"><strong><i class="material-icons">info</i> Legend:</strong>
             <br>
-            <img id="api-legend" class="img-fluid" th:src="@{/images/iiif-image-api-url-v2.0.0-localhost.jpg}">
+            <img alt="Explanation of the IIIF Image API" class="img-fluid" id="api-legend" th:src="@{/images/iiif-image-api-url-v2.0.0-localhost.jpg}">
           </div>
         </div>
 
@@ -31,14 +31,14 @@
           Directly embedded in HTML as image:<br/>
           <b>
             &lt;img src="<span th:text="${baseUrl} + '/image/v2/bsb00026283_00041/'">...</span>
-            <select name="region">
+            <select aria-label="Region" name="region">
               <option>full</option>
               <option>658,1757,3108,2647</option>
               <option>2500,3000,1024,1024</option>
               <option>pct:20,45,20,20</option>
             </select>
             /
-            <select name="size">
+            <select aria-label="Size" name="size">
               <option>full</option>
               <option selected>500,</option>
               <option>,500</option>
@@ -47,20 +47,20 @@
               <option>pct:50</option>
             </select>
             /
-            <select name="rotation">
+            <select aria-label="Rotation" name="rotation">
               <option>0</option>
               <option>90</option>
               <option>180</option>
               <option>270</option>
             </select>
             /
-            <select name="color">
+            <select aria-label="Color" name="color">
               <option>default</option>
               <option>gray</option>
               <option>bitonal</option>
             </select>
             .
-            <select name="format">
+            <select aria-label="Format" name="format">
               <option>jpg</option>
               <option>png</option>
             </select>
@@ -75,7 +75,7 @@
           </div>
 
           <div class="card-body">
-          <img class="float-left mr-2" id="preview-image" th:src="@{/image/v2/bsb00026283_00041/full/500,/0/default.jpg}">
+          <img alt="" class="float-left mr-2" id="preview-image" th:src="@{/image/v2/bsb00026283_00041/full/500,/0/default.jpg}">
 
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. </p>
 
