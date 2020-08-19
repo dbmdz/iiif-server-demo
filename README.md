@@ -15,14 +15,14 @@ A standalone IIIF server demonstrating the features of the IIIF Image API (http:
 
 ## Run Demo Server
 
-- Download iiif-server-demo-3.0.0.jar from [Releases on GitHub](https://github.com/dbmdz/iiif-server-demo/releases)
-- Start server: `$ java -jar iiif-server-demo-3.0.0.jar`
+- Download `iiif-server-demo-<version>-exec.jar` from [Releases on GitHub](https://github.com/dbmdz/iiif-server-demo/releases)
+- Start server: `$ java -jar iiif-server-demo-<version>-exec.jar`
 - View Homepage: [http://localhost:8080/iiif](http://localhost:8080/iiif)
 
 ## Build from source and run it
 
 ```shell
-$ mvn package && java -jar target/iiif-server-demo-3.0.0.jar
+$ mvn package && java -jar target/iiif-server-demo-<version>-exec.jar
 ```
 
 ## Screenshots
