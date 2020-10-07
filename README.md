@@ -1,7 +1,6 @@
 # IIIF Server Demo
 
 [![Javadocs](https://javadoc.io/badge/de.digitalcollections/iiif-server-demo.svg)](https://javadoc.io/doc/de.digitalcollections/iiif-server-demo)
-[![Build Status](https://img.shields.io/travis/dbmdz/iiif-server-demo/master.svg)](https://travis-ci.org/dbmdz/iiif-server-demo)
 [![License](https://img.shields.io/github/license/dbmdz/iiif-server-demo.svg)](LICENSE)
 [![GitHub release](https://img.shields.io/github/release/dbmdz/iiif-server-demo.svg)](https://github.com/dbmdz/iiif-server-demo/releases)
 [![Maven Central](https://img.shields.io/maven-central/v/de.digitalcollections/iiif-server-demo.svg)](https://search.maven.org/search?q=a:iiif-server-demo)
