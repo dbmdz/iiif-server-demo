@@ -62,7 +62,7 @@
     <version.webjar-highlightjs>9.12.0</version.webjar-highlightjs>
     <version.webjar-leaflet>1.7.1</version.webjar-leaflet>
     <version.webjar-leaflet-iiif>2.0.1</version.webjar-leaflet-iiif>
-    <version.webjar-material-icons>0.7.0</version.webjar-material-icons>
+    <version.webjar-material-icons>1.0.0</version.webjar-material-icons>
     <version.webjar-mirador-manifestbutton>1.1.2</version.webjar-mirador-manifestbutton>
     <version.webjar-mirador-multipagenavigation>1.1.2</version.webjar-mirador-multipagenavigation>
     <version.webjar-tify>0.19.3</version.webjar-tify>
