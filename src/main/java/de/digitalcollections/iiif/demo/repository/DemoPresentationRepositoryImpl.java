@@ -1,9 +1,9 @@
 package de.digitalcollections.iiif.demo.repository;
 
 import de.digitalcollections.iiif.hymir.presentation.backend.PresentationRepositoryImpl;
-import de.digitalcollections.model.api.identifiable.resource.FileResource;
-import de.digitalcollections.model.api.identifiable.resource.exceptions.ResourceIOException;
-import de.digitalcollections.model.api.identifiable.resource.exceptions.ResourceNotFoundException;
+import de.digitalcollections.model.exception.ResourceIOException;
+import de.digitalcollections.model.exception.ResourceNotFoundException;
+import de.digitalcollections.model.identifiable.resource.FileResource;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Primary;
