@@ -2,7 +2,6 @@ package de.digitalcollections.iiif.demo.config;
 
 import de.digitalcollections.iiif.demo.interceptor.ServerUrlInterceptor;
 import de.digitalcollections.iiif.hymir.config.SpringConfigWeb;
-import de.digitalcollections.iiif.hymir.config.WebjarProperties;
 import de.digitalcollections.iiif.hymir.frontend.ExceptionAdvice;
 import de.digitalcollections.iiif.hymir.frontend.ExtendedViewController;
 import de.digitalcollections.iiif.hymir.frontend.GlobalControllerAdvice;
@@ -17,8 +16,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
   ExceptionAdvice.class,
   ExtendedViewController.class,
   GlobalControllerAdvice.class,
-  SpringConfigWeb.class,
-  WebjarProperties.class
+  SpringConfigWeb.class
 })
 public class SpringConfigWebDemo implements WebMvcConfigurer {
 
