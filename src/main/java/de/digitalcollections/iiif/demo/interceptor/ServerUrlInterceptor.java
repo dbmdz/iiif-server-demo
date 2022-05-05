@@ -17,8 +17,8 @@ public class ServerUrlInterceptor implements HandlerInterceptor {
 
   // before the actual handler will be executed
   @Override
-  public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
-      throws Exception {
+  public boolean preHandle(
+      HttpServletRequest request, HttpServletResponse response, Object handler) {
     String requestUrl = request.getRequestURL().toString();
     if (requestUrl.endsWith("/manifest") || requestUrl.matches(".*?/canvas/.*?/view$")) {
       String serverUrl = urlHelper.getBaseUrl(request);
