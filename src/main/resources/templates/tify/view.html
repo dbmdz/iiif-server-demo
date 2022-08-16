@@ -5,7 +5,7 @@
   <head>
     <title>TIFY Viewer</title>
     <link rel="stylesheet" th:href="@{/css/viewer.css}" />
-    <link rel="stylesheet" type="text/css" th:href="@{|/webjars/tify/${webjarVersions.tify}/tify.css|}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/webjars/tify//tify.css}" />
   </head>
   <body>
     <section layout:fragment="content-fluid">
@@ -30,7 +30,7 @@
         'manifest': /*[[@{|${manifestId}|}]]*/
       }
     </script>
-    <script th:src="@{|/webjars/tify/${webjarVersions.tify}/tify.js|}"></script>
+    <script th:src="@{/webjars/tify/tify.js}"></script>
   </th:block>
 </body>
 </html>

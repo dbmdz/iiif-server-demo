@@ -5,8 +5,8 @@
   <head>
     <title>Mirador Viewer</title>
     <link rel="stylesheet" th:href="@{/css/viewer.css}" />
-    <link rel="stylesheet" type="text/css" th:href="@{|/webjars/mirador/${webjarVersions.mirador}/css/mirador-combined.min.css|}" />
-    <link rel="stylesheet" type="text/css" th:href="@{|/webjars/dbmdz__mirador-manifestbutton/${webjarVersions['mirador-manifestbutton']}/manifestButton.min.css|}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/webjars/mirador/css/mirador-combined.min.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/webjars/dbmdz__mirador-manifestbutton/manifestButton.min.css}" />
   </head>
   <body>
     <section layout:fragment="content-fluid">
@@ -15,8 +15,8 @@
     </section>
 
   <th:block layout:fragment="morejs">
-    <script th:src="@{|/webjars/mirador/${webjarVersions.mirador}/mirador.min.js|}"></script>
-    <script th:src="@{|/webjars/dbmdz__mirador-manifestbutton/${webjarVersions['mirador-manifestbutton']}/manifestButton.min.js|}"></script>
+    <script th:src="@{/webjars/mirador/mirador.min.js}"></script>
+    <script th:src="@{/webjars/dbmdz__mirador-manifestbutton/manifestButton.min.js}"></script>
     <script type="text/javascript" th:inline="javascript">
       $(function(){
         Mirador({
@@ -24,7 +24,7 @@
             'module': 'LocalStorageEndpoint',
             'name': 'Local Storage'
           },
-          'buildPath': /*[[@{|/webjars/mirador/${webjarVersions.mirador}/|}]]*/,
+          'buildPath': /*[[@{/webjars/mirador/}]]*/,
           'data': [{
             /*<![CDATA[*/
             'manifestUri': /*[[@{|${manifestId}|}]]*/

@@ -19,7 +19,7 @@
     </section>
 
   <th:block layout:fragment="morejs">
-    <script type="text/javascript" id="embedUV" th:src="@{|/webjars/universalviewer/${webjarVersions.universalviewer}/dist/uv-${webjarVersions.universalviewer}/lib/embed.js|}"></script>
+    <script type="text/javascript" id="embedUV" th:src="@{|/webjars/universalviewer/dist/uv-${webjarVersions.universalviewer}/lib/embed.js|}"></script>
     <script type="text/javascript">
       setTimeout(function(){
         var iframe = $('#uv-container > iframe');

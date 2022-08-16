@@ -20,12 +20,12 @@
     </section>
 
   <th:block layout:fragment="morejs">
-    <script th:src="@{|/webjars/openseadragon/${webjarVersions.openseadragon}/build/openseadragon/openseadragon.min.js|}"></script>
+    <script th:src="@{/webjars/openseadragon/build/openseadragon/openseadragon.min.js}"></script>
     <script type="application/javascript" th:inline="javascript">
       var viewer = OpenSeadragon({
       id: 'osd-container',
       /*<![CDATA[*/
-      prefixUrl: /*[[@{|/webjars/openseadragon/${webjarVersions.openseadragon}/build/openseadragon/images/|}]]*/,
+      prefixUrl: /*[[@{/webjars/openseadragon/build/openseadragon/images/}]]*/,
       /*]]>*/
       tileWidth: 64,
       /*<![CDATA[*/
