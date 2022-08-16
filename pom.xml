@@ -88,6 +88,11 @@
       <version>0.19.3</version>
     </dependency>
     <dependency>
+      <groupId>org.webjars</groupId>
+      <artifactId>webjars-locator</artifactId>
+      <version>0.45</version>
+    </dependency>
+    <dependency>
       <groupId>org.webjars.bower</groupId>
       <artifactId>highlightjs</artifactId>
       <version>9.12.0</version>
@@ -309,7 +314,6 @@
         <filtering>true</filtering>
         <includes>
           <include>application.yml</include>
-          <include>application-webjars-demo.yml</include>
         </includes>
       </resource>
     </resources>

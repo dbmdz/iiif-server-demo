@@ -5,7 +5,7 @@
   <head>
     <title>Diva Viewer</title>
     <link rel="stylesheet" th:href="@{/css/viewer.css}" />
-    <link rel="stylesheet" th:href="@{|/webjars/diva.js/${webjarVersions.diva}/build/css/diva.min.css|}" />
+    <link rel="stylesheet" th:href="@{/webjars/diva.js/build/css/diva.min.css}" />
   </head>
   <body>
     <section layout:fragment="content">
@@ -18,7 +18,7 @@
       <div th:replace="fragments/license :: images"></div>
     </section>
   <th:block layout:fragment="morejs">
-    <script th:src="@{|/webjars/diva.js/${webjarVersions.diva}/build/js/diva.min.js|}"></script>
+    <script th:src="@{/webjars/diva.js/build/js/diva.min.js}"></script>
     <script type="text/javascript" th:inline="javascript">
       /*<![CDATA[*/
       $('#diva-container').diva({
