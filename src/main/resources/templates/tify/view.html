@@ -5,7 +5,7 @@
   <head>
     <title>TIFY Viewer</title>
     <link rel="stylesheet" th:href="@{/css/viewer.css}" />
-    <link rel="stylesheet" type="text/css" th:href="@{/webjars/tify//tify.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/webjars/tify/dist/tify.css}" />
   </head>
   <body>
     <section layout:fragment="content-fluid">
@@ -24,13 +24,13 @@
     </section>
 
   <th:block layout:fragment="morejs">
+    <script th:src="@{/webjars/tify/dist/tify.js}"></script>
     <script type="application/javascript" th:inline="javascript">
-      tifyOptions = {
-        'container': '#tify-container',
-        'manifest': /*[[@{|${manifestId}|}]]*/
-      }
+      new Tify({
+        container: '#tify-container',
+        manifestUrl: /*[[@{|${manifestId}|}]]*/,
+      })
     </script>
-    <script th:src="@{/webjars/tify/tify.js}"></script>
   </th:block>
 </body>
 </html>
