@@ -29,12 +29,11 @@
   display: block;
 }
 
-main .tify-app {
+#tify-container {
   height: calc(100vh - 335px);
-  position: relative;
 }
 
-.tify-app > .tify-header .tify-header_title {
+#tify-container .tify-header .tify-header-title {
   font-size: 20px;
 }
 

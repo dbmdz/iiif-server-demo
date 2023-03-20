@@ -84,11 +84,6 @@
     </dependency>
     <dependency>
       <groupId>org.webjars</groupId>
-      <artifactId>tify</artifactId>
-      <version>0.19.3</version>
-    </dependency>
-    <dependency>
-      <groupId>org.webjars</groupId>
       <artifactId>webjars-locator</artifactId>
       <version>0.46</version>
     </dependency>
@@ -132,6 +127,11 @@
       <groupId>org.webjars.npm</groupId>
       <artifactId>material-icons</artifactId>
       <version>1.10.8</version>
+    </dependency>
+    <dependency>
+      <groupId>org.webjars.npm</groupId>
+      <artifactId>tify</artifactId>
+      <version>0.28.1</version>
     </dependency>
     <dependency>
       <groupId>org.webjars.npm</groupId>
