@@ -5,7 +5,7 @@
   <head>
     <title>Diva Viewer</title>
     <link rel="stylesheet" th:href="@{/css/viewer.css}" />
-    <link rel="stylesheet" th:href="@{/webjars/diva.js/build/css/diva.min.css}" />
+    <link rel="stylesheet" th:href="@{/webjars/diva.js/build/diva.css}" />
   </head>
   <body>
     <section layout:fragment="content">
@@ -18,20 +18,18 @@
       <div th:replace="fragments/license :: images"></div>
     </section>
   <th:block layout:fragment="morejs">
-    <script th:src="@{/webjars/diva.js/build/js/diva.min.js}"></script>
+    <script th:src="@{/webjars/diva.js/build/diva.js}"></script>
+    <script th:src="@{/webjars/diva.js/build/plugins/download.js}"></script>
+    <script th:src="@{/webjars/diva.js/build/plugins/metadata.js}"></script>
     <script type="text/javascript" th:inline="javascript">
-      /*<![CDATA[*/
-      $('#diva-container').diva({
-      enableCanvas: true,
-      enableDownload: true,
-      enableFullscreen: false,
-      enableIIIFMetadata: true,
-      enableZoomControls: 'slider',
-      minZoomLevel: 0.10,
-      objectData: /*[[@{|${manifestId}|}]]*/,
-      zoomLevel: 1
+      new Diva('diva-container', {
+        enableFullscreen: false,
+        inGrid: true,
+        minZoomLevel: 0.10,
+        objectData: /*[[@{|${manifestId}|}]]*/,
+        plugins: [Diva.DownloadPlugin, Diva.MetadataPlugin],
+        zoomLevel: 1
       });
-      /*]]>*/
     </script>
   </th:block>
   </body>
