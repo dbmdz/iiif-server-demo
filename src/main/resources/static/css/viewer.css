@@ -1,5 +1,9 @@
-#diva-container, #leaflet-container, #osd-container, #uv-container {
+#leaflet-container, #osd-container, #uv-container {
   height: calc(100vh - 335px);
+}
+
+#diva-container > .diva-wrapper {
+  min-height: calc(100vh - 335px);
 }
 
 #mirador-container {
@@ -35,8 +39,4 @@
 
 #tify-container .tify-header .tify-header-title {
   font-size: 20px;
-}
-
-div#diva-canvas-backdrop {
-  z-index: 1040;
 }
